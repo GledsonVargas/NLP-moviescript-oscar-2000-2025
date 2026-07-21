@@ -1,0 +1,89 @@
+Movie_Title,Character_Name,Gender,Profession,Role,Bechdel_Test
+The Cider House Rules,Homer Wells,Male,Physician (Unlicensed),Protagonist,Pass
+The Cider House Rules,Candy Kendall,Female,Apple Orchard Worker,Romantic Interest,Pass
+The Cider House Rules,Dr. Wilbur Larch,Male,Doctor / Orphanage Director,Mentor,Pass
+The Cider House Rules,Mr. Rose,Male,Apple Picker Leader,Antagonist,Pass
+The Cider House Rules,Rose Rose,Female,Apple Picker,Support / Victim,Pass
+Traffic,Robert Wakefield,Male,Conservative Judge,Protagonist,Pass
+Traffic,Javier Rodriguez,Male,Police Officer,Protagonist,Pass
+Traffic,Helena Ayala,Female,Housewife / Drug Kingpin,Protagonist,Pass
+Traffic,Caroline Wakefield,Female,Student,Support / Plot Driver,Pass
+A Beautiful Mind,John Nash,Male,Mathematician,Protagonist,Fail
+A Beautiful Mind,Alicia Nash,Female,Physics Student / Housewife,Support / Romantic Interest,Fail
+A Beautiful Mind,William Parcher,Male,Government Agent (Hallucination),Antagonist,Fail
+The Pianist,Władysław Szpilman,Male,Pianist,Protagonist,Fail
+The Pianist,Wilm Hosenfeld,Male,German Captain,Support / Ally,Fail
+The Pianist,Dorota,Female,Cellist,Romantic Interest / Support,Fail
+The Lord of the Rings: The Return of the King,Frodo Baggins,Male,Ring-bearer,Protagonist,Fail
+The Lord of the Rings: The Return of the King,Samwise Gamgee,Male,Gardener / Sidekick,Support / Hero,Fail
+The Lord of the Rings: The Return of the King,Aragorn,Male,Ranger / King,Protagonist,Fail
+The Lord of the Rings: The Return of the King,Éowyn,Female,Shieldmaiden,Support / Warrior,Fail
+The Lord of the Rings: The Return of the King,Arwen,Female,Elf Princess,Romantic Interest,Fail
+Sideways,Miles Raymond,Male,Teacher / Writer,Protagonist,Pass
+Sideways,Jack Cole,Male,Actor,Protagonist / Sidekick,Pass
+Sideways,Maya,Female,Waitress / Student,Romantic Interest / Support,Pass
+Sideways,Stephanie,Female,Pourer,Romantic Interest / Support,Pass
+Brokeback Mountain,Ennis Del Mar,Male,Ranch Hand,Protagonist,Pass
+Brokeback Mountain,Jack Twist,Male,Rodeo Cowboy,Protagonist,Pass
+Brokeback Mountain,Alma Beers,Female,Housewife,Support / Victim,Pass
+Brokeback Mountain,Lureen Newsome,Female,Businesswoman,Support,Pass
+The Departed,Billy Costigan,Male,Undercover Cop,Protagonist,Fail
+The Departed,Colin Sullivan,Male,Mole / Detective,Antagonist / Protagonist,Fail
+The Departed,Frank Costello,Male,Mob Boss,Antagonist,Fail
+The Departed,Madolyn Madden,Female,Psychiatrist,Romantic Interest / Support,Fail
+No Country for Old Men,Llewelyn Moss,Male,Welder,Protagonist,Fail
+No Country for Old Men,Anton Chigurh,Male,Hitman,Antagonist,Fail
+No Country for Old Men,Ed Tom Bell,Male,Sheriff,Protagonist,Fail
+No Country for Old Men,Carla Jean Moss,Female,Store Clerk,Support / Victim,Fail
+Slumdog Millionaire,Jamal Malik,Male,Chaiwala / Contestant,Protagonist,Fail
+Slumdog Millionaire,Latika,Female,None / Captive,Romantic Interest / Victim,Fail
+Slumdog Millionaire,Salim Malik,Male,Gangster,Support / Antagonist,Fail
+Precious,Claireece Precious Jones,Female,Student,Protagonist,Pass
+Precious,Mary Lee Johnston,Female,Unemployed,Antagonist,Pass
+Precious,Ms. Rain,Female,Teacher,Mentor / Support,Pass
+The Social Network,Mark Zuckerberg,Male,Student / CEO,Protagonist,Fail
+The Social Network,Eduardo Saverin,Male,Student / CFO,Protagonist / Victim,Fail
+The Social Network,Sean Parker,Male,Entrepreneur,Support / Antagonist,Fail
+The Social Network,Erica Albright,Female,Student,Plot Driver / Support,Fail
+The Descendants,Matt King,Male,Lawyer / Landowner,Protagonist,Pass
+The Descendants,Alexandra King,Female,Student,Support,Pass
+The Descendants,Elizabeth King,Female,None (Comatose),Plot Driver,Pass
+Argo,Tony Mendez,Male,CIA Exfiltration Specialist,Protagonist,Fail
+Argo,John Chambers,Male,Makeup Artist,Support,Fail
+Argo,Lester Siegel,Male,Film Producer,Support,Fail
+12 Years a Slave,Solomon Northup,Male,Violinist / Carpenter,Protagonist,Fail
+12 Years a Slave,Edwin Epps,Male,Planter,Antagonist,Fail
+12 Years a Slave,Patsey,Female,Slave,Support / Victim,Fail
+The Imitation Game,Alan Turing,Male,Mathematician / Cryptanalyst,Protagonist,Fail
+The Imitation Game,Joan Clarke,Female,Cryptanalyst,Support / Romantic Interest,Fail
+The Imitation Game,Commander Denniston,Male,Naval Officer,Antagonist / Support,Fail
+The Big Short,Michael Burry,Male,Hedge Fund Manager,Protagonist,Fail
+The Big Short,Mark Baum,Male,Hedge Fund Manager,Protagonist,Fail
+The Big Short,Jared Vennett,Male,Bond Trader,Protagonist / Narrator,Fail
+Moonlight,Chiron,Male,Student / Drug Dealer,Protagonist,Fail
+Moonlight,Juan,Male,Drug Dealer,Mentor,Fail
+Moonlight,Paula,Female,Unemployed / Addict,Antagonist / Support,Fail
+Moonlight,Teresa,Female,Housewife,Support,Fail
+Call Me by Your Name,Elio Perlman,Male,Student / Musician,Protagonist,Pass
+Call Me by Your Name,Oliver,Male,Graduate Student,Protagonist / Romantic Interest,Pass
+Call Me by Your Name,Marzia,Female,Student,Romantic Interest / Support,Pass
+BlacKkKlansman,Ron Stallworth,Male,Police Detective,Protagonist,Fail
+BlacKkKlansman,Flip Zimmerman,Male,Police Detective,Protagonist / Sidekick,Fail
+BlacKkKlansman,Patrice Dumas,Female,Student Activist,Romantic Interest / Support,Fail
+Jojo Rabbit,Johannes 'Jojo' Betzler,Male,Student,Protagonist,Pass
+Jojo Rabbit,Elsa Korr,Female,None (Hiding),Support / Catalyst,Pass
+Jojo Rabbit,Rosie Betzler,Female,Underground Activist,Support / Mentor,Pass
+The Father,Anthony,Male,Retired Engineer,Protagonist,Fail
+The Father,Anne,Female,None specified,Support / Caretaker,Fail
+CODA,Ruby Rossi,Female,Student / Fisherman,Protagonist,Pass
+CODA,Frank Rossi,Male,Fisherman,Support,Pass
+CODA,Jackie Rossi,Female,Fisherman,Support,Pass
+Women Talking,Ona,Female,Farmworker,Protagonist,Pass
+Women Talking,Salome,Female,Farmworker,Protagonist,Pass
+Women Talking,Agata,Female,Farmworker,Protagonist,Pass
+Women Talking,August Epp,Male,Schoolteacher,Support / Ally,Pass
+American Fiction,Thelonious 'Monk' Ellison,Male,Professor / Writer,Protagonist,Pass
+American Fiction,Sintara Golden,Female,Writer,Antagonist / Foil,Pass
+American Fiction,Coraline,Female,Public Defender,Romantic Interest / Support,Pass
+Conclave,Cardinal Lawrence,Male,Cardinal / Dean of the College,Protagonist,Fail
+Conclave,Sister Agnes,Female,Nun,Support,Fail

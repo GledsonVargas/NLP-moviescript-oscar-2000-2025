@@ -1,0 +1,2144 @@
+IMDb_ID,Title,Award,Character,Gender,Words,N_Sentences,Nsubj_I,Object_MeUs,N_FirstPerson_Mentions,Agency_Index,Reliable
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,ARAGORN,male,493,70,12,7,19,0.6316,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,ARWEN,female,127,14,6,2,8,0.75,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,BILBO,male,54,10,5,1,6,0.8333,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,DENETHOR,male,351,37,9,6,15,0.6,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,ELROND,male,261,27,5,2,7,0.7143,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,FARAMIR,male,125,19,4,1,5,0.8,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,FRODO,male,593,104,22,9,31,0.7097,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,GALADRIEL,female,65,6,1,0,1,1.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,GAMLING,male,25,5,0,0,0,,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,GANDALF,male,1032,149,4,1,5,0.8,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,GIMLI,male,195,29,4,2,6,0.6667,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,GOLLUM,male,416,90,1,2,3,0.3333,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,GORBAG,male,60,7,2,0,2,1.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,GOTHMOG,male,58,14,0,0,0,,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,HEAD ORC,male,16,3,0,0,0,,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,IORLAS,male,25,4,0,0,0,,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,KING OF THE DEAD,male,41,3,0,2,2,0.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,LEGOLAS,male,143,17,0,0,0,,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,MERRY,male,228,36,6,2,8,0.75,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,PIPPIN,male,445,76,19,8,27,0.7037,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,SAM,male,721,153,28,6,34,0.8235,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,SHAGRAT,male,64,9,1,1,2,0.5,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,SMÉAGOL,male,244,48,0,8,8,0.0,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,THÉODEN,male,421,57,9,4,13,0.6923,True
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,TREEBEARD,male,51,8,2,0,2,1.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,WITCH KING,male,41,7,1,1,2,0.5,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,ÉOMER,male,76,9,1,0,1,1.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Best Picture,ÉOWYN,female,161,25,3,2,5,0.6,True
+tt0169547,American Beauty,Best Picture,ANGELA,female,967,173,66,12,78,0.8462,True
+tt0169547,American Beauty,Best Picture,ATTENDANT,unknown,20,3,2,0,2,1.0,False
+tt0169547,American Beauty,Best Picture,BARBARA,female,31,11,5,0,5,1.0,True
+tt0169547,American Beauty,Best Picture,BRAD,male,158,22,5,0,5,1.0,True
+tt0169547,American Beauty,Best Picture,BUDDY,male,228,38,15,1,16,0.9375,True
+tt0169547,American Beauty,Best Picture,CAROLYN,female,1304,205,74,11,85,0.8706,True
+tt0169547,American Beauty,Best Picture,CATERING BOSS,male,17,5,1,1,2,0.5,False
+tt0169547,American Beauty,Best Picture,COLONEL,male,294,54,11,3,14,0.7857,True
+tt0169547,American Beauty,Best Picture,COUNTER GIRL,female,25,5,0,0,0,,False
+tt0169547,American Beauty,Best Picture,DRIVE­THRU GIRL,female,23,5,0,0,0,,False
+tt0169547,American Beauty,Best Picture,JANE,female,861,151,47,15,62,0.7581,True
+tt0169547,American Beauty,Best Picture,JIM #1,male,80,17,1,0,1,1.0,False
+tt0169547,American Beauty,Best Picture,JIM #2,male,81,16,2,1,3,0.6667,False
+tt0169547,American Beauty,Best Picture,LESTER,male,2572,418,134,30,164,0.8171,True
+tt0169547,American Beauty,Best Picture,RICKY,male,1194,208,68,24,92,0.7391,True
+tt0169547,American Beauty,Best Picture,TAPE VOICE,unknown,72,5,1,0,1,1.0,False
+tt0169547,American Beauty,Best Picture,TEENAGE GIRL #2,female,26,3,0,0,0,,False
+tt0169547,American Beauty,Best Picture,WOMAN #1,female,18,2,0,0,0,,False
+tt0169547,American Beauty,Best Picture,WOMAN #2,female,23,3,4,0,4,1.0,False
+tt0172495,Gladiator,Best Picture,ASSASSIN #1,male,18,2,0,0,0,,False
+tt0172495,Gladiator,Best Picture,ASSASSIN #3,male,18,5,0,0,0,,False
+tt0172495,Gladiator,Best Picture,CASSIUS,male,313,30,3,1,4,0.75,False
+tt0172495,Gladiator,Best Picture,CENTURION,male,16,2,0,0,0,,False
+tt0172495,Gladiator,Best Picture,COMMODUS,male,2039,249,83,33,116,0.7155,True
+tt0172495,Gladiator,Best Picture,FALCO,male,26,4,0,0,0,,False
+tt0172495,Gladiator,Best Picture,GAIUS,male,163,21,2,1,3,0.6667,False
+tt0172495,Gladiator,Best Picture,GALLUS,male,24,3,0,0,0,,False
+tt0172495,Gladiator,Best Picture,GERMAN PRISONER,male,79,8,1,0,1,1.0,False
+tt0172495,Gladiator,Best Picture,GRACCHUS,male,531,68,9,3,12,0.75,True
+tt0172495,Gladiator,Best Picture,JUBA,male,403,55,17,2,19,0.8947,True
+tt0172495,Gladiator,Best Picture,LUCILLA,female,1167,170,28,15,43,0.6512,True
+tt0172495,Gladiator,Best Picture,LUCIUS,male,88,18,6,2,8,0.75,True
+tt0172495,Gladiator,Best Picture,MARCELLUS,male,103,15,2,1,3,0.6667,False
+tt0172495,Gladiator,Best Picture,MARCUS,male,825,106,40,10,50,0.8,True
+tt0172495,Gladiator,Best Picture,MAXIMUS,male,1328,213,58,16,74,0.7838,True
+tt0172495,Gladiator,Best Picture,PROXIMO,male,1145,151,22,14,36,0.6111,True
+tt0172495,Gladiator,Best Picture,QUINTUS,male,101,15,6,0,6,1.0,True
+tt0172495,Gladiator,Best Picture,SCRIBE,male,41,5,7,0,7,1.0,True
+tt0172495,Gladiator,Best Picture,SLAVE TRADER,male,123,16,7,0,7,1.0,True
+tt0172495,Gladiator,Best Picture,TITUS,male,58,8,0,0,0,,False
+tt0172495,Gladiator,Best Picture,TRAINER #1,male,23,5,1,0,1,1.0,False
+tt0172495,Gladiator,Best Picture,TRAINER #4,male,23,4,1,0,1,1.0,False
+tt0172495,Gladiator,Best Picture,VALERIUS,male,28,7,3,0,3,1.0,False
+tt0172495,Gladiator,Best Picture,VIBIUS,male,101,20,2,2,4,0.5,False
+tt0268978,A Beautiful Mind,Best Picture,ALICIA,female,1329,261,54,12,66,0.8182,True
+tt0268978,A Beautiful Mind,Best Picture,BECKY,female,16,3,0,0,0,,False
+tt0268978,A Beautiful Mind,Best Picture,CAPTAIN,male,20,5,0,0,0,,False
+tt0268978,A Beautiful Mind,Best Picture,CHARLES,male,450,80,9,4,13,0.6923,True
+tt0268978,A Beautiful Mind,Best Picture,FOX,male,350,72,8,2,10,0.8,True
+tt0268978,A Beautiful Mind,Best Picture,GENERAL,male,40,8,1,1,2,0.5,False
+tt0268978,A Beautiful Mind,Best Picture,HORNER,male,154,34,1,1,2,0.5,False
+tt0268978,A Beautiful Mind,Best Picture,KUHN,male,47,7,2,0,2,1.0,False
+tt0268978,A Beautiful Mind,Best Picture,MARCEE,female,69,11,5,2,7,0.7143,True
+tt0268978,A Beautiful Mind,Best Picture,MILNOR,male,432,83,13,4,17,0.7647,True
+tt0268978,A Beautiful Mind,Best Picture,NASH,male,3153,592,176,41,217,0.8111,True
+tt0268978,A Beautiful Mind,Best Picture,PARCHER,male,1088,188,23,10,33,0.697,True
+tt0268978,A Beautiful Mind,Best Picture,PROFESSOR,male,22,7,1,0,1,1.0,False
+tt0268978,A Beautiful Mind,Best Picture,ROSEN,male,752,105,21,6,27,0.7778,True
+tt0268978,A Beautiful Mind,Best Picture,SHAPELY,male,75,15,0,0,0,,False
+tt0268978,A Beautiful Mind,Best Picture,STUDENT,male,90,18,2,0,2,1.0,False
+tt0268978,A Beautiful Mind,Best Picture,VAN NEUMANN,male,301,48,4,0,4,1.0,False
+tt0268978,A Beautiful Mind,Best Picture,ZWEIFEL,male,256,54,1,0,1,1.0,False
+tt0299658,Chicago,Best Picture,AMOS,male,696,81,44,10,54,0.8148,True
+tt0299658,Chicago,Best Picture,ANNIE,female,108,11,4,1,5,0.8,True
+tt0299658,Chicago,Best Picture,BAILIFF,male,27,4,0,0,0,,False
+tt0299658,Chicago,Best Picture,BANDLEADER,male,288,23,0,0,0,,False
+tt0299658,Chicago,Best Picture,BILLY,male,2527,271,59,16,75,0.7867,True
+tt0299658,Chicago,Best Picture,CASELY,male,101,17,3,1,4,0.75,False
+tt0299658,Chicago,Best Picture,CLERK,unknown,19,5,0,0,0,,False
+tt0299658,Chicago,Best Picture,ENSEMBLE,unknown,28,1,1,0,1,1.0,False
+tt0299658,Chicago,Best Picture,GIRLS,female,23,1,0,0,0,,False
+tt0299658,Chicago,Best Picture,HARRISON,male,326,44,13,2,15,0.8667,True
+tt0299658,Chicago,Best Picture,JUDGE,male,42,16,1,0,1,1.0,False
+tt0299658,Chicago,Best Picture,JUNE,female,63,5,1,0,1,1.0,False
+tt0299658,Chicago,Best Picture,KITTY,female,36,6,4,1,5,0.8,True
+tt0299658,Chicago,Best Picture,LIZ,female,94,12,5,0,5,1.0,True
+tt0299658,Chicago,Best Picture,MARY SUNSHINE,female,361,33,4,1,5,0.8,True
+tt0299658,Chicago,Best Picture,MATRON,female,688,66,12,9,21,0.5714,True
+tt0299658,Chicago,Best Picture,MONA,female,66,7,4,0,4,1.0,False
+tt0299658,Chicago,Best Picture,NEWSREEL ANNOUNCER,male,106,13,0,0,0,,False
+tt0299658,Chicago,Best Picture,NEWSREEL NARRATOR,male,42,4,0,0,0,,False
+tt0299658,Chicago,Best Picture,PHOTOGRAPHER,male,66,9,1,0,1,1.0,False
+tt0299658,Chicago,Best Picture,REPORTER,unknown,155,24,0,0,0,,False
+tt0299658,Chicago,Best Picture,ROXIE,female,2403,287,125,42,167,0.7485,True
+tt0299658,Chicago,Best Picture,ROXIE & VELMA,female,64,7,0,0,0,,False
+tt0299658,Chicago,Best Picture,SGT. FOGARTY,male,34,4,0,0,0,,False
+tt0299658,Chicago,Best Picture,STAGE MANAGER,male,30,6,0,0,0,,False
+tt0299658,Chicago,Best Picture,VELMA,female,685,57,29,4,33,0.8788,True
+tt0375679,Crash,Best Picture,ALLAN,male,48,10,2,1,3,0.6667,False
+tt0375679,Crash,Best Picture,ANTHONY,male,893,111,3,5,8,0.375,True
+tt0375679,Crash,Best Picture,BRUCE,male,25,5,1,0,1,1.0,False
+tt0375679,Crash,Best Picture,CAMERON,male,420,87,15,4,19,0.7895,True
+tt0375679,Crash,Best Picture,CHOI,male,58,16,2,3,5,0.4,True
+tt0375679,Crash,Best Picture,CHRISTINE,female,472,78,18,17,35,0.5143,True
+tt0375679,Crash,Best Picture,DANIEL,male,549,87,22,9,31,0.7097,True
+tt0375679,Crash,Best Picture,DETECTIVE CARR,male,35,10,2,0,2,1.0,False
+tt0375679,Crash,Best Picture,DIRK,male,128,12,3,0,3,1.0,False
+tt0375679,Crash,Best Picture,DIXON,male,256,17,8,1,9,0.8889,True
+tt0375679,Crash,Best Picture,DORRI,female,141,27,6,0,6,1.0,True
+tt0375679,Crash,Best Picture,FARHAD,male,340,74,21,6,27,0.7778,True
+tt0375679,Crash,Best Picture,FIRST A.D.,female,48,10,0,0,0,,False
+tt0375679,Crash,Best Picture,FLANAGAN,male,644,61,8,3,11,0.7273,True
+tt0375679,Crash,Best Picture,FRED,male,120,15,4,2,6,0.6667,True
+tt0375679,Crash,Best Picture,GRAHAM,male,433,82,17,6,23,0.7391,True
+tt0375679,Crash,Best Picture,HANSEN,male,490,74,26,5,31,0.8387,True
+tt0375679,Crash,Best Picture,JEAN,male,490,55,31,4,35,0.8857,True
+tt0375679,Crash,Best Picture,KAREN,female,88,12,2,1,3,0.6667,False
+tt0375679,Crash,Best Picture,KEN HO,male,43,9,2,1,3,0.6667,False
+tt0375679,Crash,Best Picture,KIM LEE,female,120,29,8,0,8,1.0,True
+tt0375679,Crash,Best Picture,LARA,female,107,35,9,3,12,0.75,True
+tt0375679,Crash,Best Picture,LOUISE,female,102,21,8,0,8,1.0,True
+tt0375679,Crash,Best Picture,LUCIEN,male,218,19,10,0,10,1.0,True
+tt0375679,Crash,Best Picture,MARIA,female,64,15,3,0,3,1.0,False
+tt0375679,Crash,Best Picture,MOTORCYCLE COP,male,31,6,1,0,1,1.0,False
+tt0375679,Crash,Best Picture,OFFICE MANAGER,female,30,4,3,0,3,1.0,False
+tt0375679,Crash,Best Picture,OFFICER HILL,male,120,20,3,0,3,1.0,False
+tt0375679,Crash,Best Picture,OFFICER JOHNSON,male,102,13,0,0,0,,False
+tt0375679,Crash,Best Picture,PETER,male,620,97,18,1,19,0.9474,True
+tt0375679,Crash,Best Picture,POP RYAN,male,38,9,3,2,5,0.6,True
+tt0375679,Crash,Best Picture,RIA,female,319,41,17,3,20,0.85,True
+tt0375679,Crash,Best Picture,RICK,male,443,59,16,4,20,0.8,True
+tt0375679,Crash,Best Picture,RYAN,male,838,119,32,7,39,0.8205,True
+tt0375679,Crash,Best Picture,SHANIQUA,female,245,33,11,1,12,0.9167,True
+tt0375679,Crash,Best Picture,SHEREEN,female,40,9,1,0,1,1.0,False
+tt0405159,Million Dollar Baby,Best Picture,BIG WILLIE,male,222,20,14,4,18,0.7778,True
+tt0405159,Million Dollar Baby,Best Picture,DANGER,male,218,19,15,5,20,0.75,True
+tt0405159,Million Dollar Baby,Best Picture,EARLINE,female,320,30,7,5,12,0.5833,True
+tt0405159,Million Dollar Baby,Best Picture,FANS,unknown,29,12,0,0,0,,False
+tt0405159,Million Dollar Baby,Best Picture,FATHER HORVATH,male,201,18,3,1,4,0.75,False
+tt0405159,Million Dollar Baby,Best Picture,FRANKIE,male,3257,322,116,26,142,0.8169,True
+tt0405159,Million Dollar Baby,Best Picture,J.D.,male,25,4,0,1,1,0.0,False
+tt0405159,Million Dollar Baby,Best Picture,LAWYER,male,18,2,0,0,0,,False
+tt0405159,Million Dollar Baby,Best Picture,MAGGIE,female,2112,211,119,34,153,0.7778,True
+tt0405159,Million Dollar Baby,Best Picture,MARDELL,female,37,5,0,1,1,0.0,False
+tt0405159,Million Dollar Baby,Best Picture,OWNER,male,30,4,0,0,0,,False
+tt0405159,Million Dollar Baby,Best Picture,RADIO COMMENTATOR,male,21,1,0,0,0,,False
+tt0405159,Million Dollar Baby,Best Picture,REF,male,50,9,1,2,3,0.3333,False
+tt0405159,Million Dollar Baby,Best Picture,SALLY,female,89,9,4,0,4,1.0,False
+tt0405159,Million Dollar Baby,Best Picture,SCRAP,male,3138,193,53,9,62,0.8548,True
+tt0405159,Million Dollar Baby,Best Picture,SHAWRELLE,male,110,13,3,1,4,0.75,False
+tt0407887,The Departed,Best Picture,BANKROBBER,male,92,14,11,2,13,0.8462,True
+tt0407887,The Departed,Best Picture,BARRIGAN,male,111,22,4,2,6,0.6667,True
+tt0407887,The Departed,Best Picture,BILLY,male,2464,430,125,35,160,0.7812,True
+tt0407887,The Departed,Best Picture,BILLY'S AUNT,female,20,4,1,0,1,1.0,False
+tt0407887,The Departed,Best Picture,BOOKIE,male,28,4,3,0,3,1.0,False
+tt0407887,The Departed,Best Picture,BROWN,male,188,29,2,1,3,0.6667,False
+tt0407887,The Departed,Best Picture,CAMERA COP,male,16,1,1,0,1,1.0,False
+tt0407887,The Departed,Best Picture,CAMERA GEEK COP,male,20,4,0,0,0,,False
+tt0407887,The Departed,Best Picture,CHINESE GANGSTER,male,85,15,2,0,2,1.0,False
+tt0407887,The Departed,Best Picture,CHINESE TRANSLATOR,male,32,5,1,0,1,1.0,False
+tt0407887,The Departed,Best Picture,COLIN,male,2727,479,149,24,173,0.8613,True
+tt0407887,The Departed,Best Picture,COSTELLO,male,1967,269,66,26,92,0.7174,True
+tt0407887,The Departed,Best Picture,DELAHUNT,male,264,41,16,10,26,0.6154,True
+tt0407887,The Departed,Best Picture,DETECTIVE 1,male,86,20,5,0,5,1.0,True
+tt0407887,The Departed,Best Picture,DETECTIVE 2,male,32,5,0,0,0,,False
+tt0407887,The Departed,Best Picture,DETECTIVE 4,male,27,7,1,0,1,1.0,False
+tt0407887,The Departed,Best Picture,DIGNAM,male,1014,141,23,8,31,0.7419,True
+tt0407887,The Departed,Best Picture,DRILL INSTRUCTOR,male,29,6,0,0,0,,False
+tt0407887,The Departed,Best Picture,ELLERBY,male,821,114,10,3,13,0.7692,True
+tt0407887,The Departed,Best Picture,FITZY,male,198,37,11,2,13,0.8462,True
+tt0407887,The Departed,Best Picture,FRENCH,male,37,7,1,0,1,1.0,False
+tt0407887,The Departed,Best Picture,GWEN,female,31,4,0,0,0,,False
+tt0407887,The Departed,Best Picture,INSTRUCTOR,male,35,4,0,0,0,,False
+tt0407887,The Departed,Best Picture,LAZIO,male,23,3,0,0,0,,False
+tt0407887,The Departed,Best Picture,MADOLYN,female,785,134,49,3,52,0.9423,True
+tt0407887,The Departed,Best Picture,MISTER FRENCH,male,418,64,14,5,19,0.7368,True
+tt0407887,The Departed,Best Picture,NEWS ANCHOR,female,52,3,0,0,0,,False
+tt0407887,The Departed,Best Picture,OTHER PRISONER,male,18,5,1,0,1,1.0,False
+tt0407887,The Departed,Best Picture,PHONE TECH COP,male,20,3,0,0,0,,False
+tt0407887,The Departed,Best Picture,PRIEST,male,75,4,0,0,0,,False
+tt0407887,The Departed,Best Picture,PROPRIETOR,male,16,4,0,0,0,,False
+tt0407887,The Departed,Best Picture,QUEENAN,male,815,142,23,2,25,0.92,True
+tt0407887,The Departed,Best Picture,REALTOR,female,53,9,1,0,1,1.0,False
+tt0407887,The Departed,Best Picture,SEAN,male,243,35,12,0,12,1.0,True
+tt0407887,The Departed,Best Picture,SPEAKER,male,51,3,1,0,1,1.0,False
+tt0407887,The Departed,Best Picture,UNCLE,male,25,4,0,0,0,,False
+tt0407887,The Departed,Best Picture,YOUNG COSTELLO,male,214,29,6,1,7,0.8571,True
+tt0477348,No Country for Old Men,Best Picture,BELL,male,1906,266,104,10,114,0.9123,True
+tt0477348,No Country for Old Men,Best Picture,BOY 1,male,37,6,0,0,0,,False
+tt0477348,No Country for Old Men,Best Picture,BOY 2,male,46,9,3,0,3,1.0,False
+tt0477348,No Country for Old Men,Best Picture,CARLA JEAN,female,452,82,30,7,37,0.8108,True
+tt0477348,No Country for Old Men,Best Picture,CHIGURH,male,781,154,35,8,43,0.814,True
+tt0477348,No Country for Old Men,Best Picture,CLERK,male,103,19,3,0,3,1.0,False
+tt0477348,No Country for Old Men,Best Picture,DEPUTY,male,53,6,1,1,2,0.5,False
+tt0477348,No Country for Old Men,Best Picture,DRIVER,male,82,16,3,2,5,0.6,True
+tt0477348,No Country for Old Men,Best Picture,ELLIS,male,379,59,7,2,9,0.7778,True
+tt0477348,No Country for Old Men,Best Picture,LORETTA,female,61,15,3,1,4,0.75,False
+tt0477348,No Country for Old Men,Best Picture,MAN,male,267,59,7,1,8,0.875,True
+tt0477348,No Country for Old Men,Best Picture,MAN AT CHAIR,male,20,9,1,1,2,0.5,False
+tt0477348,No Country for Old Men,Best Picture,MEXICAN,male,25,5,1,0,1,1.0,False
+tt0477348,No Country for Old Men,Best Picture,MOLLY,female,49,7,0,0,0,,False
+tt0477348,No Country for Old Men,Best Picture,MOSS,male,939,203,70,16,86,0.814,True
+tt0477348,No Country for Old Men,Best Picture,MOTHER,female,248,36,15,1,16,0.9375,True
+tt0477348,No Country for Old Men,Best Picture,OFFICIAL,male,107,18,5,2,7,0.7143,True
+tt0477348,No Country for Old Men,Best Picture,PROPRIETOR,male,199,49,15,0,15,1.0,True
+tt0477348,No Country for Old Men,Best Picture,ROSCOE,male,194,28,3,1,4,0.75,False
+tt0477348,No Country for Old Men,Best Picture,SALESMAN,male,19,5,1,0,1,1.0,False
+tt0477348,No Country for Old Men,Best Picture,WELLS,male,432,96,24,5,29,0.8276,True
+tt0477348,No Country for Old Men,Best Picture,WENDELL,male,294,64,3,0,3,1.0,False
+tt0477348,No Country for Old Men,Best Picture,WOMAN,female,172,36,8,1,9,0.8889,True
+tt0887912,The Hurt Locker,Best Picture,BECKHAM,male,153,40,0,1,1,0.0,False
+tt0887912,The Hurt Locker,Best Picture,CAMBRIDGE,male,197,39,8,1,9,0.8889,True
+tt0887912,The Hurt Locker,Best Picture,COLONEL REED,male,99,17,1,1,2,0.5,False
+tt0887912,The Hurt Locker,Best Picture,DISPATCH,unknown,47,12,0,0,0,,False
+tt0887912,The Hurt Locker,Best Picture,ELDRIDGE,male,865,161,39,2,41,0.9512,True
+tt0887912,The Hurt Locker,Best Picture,GUARD,male,58,12,3,1,4,0.75,False
+tt0887912,The Hurt Locker,Best Picture,GUARDS,male,18,5,0,0,0,,False
+tt0887912,The Hurt Locker,Best Picture,IRAQI SERGEANT,male,43,6,1,0,1,1.0,False
+tt0887912,The Hurt Locker,Best Picture,JAMES,male,1978,400,94,17,111,0.8468,True
+tt0887912,The Hurt Locker,Best Picture,JIMMY,male,56,12,1,1,2,0.5,False
+tt0887912,The Hurt Locker,Best Picture,KALIM,male,51,13,3,0,3,1.0,False
+tt0887912,The Hurt Locker,Best Picture,KEFFIYEH MAN,male,24,3,1,0,1,1.0,False
+tt0887912,The Hurt Locker,Best Picture,MEDIC,male,23,2,1,0,1,1.0,False
+tt0887912,The Hurt Locker,Best Picture,MERCENARY TEAM LEADER,male,124,25,4,1,5,0.8,True
+tt0887912,The Hurt Locker,Best Picture,OLDER CONTRACTOR,male,16,4,0,0,0,,False
+tt0887912,The Hurt Locker,Best Picture,SANBORN,male,1469,285,55,9,64,0.8594,True
+tt0887912,The Hurt Locker,Best Picture,SERGEANT,male,62,11,0,1,1,0.0,False
+tt0887912,The Hurt Locker,Best Picture,SERGEANT CARTER,male,51,4,3,0,3,1.0,False
+tt0887912,The Hurt Locker,Best Picture,SOLDIER,male,46,9,1,0,1,1.0,False
+tt0887912,The Hurt Locker,Best Picture,THOMPSON,male,229,36,7,2,9,0.7778,True
+tt0887912,The Hurt Locker,Best Picture,TRANSLATOR,male,84,16,2,1,3,0.6667,False
+tt1010048,Slumdog Millionaire,Best Picture,ADA,female,71,10,0,2,2,0.0,False
+tt1010048,Slumdog Millionaire,Best Picture,AMIR,male,18,4,3,0,3,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,ARVIND,male,152,35,3,2,5,0.6,True
+tt1010048,Slumdog Millionaire,Best Picture,CLARK,male,34,9,1,0,1,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,COMMISSIONER OF POLICE,male,131,22,0,0,0,,False
+tt1010048,Slumdog Millionaire,Best Picture,CONSTABLE SRINIVAS,male,90,15,2,0,2,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,DANCE TEACHER,female,37,9,0,0,0,,False
+tt1010048,Slumdog Millionaire,Best Picture,DAVE,male,33,6,2,0,2,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,DIRECTOR,male,86,18,0,0,0,,False
+tt1010048,Slumdog Millionaire,Best Picture,DOOR-KEEPER,male,43,11,1,0,1,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,GUIDE,male,57,4,1,1,2,0.5,False
+tt1010048,Slumdog Millionaire,Best Picture,INSPECTOR,male,610,104,10,5,15,0.6667,True
+tt1010048,Slumdog Millionaire,Best Picture,JAMAL,male,1854,416,89,8,97,0.9175,True
+tt1010048,Slumdog Millionaire,Best Picture,JAVED,male,124,33,2,0,2,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,LATIKA,female,364,89,15,10,25,0.6,True
+tt1010048,Slumdog Millionaire,Best Picture,MAMAN,female,247,57,3,0,3,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,MAN,male,33,12,0,0,0,,False
+tt1010048,Slumdog Millionaire,Best Picture,MANAGER,male,69,9,0,0,0,,False
+tt1010048,Slumdog Millionaire,Best Picture,MISTER NANDHA,male,49,10,0,0,0,,False
+tt1010048,Slumdog Millionaire,Best Picture,NITA,female,59,14,1,1,2,0.5,False
+tt1010048,Slumdog Millionaire,Best Picture,PETER,male,16,2,1,0,1,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,PRAKASH,male,23,6,2,0,2,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,PREM,male,2613,404,41,13,54,0.7593,True
+tt1010048,Slumdog Millionaire,Best Picture,PUNNOOSE,male,16,4,1,0,1,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,SALIM,male,930,223,32,13,45,0.7111,True
+tt1010048,Slumdog Millionaire,Best Picture,SECURITY GUARD,male,29,8,3,0,3,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,TALKBACK,unknown,33,12,0,0,0,,False
+tt1010048,Slumdog Millionaire,Best Picture,TEACHER,male,86,12,0,0,0,,False
+tt1010048,Slumdog Millionaire,Best Picture,TV COMMENTATOR,male,34,2,0,0,0,,False
+tt1010048,Slumdog Millionaire,Best Picture,TV REPORTER,male,65,4,0,1,1,0.0,False
+tt1010048,Slumdog Millionaire,Best Picture,VISION MIXER,male,34,7,1,0,1,1.0,False
+tt1010048,Slumdog Millionaire,Best Picture,WOMAN,female,194,39,3,2,5,0.6,True
+tt1024648,Argo,Best Picture,A.D.,male,18,3,0,0,0,,False
+tt1024648,Argo,Best Picture,AL GOLACINSKI,male,75,9,2,1,3,0.6667,False
+tt1024648,Argo,Best Picture,ANGELA BELK,female,35,2,2,0,2,1.0,False
+tt1024648,Argo,Best Picture,ANN SWIFT,female,48,4,0,0,0,,False
+tt1024648,Argo,Best Picture,ANNOUNCEMENT,unknown,28,3,0,0,0,,False
+tt1024648,Argo,Best Picture,AZIZI,male,30,7,1,0,1,1.0,False
+tt1024648,Argo,Best Picture,BATES,male,134,16,0,1,1,0.0,False
+tt1024648,Argo,Best Picture,BEHROUZ,male,61,9,2,1,3,0.6667,False
+tt1024648,Argo,Best Picture,BOB ANDERS,male,190,43,4,0,4,1.0,False
+tt1024648,Argo,Best Picture,BROKAW,male,43,2,0,0,0,,False
+tt1024648,Argo,Best Picture,BUTLER,male,28,4,0,0,0,,False
+tt1024648,Argo,Best Picture,CHAMBERS,male,374,61,3,1,4,0.75,False
+tt1024648,Argo,Best Picture,CONSUL OFFICIAL,male,18,2,0,0,0,,False
+tt1024648,Argo,Best Picture,CORA LIJEK,female,106,17,1,0,1,1.0,False
+tt1024648,Argo,Best Picture,ENGELL,male,99,20,0,1,1,0.0,False
+tt1024648,Argo,Best Picture,FLIGHT ATTENDANT,female,59,6,1,1,2,0.5,False
+tt1024648,Argo,Best Picture,GENCO,male,22,5,0,0,0,,False
+tt1024648,Argo,Best Picture,IMMIGRATION OFFICER,male,21,3,0,0,0,,False
+tt1024648,Argo,Best Picture,JOE STAFFORD,male,389,59,5,4,9,0.5556,True
+tt1024648,Argo,Best Picture,JORDAN,male,143,17,3,0,3,1.0,False
+tt1024648,Argo,Best Picture,KATHY STAFFORD,female,30,9,0,1,1,0.0,False
+tt1024648,Argo,Best Picture,KHALKALI,male,44,6,0,0,0,,False
+tt1024648,Argo,Best Picture,KHOMEINI,male,45,3,0,0,0,,False
+tt1024648,Argo,Best Picture,KLEIN,male,88,11,4,0,4,1.0,False
+tt1024648,Argo,Best Picture,LAMONT,male,58,9,0,0,0,,False
+tt1024648,Argo,Best Picture,LEE SCHATZ,male,50,13,0,0,0,,False
+tt1024648,Argo,Best Picture,MALICK,male,23,4,0,0,0,,False
+tt1024648,Argo,Best Picture,MALINOV,male,79,15,1,0,1,1.0,False
+tt1024648,Argo,Best Picture,MARK LIJEK,male,166,24,0,3,3,0.0,False
+tt1024648,Argo,Best Picture,MARMOR,male,31,2,0,0,0,,False
+tt1024648,Argo,Best Picture,MENDEZ,male,1366,215,33,11,44,0.75,True
+tt1024648,Argo,Best Picture,NEWSCASTER,male,32,2,0,0,0,,False
+tt1024648,Argo,Best Picture,NICHOLLS,male,154,20,2,0,2,1.0,False
+tt1024648,Argo,Best Picture,O’DONNELL,male,906,129,9,3,12,0.75,True
+tt1024648,Argo,Best Picture,P.A.,male,16,7,1,0,1,1.0,False
+tt1024648,Argo,Best Picture,PAT TAYLOR,male,38,5,0,0,0,,False
+tt1024648,Argo,Best Picture,PENDER,male,268,40,4,1,5,0.8,True
+tt1024648,Argo,Best Picture,PRESIDENT CARTER,male,29,3,0,0,0,,False
+tt1024648,Argo,Best Picture,PRINCESS ALEPPA,female,42,7,0,0,0,,False
+tt1024648,Argo,Best Picture,PRODUCER,male,17,4,1,0,1,1.0,False
+tt1024648,Argo,Best Picture,PUBLICIST,male,44,6,0,0,0,,False
+tt1024648,Argo,Best Picture,REPORTER,male,21,5,0,0,0,,False
+tt1024648,Argo,Best Picture,REZA,male,57,6,0,0,0,,False
+tt1024648,Argo,Best Picture,SADEQ GHOTBZADEH,male,20,1,0,0,0,,False
+tt1024648,Argo,Best Picture,SAHAR,female,35,9,1,0,1,1.0,False
+tt1024648,Argo,Best Picture,SIEGEL,male,692,84,24,8,32,0.75,True
+tt1024648,Argo,Best Picture,SOSA,male,25,5,1,0,1,1.0,False
+tt1024648,Argo,Best Picture,STROUP,male,33,4,3,0,3,1.0,False
+tt1024648,Argo,Best Picture,TAYLOR,male,198,31,2,0,2,1.0,False
+tt1024648,Argo,Best Picture,TED KOPPEL,male,20,3,0,0,0,,False
+tt1024648,Argo,Best Picture,TEHRAN MARY,female,59,5,0,0,0,,False
+tt1024648,Argo,Best Picture,TITTERTON,male,46,7,0,0,0,,False
+tt1024648,Argo,Best Picture,TURNER,male,53,6,0,1,1,0.0,False
+tt1024648,Argo,Best Picture,WALTER CRONKITE,male,19,1,0,0,0,,False
+tt1504320,The King's Speech,Best Picture,ANTONY,male,30,10,0,1,1,0.0,False
+tt1504320,The King's Speech,Best Picture,BALDWIN,male,239,21,6,0,6,1.0,True
+tt1504320,The King's Speech,Best Picture,BBC NEWS READER,male,189,10,0,1,1,0.0,False
+tt1504320,The King's Speech,Best Picture,BERTIE,female,2808,388,139,25,164,0.8476,True
+tt1504320,The King's Speech,Best Picture,CHAMBERLAIN,male,94,5,2,1,3,0.6667,False
+tt1504320,The King's Speech,Best Picture,COSMO LANG,male,293,29,16,1,17,0.9412,True
+tt1504320,The King's Speech,Best Picture,DAVID,male,477,62,28,5,33,0.8485,True
+tt1504320,The King's Speech,Best Picture,DIRECTOR,male,57,9,3,0,3,1.0,False
+tt1504320,The King's Speech,Best Picture,ELIZABETH,female,702,117,26,7,33,0.7879,True
+tt1504320,The King's Speech,Best Picture,EQUERRY,male,17,2,2,0,2,1.0,False
+tt1504320,The King's Speech,Best Picture,HARDINGE,male,59,8,1,0,1,1.0,False
+tt1504320,The King's Speech,Best Picture,KING GEORGE V,male,403,45,10,4,14,0.7143,True
+tt1504320,The King's Speech,Best Picture,LAURIE,female,28,5,1,0,1,1.0,False
+tt1504320,The King's Speech,Best Picture,LILIBET,female,45,8,0,0,0,,False
+tt1504320,The King's Speech,Best Picture,LIONEL,male,2493,390,87,22,109,0.7982,True
+tt1504320,The King's Speech,Best Picture,LORD WIGRAM,male,60,5,0,0,0,,False
+tt1504320,The King's Speech,Best Picture,MARGARET ROSE,female,28,6,0,0,0,,False
+tt1504320,The King's Speech,Best Picture,MYRTLE,female,121,28,2,1,3,0.6667,False
+tt1504320,The King's Speech,Best Picture,PATHE NEWSREEL ANNOUNCER,male,29,3,0,0,0,,False
+tt1504320,The King's Speech,Best Picture,QUEEN MARY,female,39,5,0,0,0,,False
+tt1504320,The King's Speech,Best Picture,SIR BLANDINE-BENTHAM,male,109,17,1,0,1,1.0,False
+tt1504320,The King's Speech,Best Picture,VALENTINE,female,37,8,2,1,3,0.6667,False
+tt1504320,The King's Speech,Best Picture,WILLY,male,32,6,0,0,0,,False
+tt1504320,The King's Speech,Best Picture,WINSTON CHURCHILL,male,217,32,5,0,5,1.0,True
+tt1504320,The King's Speech,Best Picture,WOOD,male,28,9,0,0,0,,False
+tt1895587,Spotlight,Best Picture,ALBANO,male,90,9,1,1,2,0.5,False
+tt1895587,Spotlight,Best Picture,BARBARA,female,24,6,0,0,0,,False
+tt1895587,Spotlight,Best Picture,BEN,male,856,160,15,4,19,0.7895,True
+tt1895587,Spotlight,Best Picture,BISHOP,male,50,4,3,0,3,1.0,False
+tt1895587,Spotlight,Best Picture,CANELLOS,male,63,9,2,0,2,1.0,False
+tt1895587,Spotlight,Best Picture,CARDINAL LAW,male,185,22,6,2,8,0.75,True
+tt1895587,Spotlight,Best Picture,CLERK O’BRIAN,male,37,10,1,0,1,1.0,False
+tt1895587,Spotlight,Best Picture,COP,male,19,3,1,0,1,1.0,False
+tt1895587,Spotlight,Best Picture,DUSSOURD,female,25,4,0,0,0,,False
+tt1895587,Spotlight,Best Picture,EILEEN,female,26,5,0,1,1,0.0,False
+tt1895587,Spotlight,Best Picture,ERIC MACLEISH,male,367,49,16,4,20,0.8,True
+tt1895587,Spotlight,Best Picture,FATHER PAQUIN,male,55,12,7,1,8,0.875,True
+tt1895587,Spotlight,Best Picture,GARABEDIAN,male,792,134,49,10,59,0.8305,True
+tt1895587,Spotlight,Best Picture,GILMAN,male,75,16,2,1,3,0.6667,False
+tt1895587,Spotlight,Best Picture,HANSI,male,20,5,0,0,0,,False
+tt1895587,Spotlight,Best Picture,HERALD REPORTER,male,25,4,0,0,0,,False
+tt1895587,Spotlight,Best Picture,JACK DUNN,male,92,10,4,0,4,1.0,False
+tt1895587,Spotlight,Best Picture,JANE PAQUIN,female,37,5,3,0,3,1.0,False
+tt1895587,Spotlight,Best Picture,JIM,male,308,50,14,2,16,0.875,True
+tt1895587,Spotlight,Best Picture,JOE CROWLEY,male,460,68,24,7,31,0.7742,True
+tt1895587,Spotlight,Best Picture,JUDGE SWEENEY,male,42,10,0,1,1,0.0,False
+tt1895587,Spotlight,Best Picture,JUDGE VOLTERRA,male,27,4,0,1,1,0.0,False
+tt1895587,Spotlight,Best Picture,KEVIN,male,67,9,6,0,6,1.0,True
+tt1895587,Spotlight,Best Picture,KURKJIAN,male,69,15,3,0,3,1.0,False
+tt1895587,Spotlight,Best Picture,LINDA,female,18,3,1,0,1,1.0,False
+tt1895587,Spotlight,Best Picture,LISA TUITE,female,35,6,0,0,0,,False
+tt1895587,Spotlight,Best Picture,MACLEISH,male,32,2,4,0,4,1.0,False
+tt1895587,Spotlight,Best Picture,MARTY,male,879,113,30,6,36,0.8333,True
+tt1895587,Spotlight,Best Picture,MATT,male,666,119,21,6,27,0.7778,True
+tt1895587,Spotlight,Best Picture,MIDDLE-AGED-MAN,male,29,4,0,1,1,0.0,False
+tt1895587,Spotlight,Best Picture,MIKE,male,2155,372,87,10,97,0.8969,True
+tt1895587,Spotlight,Best Picture,NANA,female,33,5,0,1,1,0.0,False
+tt1895587,Spotlight,Best Picture,OLDER COP,male,65,12,1,0,1,1.0,False
+tt1895587,Spotlight,Best Picture,PATRICK MCSORLEY,male,217,30,14,3,17,0.8235,True
+tt1895587,Spotlight,Best Picture,PETER CONLEY,male,275,36,11,2,13,0.8462,True
+tt1895587,Spotlight,Best Picture,PRESIDENT KAMEZA,male,30,4,2,0,2,1.0,False
+tt1895587,Spotlight,Best Picture,PRIEST,male,51,8,4,0,4,1.0,False
+tt1895587,Spotlight,Best Picture,ROBBY,male,2071,367,59,11,70,0.8429,True
+tt1895587,Spotlight,Best Picture,SACHA,female,1181,189,45,7,52,0.8654,True
+tt1895587,Spotlight,Best Picture,SACHA’S GRANDMOTHER,female,16,2,1,0,1,1.0,False
+tt1895587,Spotlight,Best Picture,SAVIANO,male,547,61,14,3,17,0.8235,True
+tt1895587,Spotlight,Best Picture,SIPE,male,337,41,10,1,11,0.9091,True
+tt1895587,Spotlight,Best Picture,WILSON D. ROGERS JR.,male,30,3,0,0,0,,False
+tt1895587,Spotlight,Best Picture,YOUNG COP,male,21,5,0,0,0,,False
+tt2024544,12 Years a Slave,Best Picture,ANNE,female,68,16,3,3,6,0.5,True
+tt2024544,12 Years a Slave,Best Picture,ARMSBY,male,407,51,18,1,19,0.9474,True
+tt2024544,12 Years a Slave,Best Picture,BASS,male,562,68,24,7,31,0.7742,True
+tt2024544,12 Years a Slave,Best Picture,BOB,male,44,6,1,1,2,0.5,False
+tt2024544,12 Years a Slave,Best Picture,BROWN,male,482,50,9,4,13,0.6923,True
+tt2024544,12 Years a Slave,Best Picture,BURCH,male,90,20,1,0,1,1.0,False
+tt2024544,12 Years a Slave,Best Picture,CAPTAIN,male,24,5,3,0,3,1.0,False
+tt2024544,12 Years a Slave,Best Picture,CELESTE,female,455,56,13,6,19,0.6842,True
+tt2024544,12 Years a Slave,Best Picture,CHAPIN,male,211,28,5,0,5,1.0,True
+tt2024544,12 Years a Slave,Best Picture,CLEMENS,male,194,22,5,2,7,0.7143,True
+tt2024544,12 Years a Slave,Best Picture,EDWARD,male,16,6,0,0,0,,False
+tt2024544,12 Years a Slave,Best Picture,ELIZA,female,438,55,17,13,30,0.5667,True
+tt2024544,12 Years a Slave,Best Picture,EMILY,female,29,7,4,0,4,1.0,False
+tt2024544,12 Years a Slave,Best Picture,EPPS,male,1359,238,48,18,66,0.7273,True
+tt2024544,12 Years a Slave,Best Picture,FORD,male,782,74,18,3,21,0.8571,True
+tt2024544,12 Years a Slave,Best Picture,FREEMAN,male,282,61,3,0,3,1.0,False
+tt2024544,12 Years a Slave,Best Picture,HAMILTON,male,271,41,2,1,3,0.6667,False
+tt2024544,12 Years a Slave,Best Picture,JOHN,male,69,12,0,1,1,0.0,False
+tt2024544,12 Years a Slave,Best Picture,JUDGE TURNER,male,54,9,1,0,1,1.0,False
+tt2024544,12 Years a Slave,Best Picture,MARGARET,female,73,11,3,1,4,0.75,False
+tt2024544,12 Years a Slave,Best Picture,MISTRESS EPPS,female,305,52,4,4,8,0.5,True
+tt2024544,12 Years a Slave,Best Picture,MISTRESS SHAW,female,262,30,8,3,11,0.7273,True
+tt2024544,12 Years a Slave,Best Picture,MR. MOON,male,52,9,2,0,2,1.0,False
+tt2024544,12 Years a Slave,Best Picture,MRS. FORD,female,53,10,1,0,1,1.0,False
+tt2024544,12 Years a Slave,Best Picture,OVERSEER,male,28,3,0,0,0,,False
+tt2024544,12 Years a Slave,Best Picture,PARKER,male,136,26,1,1,2,0.5,False
+tt2024544,12 Years a Slave,Best Picture,PATSEY,female,260,44,23,4,27,0.8519,True
+tt2024544,12 Years a Slave,Best Picture,RADBURN,male,178,31,3,0,3,1.0,False
+tt2024544,12 Years a Slave,Best Picture,RANDALL,male,18,6,0,0,0,,False
+tt2024544,12 Years a Slave,Best Picture,RAY,male,63,11,1,1,2,0.5,False
+tt2024544,12 Years a Slave,Best Picture,ROBERT,male,17,2,2,0,2,1.0,False
+tt2024544,12 Years a Slave,Best Picture,SHERIFF,male,91,16,1,3,4,0.25,False
+tt2024544,12 Years a Slave,Best Picture,SOLOMON,male,2146,313,108,18,126,0.8571,True
+tt2024544,12 Years a Slave,Best Picture,TIBEATS,male,343,48,13,2,15,0.8667,True
+tt2024544,12 Years a Slave,Best Picture,TREACH,male,91,21,0,0,0,,False
+tt2024544,12 Years a Slave,Best Picture,UNCLE ABRAM,male,168,20,3,2,5,0.6,True
+tt2024544,12 Years a Slave,Best Picture,WINSLOW,male,61,8,0,1,1,0.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,ANNIE,female,86,20,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,BIRDMAN,male,587,121,4,9,13,0.3077,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,BLOND WOMAN,female,33,2,0,2,2,0.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,CLARA,female,45,12,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,GABRIEL,male,87,3,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,GOOD NEIGHBOR,female,26,6,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,GUY,male,18,4,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,HOST,male,34,2,0,0,0,,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,JAKE,male,1045,197,25,13,38,0.6579,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,LADY,female,77,16,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,LARRY,male,91,17,5,1,6,0.8333,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,LAURA,female,530,110,22,3,25,0.88,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,LESLEY,female,847,172,46,14,60,0.7667,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,MAN,male,52,12,0,0,0,,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,MIKE,male,1772,324,71,21,92,0.7717,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,RALPH,male,178,26,6,1,7,0.8571,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,RIGGAN,male,3303,647,198,42,240,0.825,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,SAM,male,943,188,25,8,33,0.7576,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,SYLVIA,female,510,84,23,5,28,0.8214,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,TABITHA,female,223,38,9,1,10,0.9,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,TOURIST,male,28,9,0,0,0,,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,USHER,male,18,3,3,0,3,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Best Picture,WAITER,male,87,11,0,0,0,,False
+tt4975722,Moonlight,Best Picture,BLACK,male,407,104,22,11,33,0.6667,True
+tt4975722,Moonlight,Best Picture,CHIRON,male,189,55,15,4,19,0.7895,True
+tt4975722,Moonlight,Best Picture,JUAN,male,636,104,21,9,30,0.7,True
+tt4975722,Moonlight,Best Picture,KEVIN,male,1498,257,72,18,90,0.8,True
+tt4975722,Moonlight,Best Picture,LITTLE,male,77,24,5,3,8,0.625,True
+tt4975722,Moonlight,Best Picture,MR. PIERCE,male,76,10,1,2,3,0.3333,False
+tt4975722,Moonlight,Best Picture,PAULA,female,639,100,29,13,42,0.6905,True
+tt4975722,Moonlight,Best Picture,PIZZO,male,54,8,0,0,0,,False
+tt4975722,Moonlight,Best Picture,PORTABLE BOY 1,male,34,7,0,0,0,,False
+tt4975722,Moonlight,Best Picture,PORTABLE BOY 3,male,18,2,0,0,0,,False
+tt4975722,Moonlight,Best Picture,PRINCIPAL WILLIAMS,female,56,6,0,1,1,0.0,False
+tt4975722,Moonlight,Best Picture,TERESA,female,231,39,5,1,6,0.8333,True
+tt4975722,Moonlight,Best Picture,TERRELL,male,441,59,16,2,18,0.8889,True
+tt4975722,Moonlight,Best Picture,TERRENCE,male,25,4,0,0,0,,False
+tt4975722,Moonlight,Best Picture,TRAVIS,male,68,14,9,0,9,1.0,True
+tt4975722,Moonlight,Best Picture,WILLIAMS,female,102,9,6,3,9,0.6667,True
+tt5580390,The Shape of Water,Best Picture,BERNIE,female,84,16,8,0,8,1.0,True
+tt5580390,The Shape of Water,Best Picture,BREWSTER,male,80,14,3,0,3,1.0,False
+tt5580390,The Shape of Water,Best Picture,BURLY RUSSIAN,male,34,10,0,0,0,,False
+tt5580390,The Shape of Water,Best Picture,DEALER,male,111,21,0,1,1,0.0,False
+tt5580390,The Shape of Water,Best Picture,DUANE,male,55,7,0,1,1,0.0,False
+tt5580390,The Shape of Water,Best Picture,ELAINE,female,142,23,4,0,4,1.0,False
+tt5580390,The Shape of Water,Best Picture,ELISA,female,110,8,9,0,9,1.0,True
+tt5580390,The Shape of Water,Best Picture,FLEMING,male,307,47,8,3,11,0.7273,True
+tt5580390,The Shape of Water,Best Picture,GENERAL HOYT,male,282,46,5,3,8,0.625,True
+tt5580390,The Shape of Water,Best Picture,GILES,male,1638,258,81,18,99,0.8182,True
+tt5580390,The Shape of Water,Best Picture,GUARD,male,45,12,1,0,1,1.0,False
+tt5580390,The Shape of Water,Best Picture,HOFFSTETLER,male,707,126,26,8,34,0.7647,True
+tt5580390,The Shape of Water,Best Picture,MIHALKOV,male,253,44,9,2,11,0.8182,True
+tt5580390,The Shape of Water,Best Picture,MR. ARZOUMANIAN,male,46,7,4,0,4,1.0,False
+tt5580390,The Shape of Water,Best Picture,PIE GUY,male,87,12,3,1,4,0.75,False
+tt5580390,The Shape of Water,Best Picture,SALLY,female,28,7,0,0,0,,False
+tt5580390,The Shape of Water,Best Picture,STRICKLAND,male,1638,277,51,21,72,0.7083,True
+tt5580390,The Shape of Water,Best Picture,TIMMY,male,44,8,1,0,1,1.0,False
+tt5580390,The Shape of Water,Best Picture,WEATHER MAN 1,male,17,2,0,0,0,,False
+tt5580390,The Shape of Water,Best Picture,YOLANDA,female,27,5,2,0,2,1.0,False
+tt5580390,The Shape of Water,Best Picture,ZELDA,female,1188,177,47,10,57,0.8246,True
+tt6710474,Everything Everywhere All at Once,Best Picture,ALPHA JUMPER,female,59,6,0,1,1,0.0,False
+tt6710474,Everything Everywhere All at Once,Best Picture,BECKY,female,87,18,4,0,4,1.0,False
+tt6710474,Everything Everywhere All at Once,Best Picture,CHAD,male,33,8,3,1,4,0.75,False
+tt6710474,Everything Everywhere All at Once,Best Picture,DEBBIE THE DOG MOM,female,28,4,2,0,2,1.0,False
+tt6710474,Everything Everywhere All at Once,Best Picture,DEIRDRE,female,742,108,29,6,35,0.8286,True
+tt6710474,Everything Everywhere All at Once,Best Picture,EVELYN,female,2761,514,136,29,165,0.8242,True
+tt6710474,Everything Everywhere All at Once,Best Picture,GONG GONG,male,386,75,10,3,13,0.7692,True
+tt6710474,Everything Everywhere All at Once,Best Picture,GUARD,male,35,6,1,0,1,1.0,False
+tt6710474,Everything Everywhere All at Once,Best Picture,HUMAN BABY PERSON BOY,male,17,3,1,0,1,1.0,False
+tt6710474,Everything Everywhere All at Once,Best Picture,JOBU,female,1180,186,33,14,47,0.7021,True
+tt6710474,Everything Everywhere All at Once,Best Picture,JOY,female,487,94,15,3,18,0.8333,True
+tt6710474,Everything Everywhere All at Once,Best Picture,KUNG FU MASTER,female,50,7,1,0,1,1.0,False
+tt6710474,Everything Everywhere All at Once,Best Picture,MANAGER,male,18,3,1,1,2,0.5,False
+tt6710474,Everything Everywhere All at Once,Best Picture,MEN'S CHOIR,male,37,6,1,1,2,0.5,False
+tt6710474,Everything Everywhere All at Once,Best Picture,NEWS ANCHOR,unknown,19,2,0,0,0,,False
+tt6710474,Everything Everywhere All at Once,Best Picture,OFFICER #1,male,83,19,0,0,0,,False
+tt6710474,Everything Everywhere All at Once,Best Picture,OFFICER #2,male,100,17,3,0,3,1.0,False
+tt6710474,Everything Everywhere All at Once,Best Picture,RICK,male,45,9,2,0,2,1.0,False
+tt6710474,Everything Everywhere All at Once,Best Picture,SPAGHETTI BABY NOODLE BOY,male,39,8,2,1,3,0.6667,False
+tt6710474,Everything Everywhere All at Once,Best Picture,WAYMOND,male,2828,439,90,21,111,0.8108,True
+tt6751668,Parasite,Best Picture,CHUNG-SOOK,female,746,144,24,8,32,0.75,True
+tt6751668,Parasite,Best Picture,DA-HAE,female,259,61,9,3,12,0.75,True
+tt6751668,Parasite,Best Picture,DA-SONG,male,57,23,1,0,1,1.0,False
+tt6751668,Parasite,Best Picture,DONG-IK,male,1189,201,53,6,59,0.8983,True
+tt6751668,Parasite,Best Picture,KI-JUNG,female,828,149,30,6,36,0.8333,True
+tt6751668,Parasite,Best Picture,KI-TEK,male,1827,275,93,10,103,0.9029,True
+tt6751668,Parasite,Best Picture,KI-WOO,male,1943,330,72,12,84,0.8571,True
+tt6751668,Parasite,Best Picture,KUN-SAE,male,295,56,11,2,13,0.8462,True
+tt6751668,Parasite,Best Picture,MIN-HYUK,male,320,54,18,1,19,0.9474,True
+tt6751668,Parasite,Best Picture,MUN-KWANG,female,951,161,44,9,53,0.8302,True
+tt6751668,Parasite,Best Picture,PIZZA SHOP OWNER,female,72,16,2,0,2,1.0,False
+tt6751668,Parasite,Best Picture,REPORTER 1,female,34,2,0,0,0,,False
+tt6751668,Parasite,Best Picture,REPORTER 2,female,53,3,0,0,0,,False
+tt6751668,Parasite,Best Picture,YON-KYO,female,2251,372,84,8,92,0.913,True
+tt6751668,Parasite,Best Picture,YUN,male,43,5,3,1,4,0.75,False
+tt6966692,Green Book,Best Picture,AMIT,male,50,15,2,0,2,1.0,False
+tt6966692,Green Book,Best Picture,ANTHONY,male,20,1,0,0,0,,False
+tt6966692,Green Book,Best Picture,AUGIE,male,107,18,3,0,3,1.0,False
+tt6966692,Green Book,Best Picture,BARKEEP,male,25,3,2,0,2,1.0,False
+tt6966692,Green Book,Best Picture,BOBBY RYDELL,male,34,5,1,1,2,0.5,False
+tt6966692,Green Book,Best Picture,BOX OFFICE MANAGER,male,21,4,0,0,0,,False
+tt6966692,Green Book,Best Picture,CARMINE,male,40,8,3,0,3,1.0,False
+tt6966692,Green Book,Best Picture,COAT-CHECK GIRL,female,22,5,2,1,3,0.6667,False
+tt6966692,Green Book,Best Picture,DOLORES,female,505,68,24,4,28,0.8571,True
+tt6966692,Green Book,Best Picture,DOMINIC,male,68,11,3,2,5,0.6,True
+tt6966692,Green Book,Best Picture,DR. SHIRLEY,male,2612,374,125,27,152,0.8224,True
+tt6966692,Green Book,Best Picture,FAT PAULIE,male,33,6,3,1,4,0.75,False
+tt6966692,Green Book,Best Picture,FRAN,female,24,3,0,0,0,,False
+tt6966692,Green Book,Best Picture,GEORGE,male,61,13,4,0,4,1.0,False
+tt6966692,Green Book,Best Picture,GOOMBAH,male,26,4,2,2,4,0.5,False
+tt6966692,Green Book,Best Picture,GORMAN,male,16,6,0,0,0,,False
+tt6966692,Green Book,Best Picture,GRAHAM KINDELL,male,302,42,8,1,9,0.8889,True
+tt6966692,Green Book,Best Picture,JOHNNY,male,209,37,5,0,5,1.0,True
+tt6966692,Green Book,Best Picture,JULES PODELL,male,30,6,0,1,1,0.0,False
+tt6966692,Green Book,Best Picture,LIP,male,3470,549,182,34,216,0.8426,True
+tt6966692,Green Book,Best Picture,LOSCUDO,male,117,20,6,4,10,0.6,True
+tt6966692,Green Book,Best Picture,MC,male,80,6,0,0,0,,False
+tt6966692,Green Book,Best Picture,MORGAN ANDERSON,male,127,21,2,1,3,0.6667,False
+tt6966692,Green Book,Best Picture,NEWSCASTER,unknown,55,2,0,0,0,,False
+tt6966692,Green Book,Best Picture,NICOLA,female,38,7,0,0,0,,False
+tt6966692,Green Book,Best Picture,OLEG,male,148,25,1,0,1,1.0,False
+tt6966692,Green Book,Best Picture,ORANGE BIRD BARTENDER,female,31,8,0,2,2,0.0,False
+tt6966692,Green Book,Best Picture,PATROLMAN #1,male,129,24,3,1,4,0.75,False
+tt6966692,Green Book,Best Picture,PATROLMAN #2,male,25,7,1,0,1,1.0,False
+tt6966692,Green Book,Best Picture,PAWN GUY,male,23,7,0,1,1,0.0,False
+tt6966692,Green Book,Best Picture,PHIL RIZUTTO,male,26,3,0,0,0,,False
+tt6966692,Green Book,Best Picture,POLICE CHIEF,male,84,16,4,0,4,1.0,False
+tt6966692,Green Book,Best Picture,POLICEMAN #1,male,26,7,0,1,1,0.0,False
+tt6966692,Green Book,Best Picture,POLICEMAN #2,male,18,4,0,0,0,,False
+tt6966692,Green Book,Best Picture,RECORD EXEC,male,93,13,1,0,1,1.0,False
+tt6966692,Green Book,Best Picture,REDNECK #1,male,49,7,1,0,1,1.0,False
+tt6966692,Green Book,Best Picture,REDNECK #2,male,26,4,0,0,0,,False
+tt6966692,Green Book,Best Picture,RUDY,male,60,11,1,0,1,1.0,False
+tt6966692,Green Book,Best Picture,STAGE MANAGER,male,58,12,1,1,2,0.5,False
+tt6966692,Green Book,Best Picture,STATE TROOPER,male,28,7,1,0,1,1.0,False
+tt6966692,Green Book,Best Picture,TAILOR,male,40,5,1,1,2,0.5,False
+tt6966692,Green Book,Best Picture,WISEGUY #1,male,22,3,1,1,2,0.5,False
+tt9770150,Nomadland,Best Picture,ALBERT,male,170,23,5,0,5,1.0,True
+tt9770150,Nomadland,Best Picture,BOB WELLS,male,367,35,32,1,33,0.9697,True
+tt9770150,Nomadland,Best Picture,BRAD,male,119,12,0,0,0,,False
+tt9770150,Nomadland,Best Picture,BRANDY,female,81,24,1,1,2,0.5,False
+tt9770150,Nomadland,Best Picture,BRYCE,male,36,6,5,1,6,0.8333,True
+tt9770150,Nomadland,Best Picture,DAVE,male,648,132,41,2,43,0.9535,True
+tt9770150,Nomadland,Best Picture,DENI,female,69,5,4,1,5,0.8,True
+tt9770150,Nomadland,Best Picture,DEREK,male,312,51,27,1,28,0.9643,True
+tt9770150,Nomadland,Best Picture,DOLLY,female,387,54,17,5,22,0.7727,True
+tt9770150,Nomadland,Best Picture,DOUG,male,52,12,1,0,1,1.0,False
+tt9770150,Nomadland,Best Picture,EMILY,female,78,16,4,0,4,1.0,False
+tt9770150,Nomadland,Best Picture,FERN,female,2315,509,172,9,181,0.9503,True
+tt9770150,Nomadland,Best Picture,GAY,female,54,9,0,0,0,,False
+tt9770150,Nomadland,Best Picture,GEORGE,male,119,15,4,0,4,1.0,False
+tt9770150,Nomadland,Best Picture,GRANDMA,female,76,9,1,0,1,1.0,False
+tt9770150,Nomadland,Best Picture,JAMES,male,119,22,8,0,8,1.0,True
+tt9770150,Nomadland,Best Picture,JEREMY,male,24,3,1,0,1,1.0,False
+tt9770150,Nomadland,Best Picture,JIM,male,108,17,6,0,6,1.0,True
+tt9770150,Nomadland,Best Picture,KEN,male,79,10,4,0,4,1.0,False
+tt9770150,Nomadland,Best Picture,LINDA MAY,female,584,97,43,4,47,0.9149,True
+tt9770150,Nomadland,Best Picture,MACKENZIE,female,125,18,2,0,2,1.0,False
+tt9770150,Nomadland,Best Picture,MERLE,male,110,10,5,1,6,0.8333,True
+tt9770150,Nomadland,Best Picture,NOMADS,unknown,144,4,0,0,0,,False
+tt9770150,Nomadland,Best Picture,NURSE MATT,female,38,4,0,0,0,,False
+tt9770150,Nomadland,Best Picture,OFFICER STEVE,male,54,10,0,0,0,,False
+tt9770150,Nomadland,Best Picture,PATTY,female,122,29,3,0,3,1.0,False
+tt9770150,Nomadland,Best Picture,PAUL WINER,male,69,6,2,0,2,1.0,False
+tt9770150,Nomadland,Best Picture,RACHEL,female,56,7,3,0,3,1.0,False
+tt9770150,Nomadland,Best Picture,RECRUITER,unknown,51,6,1,0,1,1.0,False
+tt9770150,Nomadland,Best Picture,SUANNE,female,73,10,3,2,5,0.6,True
+tt9770150,Nomadland,Best Picture,SWANKIE,female,736,119,44,9,53,0.8302,True
+tt9770150,Nomadland,Best Picture,TOUR GUIDE,unknown,16,4,0,0,0,,False
+tt9770150,Nomadland,Best Picture,VICTOR,male,36,8,2,1,3,0.6667,False
+tt10366460,CODA,Best Picture,BERNARDO,male,1210,266,42,11,53,0.7925,True
+tt10366460,CODA,Best Picture,BRADY,male,167,21,5,0,5,1.0,True
+tt10366460,CODA,Best Picture,CHORUS,unknown,25,3,1,0,1,1.0,False
+tt10366460,CODA,Best Picture,CHUBS,male,33,5,1,0,1,1.0,False
+tt10366460,CODA,Best Picture,COAST GUARD OFFICER,male,102,12,1,0,1,1.0,False
+tt10366460,CODA,Best Picture,DOCTOR,male,52,4,1,0,1,1.0,False
+tt10366460,CODA,Best Picture,FEMALE JURY MEMBER,female,24,6,1,0,1,1.0,False
+tt10366460,CODA,Best Picture,FRANK,male,561,111,17,9,26,0.6538,True
+tt10366460,CODA,Best Picture,GERTIE,female,215,39,7,3,10,0.7,True
+tt10366460,CODA,Best Picture,GIO,male,60,10,0,0,0,,False
+tt10366460,CODA,Best Picture,JACKIE,female,486,99,16,5,21,0.7619,True
+tt10366460,CODA,Best Picture,JOANNE,female,58,11,6,1,7,0.8571,True
+tt10366460,CODA,Best Picture,JOHN KAUFMAN,male,38,5,0,0,0,,False
+tt10366460,CODA,Best Picture,LEO,male,335,70,14,4,18,0.7778,True
+tt10366460,CODA,Best Picture,MALE JURY MEMBER,male,32,2,0,0,0,,False
+tt10366460,CODA,Best Picture,MILES,male,607,108,34,8,42,0.8095,True
+tt10366460,CODA,Best Picture,MONDO,male,26,4,0,1,1,0.0,False
+tt10366460,CODA,Best Picture,MS. SIMON,female,48,4,0,0,0,,False
+tt10366460,CODA,Best Picture,NINA,female,24,3,0,0,0,,False
+tt10366460,CODA,Best Picture,RADIO,unknown,75,24,0,0,0,,False
+tt10366460,CODA,Best Picture,RUBY,female,1550,315,93,12,105,0.8857,True
+tt10366460,CODA,Best Picture,STUDENT,male,25,4,0,0,0,,False
+tt10366460,CODA,Best Picture,TONY,male,81,10,4,0,4,1.0,False
+tt15398776,Oppenheimer,Best Picture,AIR FORCE OFFICER,male,23,3,1,1,2,0.5,False
+tt15398776,Oppenheimer,Best Picture,ALVAREZ,male,34,9,1,0,1,1.0,False
+tt15398776,Oppenheimer,Best Picture,ARMY CAPTAIN,male,24,3,0,0,0,,False
+tt15398776,Oppenheimer,Best Picture,BETHE,male,132,17,1,1,2,0.5,False
+tt15398776,Oppenheimer,Best Picture,BLACKETT,male,56,15,0,0,0,,False
+tt15398776,Oppenheimer,Best Picture,BOHR,male,329,51,9,5,14,0.6429,True
+tt15398776,Oppenheimer,Best Picture,BORDEN,male,184,15,6,1,7,0.8571,True
+tt15398776,Oppenheimer,Best Picture,BUSH,male,216,19,6,1,7,0.8571,True
+tt15398776,Oppenheimer,Best Picture,BYRNES,male,45,3,0,0,0,,False
+tt15398776,Oppenheimer,Best Picture,CHAIRMAN,male,73,10,1,0,1,1.0,False
+tt15398776,Oppenheimer,Best Picture,CHARLOTTE,female,35,7,2,0,2,1.0,False
+tt15398776,Oppenheimer,Best Picture,CHEVALIER,male,220,33,4,0,4,1.0,False
+tt15398776,Oppenheimer,Best Picture,CONCERNED SCIENTIST,male,36,5,2,1,3,0.6667,False
+tt15398776,Oppenheimer,Best Picture,CONDON,male,99,15,3,2,5,0.6,True
+tt15398776,Oppenheimer,Best Picture,CONGRESSMAN,male,24,1,0,0,0,,False
+tt15398776,Oppenheimer,Best Picture,COUNSEL,male,58,10,0,1,1,0.0,False
+tt15398776,Oppenheimer,Best Picture,EINSTEIN,male,289,41,5,2,7,0.7143,True
+tt15398776,Oppenheimer,Best Picture,ELTENTON,male,38,6,2,0,2,1.0,False
+tt15398776,Oppenheimer,Best Picture,EVANS,male,19,2,3,0,3,1.0,False
+tt15398776,Oppenheimer,Best Picture,FERMI,male,83,13,1,0,1,1.0,False
+tt15398776,Oppenheimer,Best Picture,FEYNMAN,male,38,7,1,0,1,1.0,False
+tt15398776,Oppenheimer,Best Picture,FRANK,male,181,26,4,1,5,0.8,True
+tt15398776,Oppenheimer,Best Picture,GARRISON,male,484,46,9,1,10,0.9,True
+tt15398776,Oppenheimer,Best Picture,GRAY,male,202,21,1,0,1,1.0,False
+tt15398776,Oppenheimer,Best Picture,GROVES,male,1224,185,45,4,49,0.9184,True
+tt15398776,Oppenheimer,Best Picture,HEISENBERG,male,39,8,2,0,2,1.0,False
+tt15398776,Oppenheimer,Best Picture,HILL,male,323,13,9,1,10,0.9,True
+tt15398776,Oppenheimer,Best Picture,HORNIG,male,66,11,3,1,4,0.75,False
+tt15398776,Oppenheimer,Best Picture,JOHNSON,male,39,6,2,0,2,1.0,False
+tt15398776,Oppenheimer,Best Picture,KISTIAKOWSKY,male,73,15,2,0,2,1.0,False
+tt15398776,Oppenheimer,Best Picture,KITTY,female,769,121,34,6,40,0.85,True
+tt15398776,Oppenheimer,Best Picture,LAWRENCE,male,412,70,18,1,19,0.9474,True
+tt15398776,Oppenheimer,Best Picture,LOMANITZ,male,34,4,3,0,3,1.0,False
+tt15398776,Oppenheimer,Best Picture,LOUDSPEAKER,unknown,20,8,0,0,0,,False
+tt15398776,Oppenheimer,Best Picture,MARSHALL,male,61,6,0,0,0,,False
+tt15398776,Oppenheimer,Best Picture,MORRISON,male,89,7,0,0,0,,False
+tt15398776,Oppenheimer,Best Picture,NICHOLS,male,190,32,3,1,4,0.75,False
+tt15398776,Oppenheimer,Best Picture,OPPENHEIMER,male,5609,815,222,34,256,0.8672,True
+tt15398776,Oppenheimer,Best Picture,PASH,male,340,30,9,5,14,0.6429,True
+tt15398776,Oppenheimer,Best Picture,RABI,male,677,80,16,3,19,0.8421,True
+tt15398776,Oppenheimer,Best Picture,ROBB,male,1325,137,11,1,12,0.9167,True
+tt15398776,Oppenheimer,Best Picture,RUTH,female,38,6,3,1,4,0.75,False
+tt15398776,Oppenheimer,Best Picture,SENATE AIDE,female,561,77,10,1,11,0.9091,True
+tt15398776,Oppenheimer,Best Picture,SENATOR BARTLETT,male,71,7,1,1,2,0.5,False
+tt15398776,Oppenheimer,Best Picture,SENATOR MCGEE,male,112,13,1,0,1,1.0,False
+tt15398776,Oppenheimer,Best Picture,SENATOR PASTORE,male,64,5,0,0,0,,False
+tt15398776,Oppenheimer,Best Picture,SENATOR SCOTT,male,27,2,0,0,0,,False
+tt15398776,Oppenheimer,Best Picture,SERBER,male,146,16,3,2,5,0.6,True
+tt15398776,Oppenheimer,Best Picture,SNYDER,male,16,7,0,0,0,,False
+tt15398776,Oppenheimer,Best Picture,STIMSON,male,164,18,2,0,2,1.0,False
+tt15398776,Oppenheimer,Best Picture,STRAUSS,male,2009,253,57,18,75,0.76,True
+tt15398776,Oppenheimer,Best Picture,SZILARD,male,89,11,0,1,1,0.0,False
+tt15398776,Oppenheimer,Best Picture,TATLOCK,female,259,52,8,4,12,0.6667,True
+tt15398776,Oppenheimer,Best Picture,TELLER,male,385,53,17,2,19,0.8947,True
+tt15398776,Oppenheimer,Best Picture,TOLMAN,male,23,3,1,0,1,1.0,False
+tt15398776,Oppenheimer,Best Picture,TRUMAN,male,202,26,3,1,4,0.75,False
+tt15398776,Oppenheimer,Best Picture,VOICE,unknown,20,3,1,0,1,1.0,False
+tt15398776,Oppenheimer,Best Picture,VOLPE,male,76,13,3,0,3,1.0,False
+tt15398776,Oppenheimer,Best Picture,WEATHERMAN,male,37,10,1,0,1,1.0,False
+tt15398776,Oppenheimer,Best Picture,YOUNG OPPENHEIMER,male,70,17,8,0,8,1.0,True
+tt28607951,Anora,Best Picture,ALEKS,male,144,28,9,0,9,1.0,True
+tt28607951,Anora,Best Picture,ANI,female,2665,629,132,60,192,0.6875,True
+tt28607951,Anora,Best Picture,CRYSTAL,female,133,35,10,1,11,0.9091,True
+tt28607951,Anora,Best Picture,DASHA,female,18,3,1,0,1,1.0,False
+tt28607951,Anora,Best Picture,DAWN,female,110,25,5,1,6,0.8333,True
+tt28607951,Anora,Best Picture,DAY GUARD,male,38,10,3,0,3,1.0,False
+tt28607951,Anora,Best Picture,DIAMOND,female,163,26,4,1,5,0.8,True
+tt28607951,Anora,Best Picture,GALINA,female,214,37,4,1,5,0.8,True
+tt28607951,Anora,Best Picture,GARNIK,male,547,114,13,5,18,0.7222,True
+tt28607951,Anora,Best Picture,HOTEL MANAGER,male,34,4,0,0,0,,False
+tt28607951,Anora,Best Picture,IGOR,male,525,128,34,6,40,0.85,True
+tt28607951,Anora,Best Picture,IVAN,male,1026,289,54,8,62,0.871,True
+tt28607951,Anora,Best Picture,JIMMY,male,164,40,6,0,6,1.0,True
+tt28607951,Anora,Best Picture,JUDGE,male,62,12,1,0,1,1.0,False
+tt28607951,Anora,Best Picture,LULU,male,69,19,1,0,1,1.0,False
+tt28607951,Anora,Best Picture,NIKOLAI,male,38,12,1,0,1,1.0,False
+tt28607951,Anora,Best Picture,SHARNOV,male,176,36,9,2,11,0.8182,True
+tt28607951,Anora,Best Picture,TOM,male,71,17,4,0,4,1.0,False
+tt28607951,Anora,Best Picture,TOROS,male,2360,501,60,27,87,0.6897,True
+tt28607951,Anora,Best Picture,TOW TRUCK DRIVER,male,28,7,1,1,2,0.5,False
+tt28607951,Anora,Best Picture,VERA,female,34,9,0,0,0,,False
+tt0169547,American Beauty,Original Screenplay,ANGELA,female,967,173,66,12,78,0.8462,True
+tt0169547,American Beauty,Original Screenplay,ATTENDANT,unknown,20,3,2,0,2,1.0,False
+tt0169547,American Beauty,Original Screenplay,BARBARA,female,31,11,5,0,5,1.0,True
+tt0169547,American Beauty,Original Screenplay,BRAD,male,158,22,5,0,5,1.0,True
+tt0169547,American Beauty,Original Screenplay,BUDDY,male,228,38,15,1,16,0.9375,True
+tt0169547,American Beauty,Original Screenplay,CAROLYN,female,1304,205,74,11,85,0.8706,True
+tt0169547,American Beauty,Original Screenplay,CATERING BOSS,male,17,5,1,1,2,0.5,False
+tt0169547,American Beauty,Original Screenplay,COLONEL,male,294,54,11,3,14,0.7857,True
+tt0169547,American Beauty,Original Screenplay,COUNTER GIRL,female,25,5,0,0,0,,False
+tt0169547,American Beauty,Original Screenplay,DRIVE­THRU GIRL,female,23,5,0,0,0,,False
+tt0169547,American Beauty,Original Screenplay,JANE,female,861,151,47,15,62,0.7581,True
+tt0169547,American Beauty,Original Screenplay,JIM #1,male,80,17,1,0,1,1.0,False
+tt0169547,American Beauty,Original Screenplay,JIM #2,male,81,16,2,1,3,0.6667,False
+tt0169547,American Beauty,Original Screenplay,LESTER,male,2572,418,134,30,164,0.8171,True
+tt0169547,American Beauty,Original Screenplay,RICKY,male,1194,208,68,24,92,0.7391,True
+tt0169547,American Beauty,Original Screenplay,TAPE VOICE,unknown,72,5,1,0,1,1.0,False
+tt0169547,American Beauty,Original Screenplay,TEENAGE GIRL #2,female,26,3,0,0,0,,False
+tt0169547,American Beauty,Original Screenplay,WOMAN #1,female,18,2,0,0,0,,False
+tt0169547,American Beauty,Original Screenplay,WOMAN #2,female,23,3,4,0,4,1.0,False
+tt0181875,Almost Famous,Original Screenplay,AARON,male,18,3,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,ANITA,female,404,71,15,5,20,0.75,True
+tt0181875,Almost Famous,Original Screenplay,BEN,male,477,68,9,4,13,0.6923,True
+tt0181875,Almost Famous,Original Screenplay,CLERK,unknown,33,7,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,CO-PILOT,male,106,13,0,1,1,0.0,False
+tt0181875,Almost Famous,Original Screenplay,CONCERT-GOER,unknown,43,5,1,0,1,1.0,False
+tt0181875,Almost Famous,Original Screenplay,DARRYL,male,91,16,2,1,3,0.6667,False
+tt0181875,Almost Famous,Original Screenplay,DAVID FELTON,male,37,11,0,1,1,0.0,False
+tt0181875,Almost Famous,Original Screenplay,DENNIS HOPE,male,495,62,20,1,21,0.9524,True
+tt0181875,Almost Famous,Original Screenplay,DICK,male,626,113,12,4,16,0.75,True
+tt0181875,Almost Famous,Original Screenplay,DISC-JOCKEY,male,35,3,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,DOCTOR,male,91,7,2,0,2,1.0,False
+tt0181875,Almost Famous,Original Screenplay,ELAINE,female,1153,170,56,14,70,0.8,True
+tt0181875,Almost Famous,Original Screenplay,ESTRELLA,female,308,52,15,0,15,1.0,True
+tt0181875,Almost Famous,Original Screenplay,FACT CHECKER,female,116,17,5,2,7,0.7143,True
+tt0181875,Almost Famous,Original Screenplay,FAN,unknown,28,4,1,0,1,1.0,False
+tt0181875,Almost Famous,Original Screenplay,FELTON,male,98,20,5,0,5,1.0,True
+tt0181875,Almost Famous,Original Screenplay,JANN,male,83,14,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,JEFF,male,845,122,29,12,41,0.7073,True
+tt0181875,Almost Famous,Original Screenplay,KID ON PHONE,male,29,3,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,LARRY,male,37,9,3,1,4,0.75,False
+tt0181875,Almost Famous,Original Screenplay,LESLIE,female,52,12,1,1,2,0.5,False
+tt0181875,Almost Famous,Original Screenplay,LESTER BANGS,male,828,110,14,3,17,0.8235,True
+tt0181875,Almost Famous,Original Screenplay,MRS. DEEGAN,female,194,26,3,0,3,1.0,False
+tt0181875,Almost Famous,Original Screenplay,PENNY LANE,female,1590,266,74,28,102,0.7255,True
+tt0181875,Almost Famous,Original Screenplay,PILOT'S VOICE,male,34,4,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,POLEXIA,female,293,55,14,4,18,0.7778,True
+tt0181875,Almost Famous,Original Screenplay,PRINCIPAL,male,74,9,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,PROMOTER,male,59,7,3,0,3,1.0,False
+tt0181875,Almost Famous,Original Screenplay,QUINCE,male,106,25,1,0,1,1.0,False
+tt0181875,Almost Famous,Original Screenplay,RED DOG,male,54,9,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,REG,male,17,3,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,RIC,male,86,17,1,0,1,1.0,False
+tt0181875,Almost Famous,Original Screenplay,ROADIE # 2,unknown,17,3,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,RUSSELL,male,2551,431,99,41,140,0.7071,True
+tt0181875,Almost Famous,Original Screenplay,SAPPHIRE,female,343,57,8,3,11,0.7273,True
+tt0181875,Almost Famous,Original Screenplay,SCOTTY,male,76,15,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,STEWARDESS,female,19,1,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,TOBIN,male,41,8,0,0,0,,False
+tt0181875,Almost Famous,Original Screenplay,TONY,male,27,4,1,0,1,1.0,False
+tt0181875,Almost Famous,Original Screenplay,WILLIAM,male,2397,527,167,24,191,0.8743,True
+tt0280707,Gosford Park,Original Screenplay,ANTHONY,male,243,15,12,2,14,0.8571,True
+tt0280707,Gosford Park,Original Screenplay,ARTHUR,male,20,3,1,0,1,1.0,False
+tt0280707,Gosford Park,Original Screenplay,BARNES,male,273,34,10,2,12,0.8333,True
+tt0280707,Gosford Park,Original Screenplay,BERTHA,female,341,39,6,1,7,0.8571,True
+tt0280707,Gosford Park,Original Screenplay,CONSTANCE,female,1404,135,60,15,75,0.8,True
+tt0280707,Gosford Park,Original Screenplay,CROSBIE,male,24,3,0,0,0,,False
+tt0280707,Gosford Park,Original Screenplay,DEXTER,male,192,18,3,0,3,1.0,False
+tt0280707,Gosford Park,Original Screenplay,DOROTHY,female,222,24,13,4,17,0.7647,True
+tt0280707,Gosford Park,Original Screenplay,ELLEN,female,52,5,0,0,0,,False
+tt0280707,Gosford Park,Original Screenplay,ELSIE,female,1532,156,70,13,83,0.8434,True
+tt0280707,Gosford Park,Original Screenplay,FREDDIE,male,192,24,7,1,8,0.875,True
+tt0280707,Gosford Park,Original Screenplay,GEORGE,male,450,39,21,3,24,0.875,True
+tt0280707,Gosford Park,Original Screenplay,HENRY,male,588,65,42,3,45,0.9333,True
+tt0280707,Gosford Park,Original Screenplay,ISOBEL,female,399,35,25,2,27,0.9259,True
+tt0280707,Gosford Park,Original Screenplay,IVOR,male,557,56,21,7,28,0.75,True
+tt0280707,Gosford Park,Original Screenplay,JANET,female,29,3,0,1,1,0.0,False
+tt0280707,Gosford Park,Original Screenplay,JENNINGS,male,1051,86,33,11,44,0.75,True
+tt0280707,Gosford Park,Original Screenplay,JEREMY,male,207,13,3,0,3,1.0,False
+tt0280707,Gosford Park,Original Screenplay,LAVINIA,female,258,24,10,1,11,0.9091,True
+tt0280707,Gosford Park,Original Screenplay,LEWIS,male,160,16,8,1,9,0.8889,True
+tt0280707,Gosford Park,Original Screenplay,LOUISA,female,333,31,18,5,23,0.7826,True
+tt0280707,Gosford Park,Original Screenplay,MABEL,female,133,12,7,0,7,1.0,True
+tt0280707,Gosford Park,Original Screenplay,MARY,female,458,45,13,3,16,0.8125,True
+tt0280707,Gosford Park,Original Screenplay,MERRIMAN,male,37,5,1,0,1,1.0,False
+tt0280707,Gosford Park,Original Screenplay,MRS CROFT,female,516,48,24,3,27,0.8889,True
+tt0280707,Gosford Park,Original Screenplay,MRS WILSON,female,1204,103,46,2,48,0.9583,True
+tt0280707,Gosford Park,Original Screenplay,PROBERT,male,331,27,24,2,26,0.9231,True
+tt0280707,Gosford Park,Original Screenplay,RAYMOND,male,139,8,5,1,6,0.8333,True
+tt0280707,Gosford Park,Original Screenplay,RENEE,female,168,19,3,2,5,0.6,True
+tt0280707,Gosford Park,Original Screenplay,ROBERT,male,872,93,49,12,61,0.8033,True
+tt0280707,Gosford Park,Original Screenplay,RUPERT,male,163,16,6,2,8,0.75,True
+tt0280707,Gosford Park,Original Screenplay,SARAH,female,149,13,5,1,6,0.8333,True
+tt0280707,Gosford Park,Original Screenplay,STRUTT,male,127,17,2,0,2,1.0,False
+tt0280707,Gosford Park,Original Screenplay,SYLVIA,female,1501,138,65,13,78,0.8333,True
+tt0280707,Gosford Park,Original Screenplay,THOMPSON,male,428,41,23,2,25,0.92,True
+tt0280707,Gosford Park,Original Screenplay,WEISSMAN,male,825,83,43,6,49,0.8776,True
+tt0280707,Gosford Park,Original Screenplay,WILLIAM,male,461,49,31,2,33,0.9394,True
+tt0280707,Gosford Park,Original Screenplay,YOUNG WOMAN,female,16,2,4,0,4,1.0,False
+tt0335266,Lost in Translation,Original Screenplay,BOB,male,1023,195,67,9,76,0.8816,True
+tt0335266,Lost in Translation,Original Screenplay,CHARLOTTE,female,1129,195,73,7,80,0.9125,True
+tt0335266,Lost in Translation,Original Screenplay,DR. KENEGARD,male,105,6,0,0,0,,False
+tt0335266,Lost in Translation,Original Screenplay,ELAINE,female,100,4,1,0,1,1.0,False
+tt0335266,Lost in Translation,Original Screenplay,JOHN,male,290,51,16,0,16,1.0,True
+tt0335266,Lost in Translation,Original Screenplay,KELLY,female,315,30,7,1,8,0.875,True
+tt0335266,Lost in Translation,Original Screenplay,LAUREN,female,46,6,0,1,1,0.0,False
+tt0335266,Lost in Translation,Original Screenplay,LYDIA,female,197,40,11,0,11,1.0,True
+tt0335266,Lost in Translation,Original Screenplay,MAN'S VOICE,male,28,2,2,0,2,1.0,False
+tt0335266,Lost in Translation,Original Screenplay,MOTHER,female,140,5,5,3,8,0.625,True
+tt0335266,Lost in Translation,Original Screenplay,NEW SINGER,male,21,2,1,0,1,1.0,False
+tt0335266,Lost in Translation,Original Screenplay,PRESS AGENT,male,26,2,0,0,0,,False
+tt0335266,Lost in Translation,Original Screenplay,RECEPTION,female,33,11,2,1,3,0.6667,False
+tt0335266,Lost in Translation,Original Screenplay,SINGER,female,60,1,1,0,1,1.0,False
+tt0335266,Lost in Translation,Original Screenplay,TRANSLATOR,male,38,6,0,0,0,,False
+tt0335266,Lost in Translation,Original Screenplay,WOMAN,female,40,18,1,2,3,0.3333,False
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,CARRIE,female,102,21,2,2,4,0.5,False
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,CLEMENTINE,female,4614,852,323,67,390,0.8282,True
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,FATHER,male,50,8,0,1,1,0.0,False
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,FRANK,male,66,14,1,0,1,1.0,False
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,HOLLIS,male,26,7,0,0,0,,False
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,JOEL,male,3834,756,360,35,395,0.9114,True
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,MAN,male,36,7,1,0,1,1.0,False
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,MARY,female,1148,219,80,9,89,0.8989,True
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,MIERZWIAK,male,874,160,34,3,37,0.9189,True
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,MOTHER,female,27,7,2,0,2,1.0,False
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,NAOMI,female,219,48,11,5,16,0.6875,True
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,PATRICK,male,602,116,53,6,59,0.8983,True
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,ROB,male,47,8,3,0,3,1.0,False
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,STAN,male,572,133,39,1,40,0.975,True
+tt0338013,Eternal Sunshine of the Spotless Mind,Original Screenplay,VOICE-OVER,male,256,38,23,4,27,0.8519,True
+tt0375679,Crash,Original Screenplay,ALLAN,male,48,10,2,1,3,0.6667,False
+tt0375679,Crash,Original Screenplay,ANTHONY,male,893,111,3,5,8,0.375,True
+tt0375679,Crash,Original Screenplay,BRUCE,male,25,5,1,0,1,1.0,False
+tt0375679,Crash,Original Screenplay,CAMERON,male,420,87,15,4,19,0.7895,True
+tt0375679,Crash,Original Screenplay,CHOI,male,58,16,2,3,5,0.4,True
+tt0375679,Crash,Original Screenplay,CHRISTINE,female,472,78,18,17,35,0.5143,True
+tt0375679,Crash,Original Screenplay,DANIEL,male,549,87,22,9,31,0.7097,True
+tt0375679,Crash,Original Screenplay,DETECTIVE CARR,male,35,10,2,0,2,1.0,False
+tt0375679,Crash,Original Screenplay,DIRK,male,128,12,3,0,3,1.0,False
+tt0375679,Crash,Original Screenplay,DIXON,male,256,17,8,1,9,0.8889,True
+tt0375679,Crash,Original Screenplay,DORRI,female,141,27,6,0,6,1.0,True
+tt0375679,Crash,Original Screenplay,FARHAD,male,340,74,21,6,27,0.7778,True
+tt0375679,Crash,Original Screenplay,FIRST A.D.,female,48,10,0,0,0,,False
+tt0375679,Crash,Original Screenplay,FLANAGAN,male,644,61,8,3,11,0.7273,True
+tt0375679,Crash,Original Screenplay,FRED,male,120,15,4,2,6,0.6667,True
+tt0375679,Crash,Original Screenplay,GRAHAM,male,433,82,17,6,23,0.7391,True
+tt0375679,Crash,Original Screenplay,HANSEN,male,490,74,26,5,31,0.8387,True
+tt0375679,Crash,Original Screenplay,JEAN,male,490,55,31,4,35,0.8857,True
+tt0375679,Crash,Original Screenplay,KAREN,female,88,12,2,1,3,0.6667,False
+tt0375679,Crash,Original Screenplay,KEN HO,male,43,9,2,1,3,0.6667,False
+tt0375679,Crash,Original Screenplay,KIM LEE,female,120,29,8,0,8,1.0,True
+tt0375679,Crash,Original Screenplay,LARA,female,107,35,9,3,12,0.75,True
+tt0375679,Crash,Original Screenplay,LOUISE,female,102,21,8,0,8,1.0,True
+tt0375679,Crash,Original Screenplay,LUCIEN,male,218,19,10,0,10,1.0,True
+tt0375679,Crash,Original Screenplay,MARIA,female,64,15,3,0,3,1.0,False
+tt0375679,Crash,Original Screenplay,MOTORCYCLE COP,male,31,6,1,0,1,1.0,False
+tt0375679,Crash,Original Screenplay,OFFICE MANAGER,unknown,30,4,3,0,3,1.0,False
+tt0375679,Crash,Original Screenplay,OFFICER HILL,male,120,20,3,0,3,1.0,False
+tt0375679,Crash,Original Screenplay,OFFICER JOHNSON,male,102,13,0,0,0,,False
+tt0375679,Crash,Original Screenplay,PETER,male,620,97,18,1,19,0.9474,True
+tt0375679,Crash,Original Screenplay,POP RYAN,male,38,9,3,2,5,0.6,True
+tt0375679,Crash,Original Screenplay,RIA,female,319,41,17,3,20,0.85,True
+tt0375679,Crash,Original Screenplay,RICK,male,443,59,16,4,20,0.8,True
+tt0375679,Crash,Original Screenplay,RYAN,male,838,119,32,7,39,0.8205,True
+tt0375679,Crash,Original Screenplay,SHANIQUA,female,245,33,11,1,12,0.9167,True
+tt0375679,Crash,Original Screenplay,SHEREEN,female,40,9,1,0,1,1.0,False
+tt0449059,Little Miss Sunshine,Original Screenplay,ASSISTANT,female,20,9,0,0,0,,False
+tt0449059,Little Miss Sunshine,Original Screenplay,COP,male,26,4,0,0,0,,False
+tt0449059,Little Miss Sunshine,Original Screenplay,DOCTOR,male,71,15,3,0,3,1.0,False
+tt0449059,Little Miss Sunshine,Original Screenplay,DWAYNE,male,295,70,19,4,23,0.8261,True
+tt0449059,Little Miss Sunshine,Original Screenplay,FRANK,male,1414,322,57,7,64,0.8906,True
+tt0449059,Little Miss Sunshine,Original Screenplay,GRANDPA,male,781,151,36,7,43,0.8372,True
+tt0449059,Little Miss Sunshine,Original Screenplay,JEFF,male,131,9,2,1,3,0.6667,False
+tt0449059,Little Miss Sunshine,Original Screenplay,KIRBY,male,70,22,3,0,3,1.0,False
+tt0449059,Little Miss Sunshine,Original Screenplay,LINDA,female,239,30,5,0,5,1.0,True
+tt0449059,Little Miss Sunshine,Original Screenplay,MC,male,129,22,0,0,0,,False
+tt0449059,Little Miss Sunshine,Original Screenplay,MECHANIC,male,189,20,4,0,4,1.0,False
+tt0449059,Little Miss Sunshine,Original Screenplay,MISS FLORIDA,female,68,18,4,2,6,0.6667,True
+tt0449059,Little Miss Sunshine,Original Screenplay,OFFICIAL,female,114,18,6,2,8,0.75,True
+tt0449059,Little Miss Sunshine,Original Screenplay,OLIVE,female,520,160,27,0,27,1.0,True
+tt0449059,Little Miss Sunshine,Original Screenplay,RICHARD,male,2621,518,83,16,99,0.8384,True
+tt0449059,Little Miss Sunshine,Original Screenplay,SHERYL,female,1655,378,52,8,60,0.8667,True
+tt0449059,Little Miss Sunshine,Original Screenplay,STAN GROSSMAN,male,79,18,4,0,4,1.0,False
+tt0449059,Little Miss Sunshine,Original Screenplay,TROOPER,male,76,13,2,0,2,1.0,False
+tt0449059,Little Miss Sunshine,Original Screenplay,WAITRESS,female,41,12,1,0,1,1.0,False
+tt0449059,Little Miss Sunshine,Original Screenplay,YOUNG MAN,male,111,25,3,1,4,0.75,False
+tt0467406,Juno,Original Screenplay,BLEEKER,male,678,111,38,6,44,0.8636,True
+tt0467406,Juno,Original Screenplay,BLEEKER’S MOM,female,87,16,4,0,4,1.0,False
+tt0467406,Juno,Original Screenplay,BREN,female,540,72,17,1,18,0.9444,True
+tt0467406,Juno,Original Screenplay,GERTA,female,92,10,1,0,1,1.0,False
+tt0467406,Juno,Original Screenplay,GIRL LAB PARTNER,female,94,13,4,1,5,0.8,True
+tt0467406,Juno,Original Screenplay,GUY LAB PARTNER,male,66,10,5,1,6,0.8333,True
+tt0467406,Juno,Original Screenplay,JUNO,female,4467,658,258,32,290,0.8897,True
+tt0467406,Juno,Original Screenplay,LEAH,female,587,91,14,3,17,0.8235,True
+tt0467406,Juno,Original Screenplay,MAC,male,574,81,19,7,26,0.7308,True
+tt0467406,Juno,Original Screenplay,MARK,male,1223,206,64,13,77,0.8312,True
+tt0467406,Juno,Original Screenplay,MR. TINKER,male,16,2,0,0,0,,False
+tt0467406,Juno,Original Screenplay,NERD,male,25,3,0,0,0,,False
+tt0467406,Juno,Original Screenplay,NURSE,female,21,4,0,0,0,,False
+tt0467406,Juno,Original Screenplay,PUNK RECEPTIONIST,female,78,11,2,1,3,0.6667,False
+tt0467406,Juno,Original Screenplay,ROLLO,male,120,17,0,0,0,,False
+tt0467406,Juno,Original Screenplay,SU-CHIN,female,52,11,4,0,4,1.0,False
+tt0467406,Juno,Original Screenplay,TOUGH GIRL,female,18,5,0,0,0,,False
+tt0467406,Juno,Original Screenplay,ULTRASOUND TECH,female,78,14,3,1,4,0.75,False
+tt0467406,Juno,Original Screenplay,VANESSA,female,772,142,34,11,45,0.7556,True
+tt0467406,Juno,Original Screenplay,VIJAY,male,60,11,1,0,1,1.0,False
+tt0887912,The Hurt Locker,Original Screenplay,BECKHAM,male,153,40,0,1,1,0.0,False
+tt0887912,The Hurt Locker,Original Screenplay,CAMBRIDGE,male,197,39,8,1,9,0.8889,True
+tt0887912,The Hurt Locker,Original Screenplay,COLONEL REED,male,99,17,1,1,2,0.5,False
+tt0887912,The Hurt Locker,Original Screenplay,DISPATCH,unknown,47,12,0,0,0,,False
+tt0887912,The Hurt Locker,Original Screenplay,ELDRIDGE,male,865,161,39,2,41,0.9512,True
+tt0887912,The Hurt Locker,Original Screenplay,GUARD,male,58,12,3,1,4,0.75,False
+tt0887912,The Hurt Locker,Original Screenplay,GUARDS,male,18,5,0,0,0,,False
+tt0887912,The Hurt Locker,Original Screenplay,IRAQI SERGEANT,male,43,6,1,0,1,1.0,False
+tt0887912,The Hurt Locker,Original Screenplay,JAMES,male,1978,400,94,17,111,0.8468,True
+tt0887912,The Hurt Locker,Original Screenplay,JIMMY,male,56,12,1,1,2,0.5,False
+tt0887912,The Hurt Locker,Original Screenplay,KALIM,male,51,13,3,0,3,1.0,False
+tt0887912,The Hurt Locker,Original Screenplay,KEFFIYEH MAN,male,24,3,1,0,1,1.0,False
+tt0887912,The Hurt Locker,Original Screenplay,MEDIC,male,23,2,1,0,1,1.0,False
+tt0887912,The Hurt Locker,Original Screenplay,MERCENARY TEAM LEADER,male,124,25,4,1,5,0.8,True
+tt0887912,The Hurt Locker,Original Screenplay,OLDER CONTRACTOR,male,16,4,0,0,0,,False
+tt0887912,The Hurt Locker,Original Screenplay,SANBORN,male,1469,285,55,9,64,0.8594,True
+tt0887912,The Hurt Locker,Original Screenplay,SERGEANT,male,62,11,0,1,1,0.0,False
+tt0887912,The Hurt Locker,Original Screenplay,SERGEANT CARTER,male,51,4,3,0,3,1.0,False
+tt0887912,The Hurt Locker,Original Screenplay,SOLDIER,male,46,9,1,0,1,1.0,False
+tt0887912,The Hurt Locker,Original Screenplay,THOMPSON,male,229,36,7,2,9,0.7778,True
+tt0887912,The Hurt Locker,Original Screenplay,TRANSLATOR,male,84,16,2,1,3,0.6667,False
+tt1013753,Milk,Original Screenplay,ALLAN BAIRD,male,78,11,1,2,3,0.3333,False
+tt1013753,Milk,Original Screenplay,ANITA BRYANT,female,36,5,1,0,1,1.0,False
+tt1013753,Milk,Original Screenplay,ANNE KRONENBERG,female,208,32,4,2,6,0.6667,True
+tt1013753,Milk,Original Screenplay,ART AGNOS,male,75,10,4,0,4,1.0,False
+tt1013753,Milk,Original Screenplay,BOY'S VOICE,male,53,15,8,2,10,0.8,True
+tt1013753,Milk,Original Screenplay,CHANNEL 5 REPORTER,female,27,2,0,0,0,,False
+tt1013753,Milk,Original Screenplay,CLERK,male,21,7,1,0,1,1.0,False
+tt1013753,Milk,Original Screenplay,CLEVE JONES,male,618,116,21,6,27,0.7778,True
+tt1013753,Milk,Original Screenplay,COP,male,68,10,0,0,0,,False
+tt1013753,Milk,Original Screenplay,DAN WHITE,male,911,129,44,17,61,0.7213,True
+tt1013753,Milk,Original Screenplay,DAVID GOODSTEIN,male,222,29,7,3,10,0.7,True
+tt1013753,Milk,Original Screenplay,DIANNE FEINSTEIN,female,93,12,1,0,1,1.0,False
+tt1013753,Milk,Original Screenplay,DICK PABICH,male,214,30,1,1,2,0.5,False
+tt1013753,Milk,Original Screenplay,HARVEY JONES,male,19,3,0,1,1,0.0,False
+tt1013753,Milk,Original Screenplay,HARVEY MILK,male,6638,886,218,67,285,0.7649,True
+tt1013753,Milk,Original Screenplay,HOST,male,30,2,0,0,0,,False
+tt1013753,Milk,Original Screenplay,JACK LIRA,male,342,69,26,6,32,0.8125,True
+tt1013753,Milk,Original Screenplay,JIM RIVALDO,male,268,33,3,0,3,1.0,False
+tt1013753,Milk,Original Screenplay,JOHN BRIGGS,male,298,26,4,2,6,0.6667,True
+tt1013753,Milk,Original Screenplay,KCBS REPORTER,female,25,3,3,0,3,1.0,False
+tt1013753,Milk,Original Screenplay,MAYOR MOSCONE,male,125,15,5,1,6,0.8333,True
+tt1013753,Milk,Original Screenplay,MCCONNELLY,male,68,9,1,0,1,1.0,False
+tt1013753,Milk,Original Screenplay,MICHAEL WONG,male,59,14,1,0,1,1.0,False
+tt1013753,Milk,Original Screenplay,NEWS ANCHOR,unknown,25,3,0,0,0,,False
+tt1013753,Milk,Original Screenplay,OFFICER,male,18,5,0,0,0,,False
+tt1013753,Milk,Original Screenplay,PASSERBY,male,20,2,0,0,0,,False
+tt1013753,Milk,Original Screenplay,PHIL BURTON,male,51,5,0,0,0,,False
+tt1013753,Milk,Original Screenplay,RICK STOKES,male,145,20,0,0,0,,False
+tt1013753,Milk,Original Screenplay,SCOTT SMITH,male,724,146,28,11,39,0.7179,True
+tt1013753,Milk,Original Screenplay,TV REPORTER,male,37,2,0,0,0,,False
+tt1013753,Milk,Original Screenplay,YOUNG TEEN,female,138,25,13,4,17,0.7647,True
+tt1504320,The King's Speech,Original Screenplay,ANTONY,male,30,10,0,1,1,0.0,False
+tt1504320,The King's Speech,Original Screenplay,BALDWIN,male,239,21,6,0,6,1.0,True
+tt1504320,The King's Speech,Original Screenplay,BBC NEWS READER,male,189,10,0,1,1,0.0,False
+tt1504320,The King's Speech,Original Screenplay,BERTIE,female,2808,388,139,25,164,0.8476,True
+tt1504320,The King's Speech,Original Screenplay,CHAMBERLAIN,male,94,5,2,1,3,0.6667,False
+tt1504320,The King's Speech,Original Screenplay,COSMO LANG,male,293,29,16,1,17,0.9412,True
+tt1504320,The King's Speech,Original Screenplay,DAVID,male,477,62,28,5,33,0.8485,True
+tt1504320,The King's Speech,Original Screenplay,DIRECTOR,male,57,9,3,0,3,1.0,False
+tt1504320,The King's Speech,Original Screenplay,ELIZABETH,female,702,117,26,7,33,0.7879,True
+tt1504320,The King's Speech,Original Screenplay,EQUERRY,male,17,2,2,0,2,1.0,False
+tt1504320,The King's Speech,Original Screenplay,HARDINGE,male,59,8,1,0,1,1.0,False
+tt1504320,The King's Speech,Original Screenplay,KING GEORGE V,male,403,45,10,4,14,0.7143,True
+tt1504320,The King's Speech,Original Screenplay,LAURIE,female,28,5,1,0,1,1.0,False
+tt1504320,The King's Speech,Original Screenplay,LILIBET,female,45,8,0,0,0,,False
+tt1504320,The King's Speech,Original Screenplay,LIONEL,male,2493,390,87,22,109,0.7982,True
+tt1504320,The King's Speech,Original Screenplay,LORD WIGRAM,male,60,5,0,0,0,,False
+tt1504320,The King's Speech,Original Screenplay,MARGARET ROSE,female,28,6,0,0,0,,False
+tt1504320,The King's Speech,Original Screenplay,MYRTLE,female,121,28,2,1,3,0.6667,False
+tt1504320,The King's Speech,Original Screenplay,PATHE NEWSREEL ANNOUNCER,male,29,3,0,0,0,,False
+tt1504320,The King's Speech,Original Screenplay,QUEEN MARY,female,39,5,0,0,0,,False
+tt1504320,The King's Speech,Original Screenplay,SIR BLANDINE-BENTHAM,male,109,17,1,0,1,1.0,False
+tt1504320,The King's Speech,Original Screenplay,VALENTINE,female,37,8,2,1,3,0.6667,False
+tt1504320,The King's Speech,Original Screenplay,WILLY,male,32,6,0,0,0,,False
+tt1504320,The King's Speech,Original Screenplay,WINSTON CHURCHILL,male,217,32,5,0,5,1.0,True
+tt1504320,The King's Speech,Original Screenplay,WOOD,male,28,9,0,0,0,,False
+tt1605783,Midnight in Paris,Original Screenplay,ADRIANA,female,1051,133,42,11,53,0.7925,True
+tt1605783,Midnight in Paris,Original Screenplay,BUÑUEL,male,51,7,3,0,3,1.0,False
+tt1605783,Midnight in Paris,Original Screenplay,CAROL,female,121,19,3,0,3,1.0,False
+tt1605783,Midnight in Paris,Original Screenplay,DALI,male,189,19,6,0,6,1.0,True
+tt1605783,Midnight in Paris,Original Screenplay,DEGAS,male,28,3,0,0,0,,False
+tt1605783,Midnight in Paris,Original Screenplay,DENISE,female,48,5,0,0,0,,False
+tt1605783,Midnight in Paris,Original Screenplay,DOCTOR,male,23,3,3,0,3,1.0,False
+tt1605783,Midnight in Paris,Original Screenplay,DOUG,male,22,3,0,0,0,,False
+tt1605783,Midnight in Paris,Original Screenplay,DUBOIS,male,29,3,0,0,0,,False
+tt1605783,Midnight in Paris,Original Screenplay,GABRIELLE,female,116,22,7,0,7,1.0,True
+tt1605783,Midnight in Paris,Original Screenplay,GAUGUIN,male,96,8,3,0,3,1.0,False
+tt1605783,Midnight in Paris,Original Screenplay,GIL,male,4160,398,248,30,278,0.8921,True
+tt1605783,Midnight in Paris,Original Screenplay,GUIDE,female,393,41,10,5,15,0.6667,True
+tt1605783,Midnight in Paris,Original Screenplay,HELEN,female,395,52,14,1,15,0.9333,True
+tt1605783,Midnight in Paris,Original Screenplay,HEMINGWAY,male,819,73,19,4,23,0.8261,True
+tt1605783,Midnight in Paris,Original Screenplay,INEZ,female,1576,202,58,13,71,0.8169,True
+tt1605783,Midnight in Paris,Original Screenplay,JOHN,male,276,38,21,3,24,0.875,True
+tt1605783,Midnight in Paris,Original Screenplay,JUAN BELMONTE,male,22,4,0,0,0,,False
+tt1605783,Midnight in Paris,Original Screenplay,LAUTREC,male,45,9,0,0,0,,False
+tt1605783,Midnight in Paris,Original Screenplay,MAN RAY,male,43,5,2,0,2,1.0,False
+tt1605783,Midnight in Paris,Original Screenplay,PABLO,male,43,6,0,0,0,,False
+tt1605783,Midnight in Paris,Original Screenplay,PAUL,male,503,50,18,1,19,0.9474,True
+tt1605783,Midnight in Paris,Original Screenplay,SCOTT,male,182,27,4,1,5,0.8,True
+tt1605783,Midnight in Paris,Original Screenplay,STEIN,male,662,65,13,4,17,0.7647,True
+tt1605783,Midnight in Paris,Original Screenplay,ZELDA,female,317,41,28,6,34,0.8235,True
+tt1798709,Her,Original Screenplay,ALAN WATTS,male,61,8,2,0,2,1.0,False
+tt1798709,Her,Original Screenplay,ALIEN CHILD,female,102,19,3,2,5,0.6,True
+tt1798709,Her,Original Screenplay,AMY,female,929,115,60,6,66,0.9091,True
+tt1798709,Her,Original Screenplay,BLIND DATE,female,210,36,14,2,16,0.875,True
+tt1798709,Her,Original Screenplay,CATHERINE,female,217,40,17,3,20,0.85,True
+tt1798709,Her,Original Screenplay,CHARLES,male,130,17,2,0,2,1.0,False
+tt1798709,Her,Original Screenplay,FEMALE VOICE 1,female,20,2,2,0,2,1.0,False
+tt1798709,Her,Original Screenplay,ISABELLA,female,89,12,12,1,13,0.9231,True
+tt1798709,Her,Original Screenplay,JOCELYN,female,39,15,2,0,2,1.0,False
+tt1798709,Her,Original Screenplay,LETTER WRITER 2,male,45,5,1,1,2,0.5,False
+tt1798709,Her,Original Screenplay,LETTER WRITER 3,female,25,3,2,0,2,1.0,False
+tt1798709,Her,Original Screenplay,MIDDLE-AGED WOMAN LETTER WRITER,female,29,4,3,0,3,1.0,False
+tt1798709,Her,Original Screenplay,PAUL,male,245,52,9,6,15,0.6,True
+tt1798709,Her,Original Screenplay,SAMANTHA,female,3866,557,286,54,340,0.8412,True
+tt1798709,Her,Original Screenplay,SEXYKITTEN,female,111,29,6,9,15,0.4,True
+tt1798709,Her,Original Screenplay,SOULFUL OLDER MALE VOICE,male,68,10,0,0,0,,False
+tt1798709,Her,Original Screenplay,TATIANA,female,38,11,0,0,0,,False
+tt1798709,Her,Original Screenplay,TEXT VOICE,male,208,25,3,0,3,1.0,False
+tt1798709,Her,Original Screenplay,THEODORE,male,4019,678,279,50,329,0.848,True
+tt1853728,Django Unchained,Original Screenplay,ACE SPECK,male,36,10,1,0,1,1.0,False
+tt1853728,Django Unchained,Original Screenplay,ACE WOODY,male,803,107,30,3,33,0.9091,True
+tt1853728,Django Unchained,Original Screenplay,BENNETT,male,71,4,0,0,0,,False
+tt1853728,Django Unchained,Original Screenplay,BETINA,female,87,18,3,0,3,1.0,False
+tt1853728,Django Unchained,Original Screenplay,BIG JOHN BRITTLE,male,43,6,1,0,1,1.0,False
+tt1853728,Django Unchained,Original Screenplay,BILLY CRASH,male,88,16,5,2,7,0.7143,True
+tt1853728,Django Unchained,Original Screenplay,BROOMHILDA,female,183,47,19,3,22,0.8636,True
+tt1853728,Django Unchained,Original Screenplay,BROWN,male,28,3,1,0,1,1.0,False
+tt1853728,Django Unchained,Original Screenplay,CALVIN CANDIE,male,3209,358,80,16,96,0.8333,True
+tt1853728,Django Unchained,Original Screenplay,CANDIE,male,76,10,3,2,5,0.6,True
+tt1853728,Django Unchained,Original Screenplay,CHESTER,male,22,4,0,1,1,0.0,False
+tt1853728,Django Unchained,Original Screenplay,CHICKEN CHARLY,male,25,4,0,0,0,,False
+tt1853728,Django Unchained,Original Screenplay,CLEO,female,36,5,2,0,2,1.0,False
+tt1853728,Django Unchained,Original Screenplay,DICKY SPECK,female,45,9,1,0,1,1.0,False
+tt1853728,Django Unchained,Original Screenplay,DJANGO,male,2650,368,101,38,139,0.7266,True
+tt1853728,Django Unchained,Original Screenplay,DR. SCHULTZ,male,5332,554,186,23,209,0.89,True
+tt1853728,Django Unchained,Original Screenplay,FLOYD,male,97,18,3,0,3,1.0,False
+tt1853728,Django Unchained,Original Screenplay,JANO,male,169,28,10,3,13,0.7692,True
+tt1853728,Django Unchained,Original Screenplay,LARA LEE,female,110,13,4,0,4,1.0,False
+tt1853728,Django Unchained,Original Screenplay,MARSHALL TATUM,male,154,16,3,0,3,1.0,False
+tt1853728,Django Unchained,Original Screenplay,MR. MOGUY,male,160,23,5,3,8,0.625,True
+tt1853728,Django Unchained,Original Screenplay,MR. STONESIPHER,male,52,15,0,0,0,,False
+tt1853728,Django Unchained,Original Screenplay,MRS. HARMONY,female,102,15,1,1,2,0.5,False
+tt1853728,Django Unchained,Original Screenplay,NARRATOR,male,335,24,0,0,0,,False
+tt1853728,Django Unchained,Original Screenplay,RANDY,male,33,6,4,0,4,1.0,False
+tt1853728,Django Unchained,Original Screenplay,REDFISH,male,44,5,5,0,5,1.0,True
+tt1853728,Django Unchained,Original Screenplay,ROBERT,male,79,7,6,0,6,1.0,True
+tt1853728,Django Unchained,Original Screenplay,ROY,male,263,35,3,1,4,0.75,False
+tt1853728,Django Unchained,Original Screenplay,RUSS,male,109,10,1,0,1,1.0,False
+tt1853728,Django Unchained,Original Screenplay,SALOON KEEPER,male,35,3,0,0,0,,False
+tt1853728,Django Unchained,Original Screenplay,SCOTTY,male,215,45,20,1,21,0.9524,True
+tt1853728,Django Unchained,Original Screenplay,SHERIFF GUS,male,56,5,0,0,0,,False
+tt1853728,Django Unchained,Original Screenplay,SHERIFF SHARP,male,41,3,0,0,0,,False
+tt1853728,Django Unchained,Original Screenplay,SPENCER BENNETT,male,414,56,14,0,14,1.0,True
+tt1853728,Django Unchained,Original Screenplay,STEPHEN,male,1516,164,37,7,44,0.8409,True
+tt1853728,Django Unchained,Original Screenplay,TERRY,male,18,3,0,0,0,,False
+tt1853728,Django Unchained,Original Screenplay,TIMMY,male,63,16,6,0,6,1.0,True
+tt1853728,Django Unchained,Original Screenplay,WILLARD,male,45,6,3,1,4,0.75,False
+tt1895587,Spotlight,Original Screenplay,ALBANO,male,90,9,1,1,2,0.5,False
+tt1895587,Spotlight,Original Screenplay,BARBARA,female,24,6,0,0,0,,False
+tt1895587,Spotlight,Original Screenplay,BEN,male,856,160,15,4,19,0.7895,True
+tt1895587,Spotlight,Original Screenplay,BISHOP,male,50,4,3,0,3,1.0,False
+tt1895587,Spotlight,Original Screenplay,CANELLOS,male,63,9,2,0,2,1.0,False
+tt1895587,Spotlight,Original Screenplay,CARDINAL LAW,male,185,22,6,2,8,0.75,True
+tt1895587,Spotlight,Original Screenplay,CLERK O’BRIAN,male,37,10,1,0,1,1.0,False
+tt1895587,Spotlight,Original Screenplay,COP,male,19,3,1,0,1,1.0,False
+tt1895587,Spotlight,Original Screenplay,DUSSOURD,female,25,4,0,0,0,,False
+tt1895587,Spotlight,Original Screenplay,EILEEN,female,26,5,0,1,1,0.0,False
+tt1895587,Spotlight,Original Screenplay,ERIC MACLEISH,male,367,49,16,4,20,0.8,True
+tt1895587,Spotlight,Original Screenplay,FATHER PAQUIN,male,55,12,7,1,8,0.875,True
+tt1895587,Spotlight,Original Screenplay,GARABEDIAN,male,792,134,49,10,59,0.8305,True
+tt1895587,Spotlight,Original Screenplay,GILMAN,male,75,16,2,1,3,0.6667,False
+tt1895587,Spotlight,Original Screenplay,HANSI,male,20,5,0,0,0,,False
+tt1895587,Spotlight,Original Screenplay,HERALD REPORTER,male,25,4,0,0,0,,False
+tt1895587,Spotlight,Original Screenplay,JACK DUNN,male,92,10,4,0,4,1.0,False
+tt1895587,Spotlight,Original Screenplay,JANE PAQUIN,female,37,5,3,0,3,1.0,False
+tt1895587,Spotlight,Original Screenplay,JIM,male,308,50,14,2,16,0.875,True
+tt1895587,Spotlight,Original Screenplay,JOE CROWLEY,male,460,68,24,7,31,0.7742,True
+tt1895587,Spotlight,Original Screenplay,JUDGE SWEENEY,male,42,10,0,1,1,0.0,False
+tt1895587,Spotlight,Original Screenplay,JUDGE VOLTERRA,male,27,4,0,1,1,0.0,False
+tt1895587,Spotlight,Original Screenplay,KEVIN,male,67,9,6,0,6,1.0,True
+tt1895587,Spotlight,Original Screenplay,KURKJIAN,male,69,15,3,0,3,1.0,False
+tt1895587,Spotlight,Original Screenplay,LINDA,female,18,3,1,0,1,1.0,False
+tt1895587,Spotlight,Original Screenplay,LISA TUITE,female,35,6,0,0,0,,False
+tt1895587,Spotlight,Original Screenplay,MACLEISH,male,32,2,4,0,4,1.0,False
+tt1895587,Spotlight,Original Screenplay,MARTY,male,879,113,30,6,36,0.8333,True
+tt1895587,Spotlight,Original Screenplay,MATT,male,666,119,21,6,27,0.7778,True
+tt1895587,Spotlight,Original Screenplay,MIDDLE-AGED-MAN,male,29,4,0,1,1,0.0,False
+tt1895587,Spotlight,Original Screenplay,MIKE,male,2155,372,87,10,97,0.8969,True
+tt1895587,Spotlight,Original Screenplay,NANA,female,33,5,0,1,1,0.0,False
+tt1895587,Spotlight,Original Screenplay,OLDER COP,male,65,12,1,0,1,1.0,False
+tt1895587,Spotlight,Original Screenplay,PATRICK MCSORLEY,male,217,30,14,3,17,0.8235,True
+tt1895587,Spotlight,Original Screenplay,PETER CONLEY,male,275,36,11,2,13,0.8462,True
+tt1895587,Spotlight,Original Screenplay,PRESIDENT KAMEZA,male,30,4,2,0,2,1.0,False
+tt1895587,Spotlight,Original Screenplay,PRIEST,male,51,8,4,0,4,1.0,False
+tt1895587,Spotlight,Original Screenplay,ROBBY,male,2071,367,59,11,70,0.8429,True
+tt1895587,Spotlight,Original Screenplay,SACHA,female,1181,189,45,7,52,0.8654,True
+tt1895587,Spotlight,Original Screenplay,SACHA’S GRANDMOTHER,female,16,2,1,0,1,1.0,False
+tt1895587,Spotlight,Original Screenplay,SAVIANO,male,547,61,14,3,17,0.8235,True
+tt1895587,Spotlight,Original Screenplay,SIPE,male,337,41,10,1,11,0.9091,True
+tt1895587,Spotlight,Original Screenplay,WILSON D. ROGERS JR.,male,30,3,0,0,0,,False
+tt1895587,Spotlight,Original Screenplay,YOUNG COP,male,21,5,0,0,0,,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,ANNIE,female,86,20,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,BIRDMAN,male,587,121,4,9,13,0.3077,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,BLOND WOMAN,female,33,2,0,2,2,0.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,CLARA,female,45,12,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,GABRIEL,male,87,3,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,GOOD NEIGHBOR,female,26,6,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,GUY,male,18,4,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,HOST,male,34,2,0,0,0,,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,JAKE,male,1045,197,25,13,38,0.6579,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,LADY,female,77,16,1,0,1,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,LARRY,male,91,17,5,1,6,0.8333,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,LAURA,female,530,110,22,3,25,0.88,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,LESLEY,female,847,172,46,14,60,0.7667,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,MAN,male,52,12,0,0,0,,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,MIKE,male,1772,324,71,21,92,0.7717,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,RALPH,male,178,26,6,1,7,0.8571,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,RIGGAN,male,3303,647,198,42,240,0.825,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,SAM,male,943,188,25,8,33,0.7576,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,SYLVIA,female,510,84,23,5,28,0.8214,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,TABITHA,female,223,38,9,1,10,0.9,True
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,TOURIST,male,28,9,0,0,0,,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,USHER,male,18,3,3,0,3,1.0,False
+tt2562232,Birdman or (The Unexpected Virtue of Ignorance),Original Screenplay,WAITER,male,87,11,0,0,0,,False
+tt4034228,Manchester by the Sea,Original Screenplay,1ST BUSINESSMAN,male,21,5,1,0,1,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,1ST DETECTIVE,male,30,7,0,0,0,,False
+tt4034228,Manchester by the Sea,Original Screenplay,2ND BUSINESSMAN,male,37,10,1,1,2,0.5,False
+tt4034228,Manchester by the Sea,Original Screenplay,ASSISTANT,female,19,4,0,0,0,,False
+tt4034228,Manchester by the Sea,Original Screenplay,CAR DAD,male,52,15,1,1,2,0.5,False
+tt4034228,Manchester by the Sea,Original Screenplay,CAR MOM,female,27,9,1,0,1,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,CJ,male,183,28,4,1,5,0.8,True
+tt4034228,Manchester by the Sea,Original Screenplay,DR BETHENY,male,212,19,2,0,2,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,DR MULLER,male,174,27,5,1,6,0.8333,True
+tt4034228,Manchester by the Sea,Original Screenplay,ELISE,female,256,54,15,0,15,1.0,True
+tt4034228,Manchester by the Sea,Original Screenplay,EMERY,male,66,11,3,0,3,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,FIRE MARSHALL,male,55,6,1,0,1,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,GEORGE,male,442,92,20,2,22,0.9091,True
+tt4034228,Manchester by the Sea,Original Screenplay,GIRL,female,39,8,4,0,4,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,HOCKEY COACH,male,174,33,4,1,5,0.8,True
+tt4034228,Manchester by the Sea,Original Screenplay,HOMEOWNER,male,91,15,2,0,2,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,JANINE,female,43,10,1,0,1,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,JEFFREY,male,160,22,8,1,9,0.8889,True
+tt4034228,Manchester by the Sea,Original Screenplay,JERRY,male,82,15,2,0,2,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,JILL,female,259,44,18,2,20,0.9,True
+tt4034228,Manchester by the Sea,Original Screenplay,JOE,male,365,75,7,2,9,0.7778,True
+tt4034228,Manchester by the Sea,Original Screenplay,JOEL,male,85,18,2,2,4,0.5,False
+tt4034228,Manchester by the Sea,Original Screenplay,KAREN,female,16,5,2,1,3,0.6667,False
+tt4034228,Manchester by the Sea,Original Screenplay,LEE,male,4195,782,244,23,267,0.9139,True
+tt4034228,Manchester by the Sea,Original Screenplay,MANCHESTER BUSINESSMAN,male,20,5,0,0,0,,False
+tt4034228,Manchester by the Sea,Original Screenplay,MARIANNE,female,150,28,10,0,10,1.0,True
+tt4034228,Manchester by the Sea,Original Screenplay,MR MARTINEZ,male,56,7,4,0,4,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,MRS GROOM,female,48,4,3,0,3,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,MRS OLSEN,female,119,15,2,3,5,0.4,True
+tt4034228,Manchester by the Sea,Original Screenplay,NURSE IRENE,female,44,10,3,0,3,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,OTTO,male,23,8,5,0,5,1.0,True
+tt4034228,Manchester by the Sea,Original Screenplay,PATRICK,male,2397,474,121,38,159,0.761,True
+tt4034228,Manchester by the Sea,Original Screenplay,PAUL,male,84,16,3,1,4,0.75,False
+tt4034228,Manchester by the Sea,Original Screenplay,RACHEL,female,30,5,1,0,1,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,RANDI,female,656,121,51,9,60,0.85,True
+tt4034228,Manchester by the Sea,Original Screenplay,SANDY,female,277,65,8,6,14,0.5714,True
+tt4034228,Manchester by the Sea,Original Screenplay,SILVIE,female,69,13,2,1,3,0.6667,False
+tt4034228,Manchester by the Sea,Original Screenplay,STAN,male,87,16,0,1,1,0.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,THE GUYS,male,24,5,1,0,1,1.0,False
+tt4034228,Manchester by the Sea,Original Screenplay,TOM,male,19,6,0,0,0,,False
+tt4034228,Manchester by the Sea,Original Screenplay,WES,male,298,30,12,1,13,0.9231,True
+tt5052448,Get Out,Original Screenplay,ANDRE,male,279,43,17,2,19,0.8947,True
+tt5052448,Get Out,Original Screenplay,CHRIS,male,1935,476,130,35,165,0.7879,True
+tt5052448,Get Out,Original Screenplay,COPS,male,21,6,0,1,1,0.0,False
+tt5052448,Get Out,Original Screenplay,DEAN,male,940,154,13,6,19,0.6842,True
+tt5052448,Get Out,Original Screenplay,DETECTIVE LATOYA,female,149,20,3,4,7,0.4286,True
+tt5052448,Get Out,Original Screenplay,GEORGINA,female,74,10,4,3,7,0.5714,True
+tt5052448,Get Out,Original Screenplay,GORDON,male,58,11,6,1,7,0.8571,True
+tt5052448,Get Out,Original Screenplay,HIROKI,male,21,2,0,0,0,,False
+tt5052448,Get Out,Original Screenplay,JEREMY,male,310,53,14,0,14,1.0,True
+tt5052448,Get Out,Original Screenplay,JIM,male,790,105,23,3,26,0.8846,True
+tt5052448,Get Out,Original Screenplay,JOSHUA,male,38,5,0,0,0,,False
+tt5052448,Get Out,Original Screenplay,LATOYA,female,20,2,2,0,2,1.0,False
+tt5052448,Get Out,Original Screenplay,LISA,female,33,9,2,0,2,1.0,False
+tt5052448,Get Out,Original Screenplay,MISSY,female,589,125,9,10,19,0.4737,True
+tt5052448,Get Out,Original Screenplay,OFFICER CROWE,male,56,7,3,0,3,1.0,False
+tt5052448,Get Out,Original Screenplay,PARKER,male,51,4,1,0,1,1.0,False
+tt5052448,Get Out,Original Screenplay,PHIL,male,49,12,3,0,3,1.0,False
+tt5052448,Get Out,Original Screenplay,RICHARD,male,18,5,0,0,0,,False
+tt5052448,Get Out,Original Screenplay,ROD,male,828,144,29,7,36,0.8056,True
+tt5052448,Get Out,Original Screenplay,ROSE,female,940,216,57,11,68,0.8382,True
+tt5052448,Get Out,Original Screenplay,TUTORIAL,unknown,113,18,1,2,3,0.3333,False
+tt5052448,Get Out,Original Screenplay,WALTER,male,49,10,4,0,4,1.0,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,ALPHA JUMPER,female,59,6,0,1,1,0.0,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,BECKY,female,87,18,4,0,4,1.0,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,CHAD,male,33,8,3,1,4,0.75,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,DEBBIE THE DOG MOM,female,28,4,2,0,2,1.0,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,DEIRDRE,female,742,108,29,6,35,0.8286,True
+tt6710474,Everything Everywhere All at Once,Original Screenplay,EVELYN,female,2761,514,136,29,165,0.8242,True
+tt6710474,Everything Everywhere All at Once,Original Screenplay,GONG GONG,male,386,75,10,3,13,0.7692,True
+tt6710474,Everything Everywhere All at Once,Original Screenplay,GUARD,male,35,6,1,0,1,1.0,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,HUMAN BABY PERSON BOY,male,17,3,1,0,1,1.0,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,JOBU,female,1180,186,33,14,47,0.7021,True
+tt6710474,Everything Everywhere All at Once,Original Screenplay,JOY,female,487,94,15,3,18,0.8333,True
+tt6710474,Everything Everywhere All at Once,Original Screenplay,KUNG FU MASTER,female,50,7,1,0,1,1.0,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,MANAGER,male,18,3,1,1,2,0.5,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,MEN'S CHOIR,male,37,6,1,1,2,0.5,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,NEWS ANCHOR,unknown,19,2,0,0,0,,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,OFFICER #1,male,83,19,0,0,0,,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,OFFICER #2,male,100,17,3,0,3,1.0,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,RICK,male,45,9,2,0,2,1.0,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,SPAGHETTI BABY NOODLE BOY,male,39,8,2,1,3,0.6667,False
+tt6710474,Everything Everywhere All at Once,Original Screenplay,WAYMOND,male,2828,439,90,21,111,0.8108,True
+tt6751668,Parasite,Original Screenplay,CHUNG-SOOK,female,746,144,24,8,32,0.75,True
+tt6751668,Parasite,Original Screenplay,DA-HAE,female,259,61,9,3,12,0.75,True
+tt6751668,Parasite,Original Screenplay,DA-SONG,male,57,23,1,0,1,1.0,False
+tt6751668,Parasite,Original Screenplay,DONG-IK,male,1189,201,53,6,59,0.8983,True
+tt6751668,Parasite,Original Screenplay,KI-JUNG,female,828,149,30,6,36,0.8333,True
+tt6751668,Parasite,Original Screenplay,KI-TEK,male,1827,275,93,10,103,0.9029,True
+tt6751668,Parasite,Original Screenplay,KI-WOO,male,1943,330,72,12,84,0.8571,True
+tt6751668,Parasite,Original Screenplay,KUN-SAE,male,295,56,11,2,13,0.8462,True
+tt6751668,Parasite,Original Screenplay,MIN-HYUK,male,320,54,18,1,19,0.9474,True
+tt6751668,Parasite,Original Screenplay,MUN-KWANG,female,951,161,44,9,53,0.8302,True
+tt6751668,Parasite,Original Screenplay,PIZZA SHOP OWNER,female,72,16,2,0,2,1.0,False
+tt6751668,Parasite,Original Screenplay,REPORTER 1,female,34,2,0,0,0,,False
+tt6751668,Parasite,Original Screenplay,REPORTER 2,female,53,3,0,0,0,,False
+tt6751668,Parasite,Original Screenplay,YON-KYO,female,2251,372,84,8,92,0.913,True
+tt6751668,Parasite,Original Screenplay,YUN,male,43,5,3,1,4,0.75,False
+tt6966692,Green Book,Original Screenplay,AMIT,male,50,15,2,0,2,1.0,False
+tt6966692,Green Book,Original Screenplay,ANTHONY,male,20,1,0,0,0,,False
+tt6966692,Green Book,Original Screenplay,AUGIE,male,107,18,3,0,3,1.0,False
+tt6966692,Green Book,Original Screenplay,BARKEEP,male,25,3,2,0,2,1.0,False
+tt6966692,Green Book,Original Screenplay,BOBBY RYDELL,male,34,5,1,1,2,0.5,False
+tt6966692,Green Book,Original Screenplay,BOX OFFICE MANAGER,male,21,4,0,0,0,,False
+tt6966692,Green Book,Original Screenplay,CARMINE,male,40,8,3,0,3,1.0,False
+tt6966692,Green Book,Original Screenplay,COAT-CHECK GIRL,female,22,5,2,1,3,0.6667,False
+tt6966692,Green Book,Original Screenplay,DOLORES,female,505,68,24,4,28,0.8571,True
+tt6966692,Green Book,Original Screenplay,DOMINIC,male,68,11,3,2,5,0.6,True
+tt6966692,Green Book,Original Screenplay,DR. SHIRLEY,male,2612,374,125,27,152,0.8224,True
+tt6966692,Green Book,Original Screenplay,FAT PAULIE,male,33,6,3,1,4,0.75,False
+tt6966692,Green Book,Original Screenplay,FRAN,female,24,3,0,0,0,,False
+tt6966692,Green Book,Original Screenplay,GEORGE,male,61,13,4,0,4,1.0,False
+tt6966692,Green Book,Original Screenplay,GOOMBAH,male,26,4,2,2,4,0.5,False
+tt6966692,Green Book,Original Screenplay,GORMAN,male,16,6,0,0,0,,False
+tt6966692,Green Book,Original Screenplay,GRAHAM KINDELL,male,302,42,8,1,9,0.8889,True
+tt6966692,Green Book,Original Screenplay,JOHNNY,male,209,37,5,0,5,1.0,True
+tt6966692,Green Book,Original Screenplay,JULES PODELL,male,30,6,0,1,1,0.0,False
+tt6966692,Green Book,Original Screenplay,LIP,male,3470,549,182,34,216,0.8426,True
+tt6966692,Green Book,Original Screenplay,LOSCUDO,male,117,20,6,4,10,0.6,True
+tt6966692,Green Book,Original Screenplay,MC,male,80,6,0,0,0,,False
+tt6966692,Green Book,Original Screenplay,MORGAN ANDERSON,male,127,21,2,1,3,0.6667,False
+tt6966692,Green Book,Original Screenplay,NEWSCASTER,unknown,55,2,0,0,0,,False
+tt6966692,Green Book,Original Screenplay,NICOLA,female,38,7,0,0,0,,False
+tt6966692,Green Book,Original Screenplay,OLEG,male,148,25,1,0,1,1.0,False
+tt6966692,Green Book,Original Screenplay,ORANGE BIRD BARTENDER,female,31,8,0,2,2,0.0,False
+tt6966692,Green Book,Original Screenplay,PATROLMAN #1,male,129,24,3,1,4,0.75,False
+tt6966692,Green Book,Original Screenplay,PATROLMAN #2,male,25,7,1,0,1,1.0,False
+tt6966692,Green Book,Original Screenplay,PAWN GUY,male,23,7,0,1,1,0.0,False
+tt6966692,Green Book,Original Screenplay,PHIL RIZUTTO,male,26,3,0,0,0,,False
+tt6966692,Green Book,Original Screenplay,POLICE CHIEF,male,84,16,4,0,4,1.0,False
+tt6966692,Green Book,Original Screenplay,POLICEMAN #1,male,26,7,0,1,1,0.0,False
+tt6966692,Green Book,Original Screenplay,POLICEMAN #2,male,18,4,0,0,0,,False
+tt6966692,Green Book,Original Screenplay,RECORD EXEC,male,93,13,1,0,1,1.0,False
+tt6966692,Green Book,Original Screenplay,REDNECK #1,male,49,7,1,0,1,1.0,False
+tt6966692,Green Book,Original Screenplay,REDNECK #2,male,26,4,0,0,0,,False
+tt6966692,Green Book,Original Screenplay,RUDY,male,60,11,1,0,1,1.0,False
+tt6966692,Green Book,Original Screenplay,STAGE MANAGER,male,58,12,1,1,2,0.5,False
+tt6966692,Green Book,Original Screenplay,STATE TROOPER,male,28,7,1,0,1,1.0,False
+tt6966692,Green Book,Original Screenplay,TAILOR,male,40,5,1,1,2,0.5,False
+tt6966692,Green Book,Original Screenplay,WISEGUY #1,male,22,3,1,1,2,0.5,False
+tt9620292,Promising Young Woman,Original Screenplay,AL MONROE,male,401,108,28,4,32,0.875,True
+tt9620292,Promising Young Woman,Original Screenplay,ALFRED,male,16,3,0,0,0,,False
+tt9620292,Promising Young Woman,Original Screenplay,AMBER,female,100,29,11,0,11,1.0,True
+tt9620292,Promising Young Woman,Original Screenplay,CASSANDRA,female,3502,696,209,31,240,0.8708,True
+tt9620292,Promising Young Woman,Original Screenplay,CHIP,male,16,3,1,1,2,0.5,False
+tt9620292,Promising Young Woman,Original Screenplay,DEAN WALKER,male,428,69,23,5,28,0.8214,True
+tt9620292,Promising Young Woman,Original Screenplay,GAIL,female,312,52,14,0,14,1.0,True
+tt9620292,Promising Young Woman,Original Screenplay,GEORGE,male,51,15,2,1,3,0.6667,False
+tt9620292,Promising Young Woman,Original Screenplay,JEZ,female,234,47,12,0,12,1.0,True
+tt9620292,Promising Young Woman,Original Screenplay,JIM,male,19,3,0,0,0,,False
+tt9620292,Promising Young Woman,Original Screenplay,JOE,male,280,58,4,4,8,0.5,True
+tt9620292,Promising Young Woman,Original Screenplay,JORDAN,male,252,46,23,3,26,0.8846,True
+tt9620292,Promising Young Woman,Original Screenplay,LINCOLN,male,204,33,4,0,4,1.0,False
+tt9620292,Promising Young Woman,Original Screenplay,MADISON,female,651,113,46,9,55,0.8364,True
+tt9620292,Promising Young Woman,Original Screenplay,MAKE UP VLOGGER,female,48,7,1,0,1,1.0,False
+tt9620292,Promising Young Woman,Original Screenplay,MAN,male,18,4,2,1,3,0.6667,False
+tt9620292,Promising Young Woman,Original Screenplay,MRS FISHER,female,129,23,2,4,6,0.3333,True
+tt9620292,Promising Young Woman,Original Screenplay,NEIL,male,401,81,27,1,28,0.9643,True
+tt9620292,Promising Young Woman,Original Screenplay,PAUL,male,225,47,4,0,4,1.0,False
+tt9620292,Promising Young Woman,Original Screenplay,RYAN,male,1136,237,75,14,89,0.8427,True
+tt9620292,Promising Young Woman,Original Screenplay,STANLEY,male,141,30,3,1,4,0.75,False
+tt9620292,Promising Young Woman,Original Screenplay,SUSAN,female,371,72,6,2,8,0.75,True
+tt9620292,Promising Young Woman,Original Screenplay,TODD,male,17,4,0,0,0,,False
+tt12789558,Belfast,Original Screenplay,AMY FOWLER-KANE/GRACE KELLY,female,59,6,6,2,8,0.75,True
+tt12789558,Belfast,Original Screenplay,BILLY CLANTON,male,413,55,6,10,16,0.375,True
+tt12789558,Belfast,Original Screenplay,BILLY CLANTON JNR,male,24,6,1,0,1,1.0,False
+tt12789558,Belfast,Original Screenplay,BUDDY,male,1294,188,55,14,69,0.7971,True
+tt12789558,Belfast,Original Screenplay,BUS DRIVER,male,32,6,0,0,0,,False
+tt12789558,Belfast,Original Screenplay,CATHERINE,female,42,9,0,1,1,0.0,False
+tt12789558,Belfast,Original Screenplay,FILM COMMENTATOR,male,26,4,0,0,0,,False
+tt12789558,Belfast,Original Screenplay,FRANKIE WEST,male,157,27,3,2,5,0.6,True
+tt12789558,Belfast,Original Screenplay,GRANNY,female,580,83,17,9,26,0.6538,True
+tt12789558,Belfast,Original Screenplay,MA,female,1334,182,31,14,45,0.6889,True
+tt12789558,Belfast,Original Screenplay,MACKIE,male,213,25,8,1,9,0.8889,True
+tt12789558,Belfast,Original Screenplay,MAN 3,male,22,2,0,1,1,0.0,False
+tt12789558,Belfast,Original Screenplay,MAN 5,male,18,2,0,1,1,0.0,False
+tt12789558,Belfast,Original Screenplay,MARLEY’S GHOST,female,27,4,1,2,3,0.3333,False
+tt12789558,Belfast,Original Screenplay,MICKEY CLANTON,male,23,3,0,0,0,,False
+tt12789558,Belfast,Original Screenplay,MINISTER,male,217,21,10,1,11,0.9091,True
+tt12789558,Belfast,Original Screenplay,MISS LEWIS,female,196,16,1,0,1,1.0,False
+tt12789558,Belfast,Original Screenplay,MOIRA,female,531,82,7,4,11,0.6364,True
+tt12789558,Belfast,Original Screenplay,MR SINGH,male,40,10,1,0,1,1.0,False
+tt12789558,Belfast,Original Screenplay,MR STEWART,male,42,9,1,0,1,1.0,False
+tt12789558,Belfast,Original Screenplay,MRS FORD,female,38,9,1,0,1,1.0,False
+tt12789558,Belfast,Original Screenplay,PA,male,1592,219,48,13,61,0.7869,True
+tt12789558,Belfast,Original Screenplay,POLICEMAN,male,37,7,3,1,4,0.75,False
+tt12789558,Belfast,Original Screenplay,POP,male,1014,104,20,7,27,0.7407,True
+tt12789558,Belfast,Original Screenplay,PRIME MINISTER,male,31,4,2,0,2,1.0,False
+tt12789558,Belfast,Original Screenplay,RADIO REPORTER,unknown,185,11,0,3,3,0.0,False
+tt12789558,Belfast,Original Screenplay,RANSOM STODDARD/JAMES STEWART,male,22,5,0,0,0,,False
+tt12789558,Belfast,Original Screenplay,SCROOGE,male,23,4,2,1,3,0.6667,False
+tt12789558,Belfast,Original Screenplay,SOLDIER,male,73,11,1,0,1,1.0,False
+tt12789558,Belfast,Original Screenplay,TV REPORTER,unknown,325,25,0,0,0,,False
+tt12789558,Belfast,Original Screenplay,VIOLET,female,106,11,1,1,2,0.5,False
+tt12789558,Belfast,Original Screenplay,WILL,male,178,27,3,1,4,0.75,False
+tt28607951,Anora,Original Screenplay,ALEKS,male,144,28,9,0,9,1.0,True
+tt28607951,Anora,Original Screenplay,ANI,female,2665,629,132,60,192,0.6875,True
+tt28607951,Anora,Original Screenplay,CRYSTAL,female,133,35,10,1,11,0.9091,True
+tt28607951,Anora,Original Screenplay,DASHA,female,18,3,1,0,1,1.0,False
+tt28607951,Anora,Original Screenplay,DAWN,female,110,25,5,1,6,0.8333,True
+tt28607951,Anora,Original Screenplay,DAY GUARD,male,38,10,3,0,3,1.0,False
+tt28607951,Anora,Original Screenplay,DIAMOND,female,163,26,4,1,5,0.8,True
+tt28607951,Anora,Original Screenplay,GALINA,female,214,37,4,1,5,0.8,True
+tt28607951,Anora,Original Screenplay,GARNIK,male,547,114,13,5,18,0.7222,True
+tt28607951,Anora,Original Screenplay,HOTEL MANAGER,male,34,4,0,0,0,,False
+tt28607951,Anora,Original Screenplay,IGOR,male,525,128,34,6,40,0.85,True
+tt28607951,Anora,Original Screenplay,IVAN,male,1026,289,54,8,62,0.871,True
+tt28607951,Anora,Original Screenplay,JIMMY,male,164,40,6,0,6,1.0,True
+tt28607951,Anora,Original Screenplay,JUDGE,male,62,12,1,0,1,1.0,False
+tt28607951,Anora,Original Screenplay,LULU,male,69,19,1,0,1,1.0,False
+tt28607951,Anora,Original Screenplay,NIKOLAI,male,38,12,1,0,1,1.0,False
+tt28607951,Anora,Original Screenplay,SHARNOV,male,176,36,9,2,11,0.8182,True
+tt28607951,Anora,Original Screenplay,TOM,male,71,17,4,0,4,1.0,False
+tt28607951,Anora,Original Screenplay,TOROS,male,2360,501,60,27,87,0.6897,True
+tt28607951,Anora,Original Screenplay,TOW TRUCK DRIVER,male,28,7,1,1,2,0.5,False
+tt28607951,Anora,Original Screenplay,VERA,female,34,9,0,0,0,,False
+tt0124315,The Cider House Rules,Adapted Screenplay,ANGELA,female,344,58,7,2,9,0.7778,True
+tt0124315,The Cider House Rules,Adapted Screenplay,BUSTER,male,195,36,13,0,13,1.0,True
+tt0124315,The Cider House Rules,Adapted Screenplay,CANDY,female,1099,209,64,14,78,0.8205,True
+tt0124315,The Cider House Rules,Adapted Screenplay,CARLA,female,36,5,4,1,5,0.8,True
+tt0124315,The Cider House Rules,Adapted Screenplay,COPPERFIELD,male,17,4,0,0,0,,False
+tt0124315,The Cider House Rules,Adapted Screenplay,CURLY,male,78,19,7,6,13,0.5385,True
+tt0124315,The Cider House Rules,Adapted Screenplay,DISTRAUGHT WOMAN,female,62,9,0,1,1,0.0,False
+tt0124315,The Cider House Rules,Adapted Screenplay,DOROTHY,female,25,4,2,0,2,1.0,False
+tt0124315,The Cider House Rules,Adapted Screenplay,DR. HOLTZ,male,35,6,0,0,0,,False
+tt0124315,The Cider House Rules,Adapted Screenplay,EDNA,female,438,65,3,5,8,0.375,True
+tt0124315,The Cider House Rules,Adapted Screenplay,FLORENCE,female,18,3,0,0,0,,False
+tt0124315,The Cider House Rules,Adapted Screenplay,FUZZY,male,113,24,0,0,0,,False
+tt0124315,The Cider House Rules,Adapted Screenplay,HERO,male,34,7,0,1,1,0.0,False
+tt0124315,The Cider House Rules,Adapted Screenplay,HOMER,male,2392,442,146,19,165,0.8848,True
+tt0124315,The Cider House Rules,Adapted Screenplay,JACK,male,96,14,3,0,3,1.0,False
+tt0124315,The Cider House Rules,Adapted Screenplay,LARCH,male,2175,273,77,20,97,0.7938,True
+tt0124315,The Cider House Rules,Adapted Screenplay,MAJOR WINSLOW,male,175,23,1,0,1,1.0,False
+tt0124315,The Cider House Rules,Adapted Screenplay,MARY AGNES,female,115,16,4,5,9,0.4444,True
+tt0124315,The Cider House Rules,Adapted Screenplay,MR. ROSE,male,1432,172,40,13,53,0.7547,True
+tt0124315,The Cider House Rules,Adapted Screenplay,MRS. GOODHALL,female,104,6,2,0,2,1.0,False
+tt0124315,The Cider House Rules,Adapted Screenplay,MUDDY,male,300,40,8,3,11,0.7273,True
+tt0124315,The Cider House Rules,Adapted Screenplay,OLIVE,female,237,32,10,1,11,0.9091,True
+tt0124315,The Cider House Rules,Adapted Screenplay,PEACHES,female,191,26,3,2,5,0.6,True
+tt0124315,The Cider House Rules,Adapted Screenplay,RAY,male,116,17,4,0,4,1.0,False
+tt0124315,The Cider House Rules,Adapted Screenplay,ROSE ROSE,female,350,60,17,3,20,0.85,True
+tt0124315,The Cider House Rules,Adapted Screenplay,STEERFORTH,male,16,4,1,1,2,0.5,False
+tt0124315,The Cider House Rules,Adapted Screenplay,TWELVE-YEAR-OLD GIRL,female,36,7,3,2,5,0.6,True
+tt0124315,The Cider House Rules,Adapted Screenplay,WALLY,male,653,120,31,4,35,0.8857,True
+tt0181865,Traffic,Adapted Screenplay,A.D.A. KELLY,female,102,16,4,1,5,0.8,True
+tt0181865,Traffic,Adapted Screenplay,ADLER,male,197,13,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,AGENT,male,40,10,0,1,1,0.0,False
+tt0181865,Traffic,Adapted Screenplay,ALEX,male,23,5,1,1,2,0.5,False
+tt0181865,Traffic,Adapted Screenplay,ANNA,female,119,21,6,0,6,1.0,True
+tt0181865,Traffic,Adapted Screenplay,ARNIE,male,604,79,27,4,31,0.871,True
+tt0181865,Traffic,Adapted Screenplay,ART APPRAISER,male,41,7,3,0,3,1.0,False
+tt0181865,Traffic,Adapted Screenplay,BARBARA,female,363,51,12,3,15,0.8,True
+tt0181865,Traffic,Adapted Screenplay,CARL,male,104,20,6,0,6,1.0,True
+tt0181865,Traffic,Adapted Screenplay,CARLOS,male,184,28,4,2,6,0.6667,True
+tt0181865,Traffic,Adapted Screenplay,CAROLINE,female,982,115,78,8,86,0.907,True
+tt0181865,Traffic,Adapted Screenplay,CASTRO,male,296,51,14,2,16,0.875,True
+tt0181865,Traffic,Adapted Screenplay,CHIEF OF STAFF,male,315,23,5,0,5,1.0,True
+tt0181865,Traffic,Adapted Screenplay,CLERK,male,31,5,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,CUSTOMS MATRON,female,67,7,1,0,1,1.0,False
+tt0181865,Traffic,Adapted Screenplay,CUSTOMS OFFICER,male,18,3,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,DEA AGENT,male,42,7,3,0,3,1.0,False
+tt0181865,Traffic,Adapted Screenplay,DRIVER,male,31,8,3,0,3,1.0,False
+tt0181865,Traffic,Adapted Screenplay,ECONOMIST,male,125,6,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,ETHAN,male,56,5,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,FBI AGENT #2,male,29,8,1,0,1,1.0,False
+tt0181865,Traffic,Adapted Screenplay,FRANCISCO,male,222,35,16,6,22,0.7273,True
+tt0181865,Traffic,Adapted Screenplay,FRANK,male,32,4,2,1,3,0.6667,False
+tt0181865,Traffic,Adapted Screenplay,FUCKED-UP BOWMAN,male,18,4,4,0,4,1.0,False
+tt0181865,Traffic,Adapted Screenplay,GENERAL LANDRY,male,174,21,4,2,6,0.6667,True
+tt0181865,Traffic,Adapted Screenplay,GORDON,male,421,81,6,5,11,0.5455,True
+tt0181865,Traffic,Adapted Screenplay,HELENA,female,1207,174,76,20,96,0.7917,True
+tt0181865,Traffic,Adapted Screenplay,HUGHES,male,91,11,1,1,2,0.5,False
+tt0181865,Traffic,Adapted Screenplay,JAVIER,male,704,115,21,6,27,0.7778,True
+tt0181865,Traffic,Adapted Screenplay,JOHNSON,male,73,11,0,2,2,0.0,False
+tt0181865,Traffic,Adapted Screenplay,JUDGE,male,39,6,2,0,2,1.0,False
+tt0181865,Traffic,Adapted Screenplay,LONNIE,male,102,12,1,0,1,1.0,False
+tt0181865,Traffic,Adapted Screenplay,MAN #1,male,41,8,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,MAN #2,male,16,2,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,MANOLO,male,269,51,7,6,13,0.5385,True
+tt0181865,Traffic,Adapted Screenplay,MARQUEZ,male,282,43,15,1,16,0.9375,True
+tt0181865,Traffic,Adapted Screenplay,MARTY,male,174,12,12,2,14,0.8571,True
+tt0181865,Traffic,Adapted Screenplay,MICHAEL,male,128,14,2,1,3,0.6667,False
+tt0181865,Traffic,Adapted Screenplay,MR. RODMAN,male,66,4,1,0,1,1.0,False
+tt0181865,Traffic,Adapted Screenplay,MRS. BERRY,female,21,3,2,0,2,1.0,False
+tt0181865,Traffic,Adapted Screenplay,MRS. CASTRO,female,41,7,1,0,1,1.0,False
+tt0181865,Traffic,Adapted Screenplay,NAN,female,74,12,2,0,2,1.0,False
+tt0181865,Traffic,Adapted Screenplay,OFFICIAL,male,318,30,6,1,7,0.8571,True
+tt0181865,Traffic,Adapted Screenplay,PHARMACEUTICAL LOBBYIST,male,104,5,1,0,1,1.0,False
+tt0181865,Traffic,Adapted Screenplay,PRESS SECRETARY,female,26,2,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,PROSECUTOR,male,105,12,1,0,1,1.0,False
+tt0181865,Traffic,Adapted Screenplay,REP FROM DEA,male,26,3,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,ROSARIO,male,85,10,3,1,4,0.75,False
+tt0181865,Traffic,Adapted Screenplay,RUIZ,male,505,67,12,3,15,0.8,True
+tt0181865,Traffic,Adapted Screenplay,RUSH PHILLIPS,male,107,10,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,SALAZAR,male,591,73,16,7,23,0.6957,True
+tt0181865,Traffic,Adapted Screenplay,SETH,male,706,99,17,3,20,0.85,True
+tt0181865,Traffic,Adapted Screenplay,SHEILA,female,64,10,6,0,6,1.0,True
+tt0181865,Traffic,Adapted Screenplay,SHERIDAN,male,233,21,13,3,16,0.8125,True
+tt0181865,Traffic,Adapted Screenplay,SKETCH,male,122,22,4,0,4,1.0,False
+tt0181865,Traffic,Adapted Screenplay,SOCIAL WORKER,female,39,11,0,1,1,0.0,False
+tt0181865,Traffic,Adapted Screenplay,SOMEBODY ELSE,male,16,4,0,1,1,0.0,False
+tt0181865,Traffic,Adapted Screenplay,SPECIAL-AGENT-IN-CHARGE,male,158,16,4,1,5,0.8,True
+tt0181865,Traffic,Adapted Screenplay,STAN,male,31,1,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,STEWIE,male,39,9,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,STRANGE MAN,male,66,7,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,STREET DEALER,male,29,7,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,TIM,male,59,6,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,TORTURER,male,56,7,0,0,0,,False
+tt0181865,Traffic,Adapted Screenplay,TOURIST MAN,male,19,3,1,1,2,0.5,False
+tt0181865,Traffic,Adapted Screenplay,TOURIST WOMAN,female,61,11,1,0,1,1.0,False
+tt0181865,Traffic,Adapted Screenplay,UNDERSECRETARY,male,96,5,0,1,1,0.0,False
+tt0181865,Traffic,Adapted Screenplay,VANESSA,female,30,9,1,1,2,0.5,False
+tt0181865,Traffic,Adapted Screenplay,VOICE,unknown,27,6,0,0,0,,False
+tt0268978,A Beautiful Mind,Adapted Screenplay,ALICIA,female,1329,261,54,12,66,0.8182,True
+tt0268978,A Beautiful Mind,Adapted Screenplay,BECKY,female,16,3,0,0,0,,False
+tt0268978,A Beautiful Mind,Adapted Screenplay,CAPTAIN,male,20,5,0,0,0,,False
+tt0268978,A Beautiful Mind,Adapted Screenplay,CHARLES,male,450,80,9,4,13,0.6923,True
+tt0268978,A Beautiful Mind,Adapted Screenplay,FOX,male,350,72,8,2,10,0.8,True
+tt0268978,A Beautiful Mind,Adapted Screenplay,GENERAL,male,40,8,1,1,2,0.5,False
+tt0268978,A Beautiful Mind,Adapted Screenplay,HORNER,male,154,34,1,1,2,0.5,False
+tt0268978,A Beautiful Mind,Adapted Screenplay,KUHN,male,47,7,2,0,2,1.0,False
+tt0268978,A Beautiful Mind,Adapted Screenplay,MARCEE,female,69,11,5,2,7,0.7143,True
+tt0268978,A Beautiful Mind,Adapted Screenplay,MILNOR,male,432,83,13,4,17,0.7647,True
+tt0268978,A Beautiful Mind,Adapted Screenplay,NASH,male,3153,592,176,41,217,0.8111,True
+tt0268978,A Beautiful Mind,Adapted Screenplay,PARCHER,male,1088,188,23,10,33,0.697,True
+tt0268978,A Beautiful Mind,Adapted Screenplay,PROFESSOR,male,22,7,1,0,1,1.0,False
+tt0268978,A Beautiful Mind,Adapted Screenplay,ROSEN,male,752,105,21,6,27,0.7778,True
+tt0268978,A Beautiful Mind,Adapted Screenplay,SHAPELY,female,75,15,0,0,0,,False
+tt0268978,A Beautiful Mind,Adapted Screenplay,STUDENT,male,90,18,2,0,2,1.0,False
+tt0268978,A Beautiful Mind,Adapted Screenplay,VAN NEUMANN,male,301,48,4,0,4,1.0,False
+tt0268978,A Beautiful Mind,Adapted Screenplay,ZWEIFEL,male,256,54,1,0,1,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,2ND POLISH OFFICER,male,17,3,0,0,0,,False
+tt0253474,The Pianist,Adapted Screenplay,A GERMAN VOICE,male,19,8,0,0,0,,False
+tt0253474,The Pianist,Adapted Screenplay,A MAN'S VOICE,male,22,4,1,1,2,0.5,False
+tt0253474,The Pianist,Adapted Screenplay,ALL WORKERS,male,54,8,0,0,0,,False
+tt0253474,The Pianist,Adapted Screenplay,BARTCZAK,male,19,2,2,0,2,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,BENEK,male,78,16,2,0,2,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,BOGUCKI,male,70,13,0,0,0,,False
+tt0253474,The Pianist,Adapted Screenplay,DOCTOR,male,32,7,1,0,1,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,DOROTA,female,284,52,15,2,17,0.8824,True
+tt0253474,The Pianist,Adapted Screenplay,DR. EHRLICH,male,102,11,3,4,7,0.4286,True
+tt0253474,The Pianist,Adapted Screenplay,FATHER,male,420,58,12,2,14,0.8571,True
+tt0253474,The Pianist,Adapted Screenplay,GEBCZYNSKI,male,163,23,5,2,7,0.7143,True
+tt0253474,The Pianist,Adapted Screenplay,GERMAN OFFICER,male,17,4,0,0,0,,False
+tt0253474,The Pianist,Adapted Screenplay,GRUN,male,82,11,0,2,2,0.0,False
+tt0253474,The Pianist,Adapted Screenplay,HALINA,female,209,27,2,1,3,0.6667,False
+tt0253474,The Pianist,Adapted Screenplay,HENRYK,male,638,87,14,10,24,0.5833,True
+tt0253474,The Pianist,Adapted Screenplay,JANINA,female,85,20,2,0,2,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,JEHUDA,male,360,57,9,3,12,0.75,True
+tt0253474,The Pianist,Adapted Screenplay,JEWISH POLICEMAN #1,male,17,3,0,0,0,,False
+tt0253474,The Pianist,Adapted Screenplay,JUREK,male,64,7,2,0,2,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,KITTY,female,91,21,2,1,3,0.6667,False
+tt0253474,The Pianist,Adapted Screenplay,LEDNICKI,male,93,16,9,1,10,0.9,True
+tt0253474,The Pianist,Adapted Screenplay,MAJOREK,male,219,38,5,1,6,0.8333,True
+tt0253474,The Pianist,Adapted Screenplay,MICHAL,male,151,26,6,0,6,1.0,True
+tt0253474,The Pianist,Adapted Screenplay,MOTHER,female,183,34,8,0,8,1.0,True
+tt0253474,The Pianist,Adapted Screenplay,MR LIPA,male,94,16,4,0,4,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,NCO,male,25,7,0,0,0,,False
+tt0253474,The Pianist,Adapted Screenplay,PUPPYDOG'S VOICE,male,41,9,5,0,5,1.0,True
+tt0253474,The Pianist,Adapted Screenplay,RADIO ANNOUNCER,male,50,11,0,0,0,,False
+tt0253474,The Pianist,Adapted Screenplay,REGINA,female,158,23,1,0,1,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,RUBINSTEIN,male,27,5,1,0,1,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,SS CAPTAIN,male,131,9,2,0,2,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,SS LIEUTENANT,male,40,7,2,1,3,0.6667,False
+tt0253474,The Pianist,Adapted Screenplay,SS LIEUTENANT'S VOICE,male,18,2,0,0,0,,False
+tt0253474,The Pianist,Adapted Screenplay,SZALAS,male,128,28,6,1,7,0.8571,True
+tt0253474,The Pianist,Adapted Screenplay,SZPILMAN,male,1049,213,73,15,88,0.8295,True
+tt0253474,The Pianist,Adapted Screenplay,THE ELDERLY MAN,male,25,4,1,0,1,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,THE FEATHER WOMAN,female,82,9,0,3,3,0.0,False
+tt0253474,The Pianist,Adapted Screenplay,THE GERMAN CAPTAIN,male,158,37,5,3,8,0.625,True
+tt0253474,The Pianist,Adapted Screenplay,THE NERVOUS MAN,male,62,6,4,1,5,0.8,True
+tt0253474,The Pianist,Adapted Screenplay,THE YOUNG WOMAN,female,46,10,8,0,8,1.0,True
+tt0253474,The Pianist,Adapted Screenplay,WOMAN WITH CHILD,female,21,2,1,0,1,1.0,False
+tt0253474,The Pianist,Adapted Screenplay,ZICK-ZACK,male,59,19,1,0,1,1.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,ARAGORN,male,493,70,12,7,19,0.6316,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,ARWEN,female,127,14,6,2,8,0.75,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,BILBO,male,54,10,5,1,6,0.8333,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,DENETHOR,male,351,37,9,6,15,0.6,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,ELROND,male,261,27,5,2,7,0.7143,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,FARAMIR,male,125,19,4,1,5,0.8,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,FRODO,male,593,104,22,9,31,0.7097,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,GALADRIEL,female,65,6,1,0,1,1.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,GAMLING,male,25,5,0,0,0,,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,GANDALF,male,1032,149,4,1,5,0.8,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,GIMLI,male,195,29,4,2,6,0.6667,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,GOLLUM,male,416,90,1,2,3,0.3333,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,GORBAG,male,60,7,2,0,2,1.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,GOTHMOG,male,58,14,0,0,0,,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,HEAD ORC,male,16,3,0,0,0,,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,IORLAS,male,25,4,0,0,0,,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,KING OF THE DEAD,male,41,3,0,2,2,0.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,LEGOLAS,male,143,17,0,0,0,,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,MERRY,male,228,36,6,2,8,0.75,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,PIPPIN,male,445,76,19,8,27,0.7037,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,SAM,male,721,153,28,6,34,0.8235,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,SHAGRAT,male,64,9,1,1,2,0.5,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,SMÉAGOL,male,244,48,0,8,8,0.0,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,THÉODEN,male,421,57,9,4,13,0.6923,True
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,TREEBEARD,male,51,8,2,0,2,1.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,WITCH KING,male,41,7,1,1,2,0.5,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,ÉOMER,male,76,9,1,0,1,1.0,False
+tt0167260,The Lord of the Rings: The Return of the King,Adapted Screenplay,ÉOWYN,female,161,25,3,2,5,0.6,True
+tt0375063,Sideways,Adapted Screenplay,14-YEAR-OLD BOY,male,93,8,5,0,5,1.0,True
+tt0375063,Sideways,Adapted Screenplay,CAMMI,female,104,23,7,2,9,0.7778,True
+tt0375063,Sideways,Adapted Screenplay,CARYL,female,58,4,3,0,3,1.0,False
+tt0375063,Sideways,Adapted Screenplay,CHRISTINE,female,142,19,5,2,7,0.7143,True
+tt0375063,Sideways,Adapted Screenplay,EVELYN,female,177,22,9,1,10,0.9,True
+tt0375063,Sideways,Adapted Screenplay,GARY,male,97,21,2,0,2,1.0,False
+tt0375063,Sideways,Adapted Screenplay,GAS STATION ATTENDANT,male,34,6,0,0,0,,False
+tt0375063,Sideways,Adapted Screenplay,JACK,male,4557,851,209,44,253,0.8261,True
+tt0375063,Sideways,Adapted Screenplay,KEN,male,16,4,1,0,1,1.0,False
+tt0375063,Sideways,Adapted Screenplay,MAN,male,45,8,4,0,4,1.0,False
+tt0375063,Sideways,Adapted Screenplay,MAYA,female,1063,171,54,6,60,0.9,True
+tt0375063,Sideways,Adapted Screenplay,MILES,male,4601,814,183,39,222,0.8243,True
+tt0375063,Sideways,Adapted Screenplay,MR. ERGANIAN,male,55,5,2,0,2,1.0,False
+tt0375063,Sideways,Adapted Screenplay,MRS. ERGANIAN,female,27,5,0,1,1,0.0,False
+tt0375063,Sideways,Adapted Screenplay,PHYLLIS,female,411,56,17,3,20,0.85,True
+tt0375063,Sideways,Adapted Screenplay,POLISH VOICE,male,34,5,1,0,1,1.0,False
+tt0375063,Sideways,Adapted Screenplay,POURER,female,43,8,0,0,0,,False
+tt0375063,Sideways,Adapted Screenplay,RAUL,male,22,3,0,0,0,,False
+tt0375063,Sideways,Adapted Screenplay,STEPHANIE,female,272,63,12,5,17,0.7059,True
+tt0375063,Sideways,Adapted Screenplay,VICTORIA,female,105,25,6,1,7,0.8571,True
+tt0375063,Sideways,Adapted Screenplay,WAITER,male,46,4,0,0,0,,False
+tt0375063,Sideways,Adapted Screenplay,WAITRESS,female,20,5,2,0,2,1.0,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,ALMA,female,493,61,15,2,17,0.8824,True
+tt0388795,Brokeback Mountain,Adapted Screenplay,ALMA JR.,female,33,7,0,0,0,,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,ANNOUNCER,male,36,1,0,1,1,0.0,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,BARTENDER,male,40,9,2,0,2,1.0,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,BASQUE,male,57,9,0,0,0,,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,CASSIE,female,167,29,5,2,7,0.7143,True
+tt0388795,Brokeback Mountain,Adapted Screenplay,ENNIS,male,1880,259,75,13,88,0.8523,True
+tt0388795,Brokeback Mountain,Adapted Screenplay,JACK,male,1860,231,44,17,61,0.7213,True
+tt0388795,Brokeback Mountain,Adapted Screenplay,JACK'S MOTHER,female,83,8,0,1,1,0.0,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,JIMBO,male,43,4,1,0,1,1.0,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,JOE AGUIRRE,male,255,27,4,0,4,1.0,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,JOHN TWIST,male,137,8,0,0,0,,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,JR.,female,43,7,1,0,1,1.0,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,LASHAWN,female,147,8,5,2,7,0.7143,True
+tt0388795,Brokeback Mountain,Adapted Screenplay,LINDA HIGGINS,female,20,3,0,0,0,,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,LUREEN,female,312,36,8,0,8,1.0,True
+tt0388795,Brokeback Mountain,Adapted Screenplay,MONROE,male,42,10,2,0,2,1.0,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,OLD MAN,male,99,12,0,0,0,,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,PHILLIPS,male,81,9,0,0,0,,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,RANDALL,male,73,11,3,0,3,1.0,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,ROAD BOSS,male,16,2,0,0,0,,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,SECOND ROUGHNECK,male,16,3,0,0,0,,False
+tt0388795,Brokeback Mountain,Adapted Screenplay,TIMMY,male,54,5,3,2,5,0.6,True
+tt0388795,Brokeback Mountain,Adapted Screenplay,WAITRESS,female,35,6,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,BANKROBBER,male,92,14,11,2,13,0.8462,True
+tt0407887,The Departed,Adapted Screenplay,BARRIGAN,male,111,22,4,2,6,0.6667,True
+tt0407887,The Departed,Adapted Screenplay,BILLY,male,2464,430,125,35,160,0.7812,True
+tt0407887,The Departed,Adapted Screenplay,BILLY'S AUNT,female,20,4,1,0,1,1.0,False
+tt0407887,The Departed,Adapted Screenplay,BOOKIE,male,28,4,3,0,3,1.0,False
+tt0407887,The Departed,Adapted Screenplay,BROWN,male,188,29,2,1,3,0.6667,False
+tt0407887,The Departed,Adapted Screenplay,CAMERA COP,male,16,1,1,0,1,1.0,False
+tt0407887,The Departed,Adapted Screenplay,CAMERA GEEK COP,male,20,4,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,CHINESE GANGSTER,male,85,15,2,0,2,1.0,False
+tt0407887,The Departed,Adapted Screenplay,CHINESE TRANSLATOR,male,32,5,1,0,1,1.0,False
+tt0407887,The Departed,Adapted Screenplay,COLIN,male,2727,479,149,24,173,0.8613,True
+tt0407887,The Departed,Adapted Screenplay,COSTELLO,male,1967,269,66,26,92,0.7174,True
+tt0407887,The Departed,Adapted Screenplay,DELAHUNT,male,264,41,16,10,26,0.6154,True
+tt0407887,The Departed,Adapted Screenplay,DETECTIVE 1,male,86,20,5,0,5,1.0,True
+tt0407887,The Departed,Adapted Screenplay,DETECTIVE 2,male,32,5,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,DETECTIVE 4,male,27,7,1,0,1,1.0,False
+tt0407887,The Departed,Adapted Screenplay,DIGNAM,male,495,83,14,4,18,0.7778,True
+tt0407887,The Departed,Adapted Screenplay,DRILL INSTRUCTOR,male,29,6,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,ELLERBY,male,821,114,10,3,13,0.7692,True
+tt0407887,The Departed,Adapted Screenplay,FITZY,male,198,37,11,2,13,0.8462,True
+tt0407887,The Departed,Adapted Screenplay,FRENCH,male,37,7,1,0,1,1.0,False
+tt0407887,The Departed,Adapted Screenplay,GWEN,female,31,4,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,INSTRUCTOR,male,35,4,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,LAZIO,male,23,3,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,MADOLYN,female,785,134,49,3,52,0.9423,True
+tt0407887,The Departed,Adapted Screenplay,MISTER FRENCH,male,418,64,14,5,19,0.7368,True
+tt0407887,The Departed,Adapted Screenplay,NEWS ANCHOR,female,52,3,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,OTHER PRISONER,male,18,5,1,0,1,1.0,False
+tt0407887,The Departed,Adapted Screenplay,PHONE TECH COP,male,20,3,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,PRIEST,male,75,4,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,PROPRIETOR,male,16,4,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,QUEENAN,male,815,142,23,2,25,0.92,True
+tt0407887,The Departed,Adapted Screenplay,REALTOR,female,53,9,1,0,1,1.0,False
+tt0407887,The Departed,Adapted Screenplay,SEAN,male,243,35,12,0,12,1.0,True
+tt0407887,The Departed,Adapted Screenplay,SGT. DIGNAM,male,519,58,9,4,13,0.6923,True
+tt0407887,The Departed,Adapted Screenplay,SPEAKER,male,51,3,1,0,1,1.0,False
+tt0407887,The Departed,Adapted Screenplay,UNCLE,male,25,4,0,0,0,,False
+tt0407887,The Departed,Adapted Screenplay,YOUNG COSTELLO,male,214,29,6,1,7,0.8571,True
+tt0477348,No Country for Old Men,Adapted Screenplay,BELL,male,1906,266,104,10,114,0.9123,True
+tt0477348,No Country for Old Men,Adapted Screenplay,BOY 1,male,37,6,0,0,0,,False
+tt0477348,No Country for Old Men,Adapted Screenplay,BOY 2,male,46,9,3,0,3,1.0,False
+tt0477348,No Country for Old Men,Adapted Screenplay,CARLA JEAN,female,452,82,30,7,37,0.8108,True
+tt0477348,No Country for Old Men,Adapted Screenplay,CHIGURH,male,781,154,35,8,43,0.814,True
+tt0477348,No Country for Old Men,Adapted Screenplay,CLERK,male,103,19,3,0,3,1.0,False
+tt0477348,No Country for Old Men,Adapted Screenplay,DEPUTY,male,53,6,1,1,2,0.5,False
+tt0477348,No Country for Old Men,Adapted Screenplay,DRIVER,male,82,16,3,2,5,0.6,True
+tt0477348,No Country for Old Men,Adapted Screenplay,ELLIS,male,379,59,7,2,9,0.7778,True
+tt0477348,No Country for Old Men,Adapted Screenplay,LORETTA,female,61,15,3,1,4,0.75,False
+tt0477348,No Country for Old Men,Adapted Screenplay,MAN,male,267,59,7,1,8,0.875,True
+tt0477348,No Country for Old Men,Adapted Screenplay,MAN AT CHAIR,male,20,9,1,1,2,0.5,False
+tt0477348,No Country for Old Men,Adapted Screenplay,MEXICAN,male,25,5,1,0,1,1.0,False
+tt0477348,No Country for Old Men,Adapted Screenplay,MOLLY,female,49,7,0,0,0,,False
+tt0477348,No Country for Old Men,Adapted Screenplay,MOSS,male,939,203,70,16,86,0.814,True
+tt0477348,No Country for Old Men,Adapted Screenplay,MOTHER,female,248,36,15,1,16,0.9375,True
+tt0477348,No Country for Old Men,Adapted Screenplay,OFFICIAL,male,107,18,5,2,7,0.7143,True
+tt0477348,No Country for Old Men,Adapted Screenplay,PROPRIETOR,male,199,49,15,0,15,1.0,True
+tt0477348,No Country for Old Men,Adapted Screenplay,ROSCOE,male,194,28,3,1,4,0.75,False
+tt0477348,No Country for Old Men,Adapted Screenplay,SALESMAN,male,19,5,1,0,1,1.0,False
+tt0477348,No Country for Old Men,Adapted Screenplay,WELLS,male,432,96,24,5,29,0.8276,True
+tt0477348,No Country for Old Men,Adapted Screenplay,WENDELL,male,294,64,3,0,3,1.0,False
+tt0477348,No Country for Old Men,Adapted Screenplay,WOMAN,female,172,36,8,1,9,0.8889,True
+tt1010048,Slumdog Millionaire,Adapted Screenplay,ADA,female,71,10,0,2,2,0.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,AMIR,male,18,4,3,0,3,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,ARVIND,male,152,35,3,2,5,0.6,True
+tt1010048,Slumdog Millionaire,Adapted Screenplay,CLARK,male,34,9,1,0,1,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,COMMISSIONER OF POLICE,male,131,22,0,0,0,,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,CONSTABLE SRINIVAS,male,90,15,2,0,2,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,DANCE TEACHER,female,37,9,0,0,0,,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,DAVE,male,33,6,2,0,2,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,DIRECTOR,male,86,18,0,0,0,,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,DOOR-KEEPER,male,43,11,1,0,1,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,GUIDE,male,57,4,1,1,2,0.5,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,INSPECTOR,male,610,104,10,5,15,0.6667,True
+tt1010048,Slumdog Millionaire,Adapted Screenplay,JAMAL,male,1854,416,89,8,97,0.9175,True
+tt1010048,Slumdog Millionaire,Adapted Screenplay,JAVED,male,124,33,2,0,2,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,LATIKA,female,364,89,15,10,25,0.6,True
+tt1010048,Slumdog Millionaire,Adapted Screenplay,MAMAN,male,247,57,3,0,3,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,MAN,male,33,12,0,0,0,,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,MANAGER,male,69,9,0,0,0,,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,MISTER NANDHA,male,49,10,0,0,0,,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,NITA,female,59,14,1,1,2,0.5,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,PETER,male,16,2,1,0,1,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,PRAKASH,male,23,6,2,0,2,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,PREM,male,2613,404,41,13,54,0.7593,True
+tt1010048,Slumdog Millionaire,Adapted Screenplay,PUNNOOSE,male,16,4,1,0,1,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,SALIM,male,930,223,32,13,45,0.7111,True
+tt1010048,Slumdog Millionaire,Adapted Screenplay,SECURITY GUARD,male,29,8,3,0,3,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,TALKBACK,unknown,33,12,0,0,0,,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,TEACHER,male,86,12,0,0,0,,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,TV COMMENTATOR,male,34,2,0,0,0,,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,TV REPORTER,male,65,4,0,1,1,0.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,VISION MIXER,male,34,7,1,0,1,1.0,False
+tt1010048,Slumdog Millionaire,Adapted Screenplay,WOMAN,female,194,39,3,2,5,0.6,True
+tt0929632,Precious,Adapted Screenplay,BOY# 1,male,32,6,2,1,3,0.6667,False
+tt0929632,Precious,Adapted Screenplay,BUG LADY,female,30,5,0,0,0,,False
+tt0929632,Precious,Adapted Screenplay,BUNNY,female,22,3,0,0,0,,False
+tt0929632,Precious,Adapted Screenplay,CAITLIN,female,23,3,2,1,3,0.6667,False
+tt0929632,Precious,Adapted Screenplay,CANDACE,female,17,1,1,1,2,0.5,False
+tt0929632,Precious,Adapted Screenplay,CONSUELO,female,30,7,4,0,4,1.0,False
+tt0929632,Precious,Adapted Screenplay,CORNROWS,female,376,49,8,1,9,0.8889,True
+tt0929632,Precious,Adapted Screenplay,IRENE,female,50,4,3,2,5,0.6,True
+tt0929632,Precious,Adapted Screenplay,JERMAINE,male,355,44,8,2,10,0.8,True
+tt0929632,Precious,Adapted Screenplay,JO ANN,female,197,32,13,2,15,0.8667,True
+tt0929632,Precious,Adapted Screenplay,JOHN,male,54,12,3,0,3,1.0,False
+tt0929632,Precious,Adapted Screenplay,KATHERINE,female,58,10,1,0,1,1.0,False
+tt0929632,Precious,Adapted Screenplay,MARY,female,904,139,34,9,43,0.7907,True
+tt0929632,Precious,Adapted Screenplay,MIRIAM,female,22,3,2,0,2,1.0,False
+tt0929632,Precious,Adapted Screenplay,MR. WICHER,male,46,13,1,0,1,1.0,False
+tt0929632,Precious,Adapted Screenplay,MRS. LICHENSTEIN,female,348,53,13,1,14,0.9286,True
+tt0929632,Precious,Adapted Screenplay,MS. RAIN,female,1563,239,42,11,53,0.7925,True
+tt0929632,Precious,Adapted Screenplay,MS. WEISS,female,321,48,8,2,10,0.8,True
+tt0929632,Precious,Adapted Screenplay,NURSE,female,41,7,3,0,3,1.0,False
+tt0929632,Precious,Adapted Screenplay,PRECIOUS,female,4929,665,294,70,364,0.8077,True
+tt0929632,Precious,Adapted Screenplay,RHONDA,female,98,18,5,2,7,0.7143,True
+tt0929632,Precious,Adapted Screenplay,RITA,female,82,11,5,1,6,0.8333,True
+tt0929632,Precious,Adapted Screenplay,RUBY,female,70,18,6,0,6,1.0,True
+tt0929632,Precious,Adapted Screenplay,SECRETARY,female,17,5,0,0,0,,False
+tt0929632,Precious,Adapted Screenplay,SHEILA,female,65,9,3,0,3,1.0,False
+tt0929632,Precious,Adapted Screenplay,WOMAN,female,29,6,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,ADMINISTRATOR,female,67,10,2,0,2,1.0,False
+tt1285016,The Social Network,Adapted Screenplay,AIDE,male,26,8,1,1,2,0.5,False
+tt1285016,The Social Network,Adapted Screenplay,ALL,unknown,22,7,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,AMY,female,217,43,7,3,10,0.7,True
+tt1285016,The Social Network,Adapted Screenplay,ASHLEIGH,female,42,11,5,1,6,0.8333,True
+tt1285016,The Social Network,Adapted Screenplay,BOB,male,41,4,4,0,4,1.0,False
+tt1285016,The Social Network,Adapted Screenplay,BRIANNA,female,16,2,1,0,1,1.0,False
+tt1285016,The Social Network,Adapted Screenplay,CAMERON,male,1108,117,33,4,37,0.8919,True
+tt1285016,The Social Network,Adapted Screenplay,CHRISTY,female,236,42,6,6,12,0.5,True
+tt1285016,The Social Network,Adapted Screenplay,CLUB PRESIDENT,male,38,1,1,0,1,1.0,False
+tt1285016,The Social Network,Adapted Screenplay,COURT REPORTER,female,18,1,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,COX,male,74,12,4,2,6,0.6667,True
+tt1285016,The Social Network,Adapted Screenplay,DIVYA,male,697,86,19,4,23,0.8261,True
+tt1285016,The Social Network,Adapted Screenplay,DUSTIN,male,119,28,1,0,1,1.0,False
+tt1285016,The Social Network,Adapted Screenplay,EDUARDO,male,3026,414,138,36,174,0.7931,True
+tt1285016,The Social Network,Adapted Screenplay,ERICA,female,715,84,36,4,40,0.9,True
+tt1285016,The Social Network,Adapted Screenplay,ERICA’S ROOMMATE,unknown,16,3,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,EXECUTIVE,male,18,4,0,1,1,0.0,False
+tt1285016,The Social Network,Adapted Screenplay,GAGE,male,667,64,21,2,23,0.913,True
+tt1285016,The Social Network,Adapted Screenplay,GIRL #1,female,18,4,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,GIRL #2,female,20,3,4,0,4,1.0,False
+tt1285016,The Social Network,Adapted Screenplay,GRAD STUDENT,male,23,2,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,GRETCHEN,female,401,61,4,1,5,0.8,True
+tt1285016,The Social Network,Adapted Screenplay,K.C.,male,36,6,3,1,4,0.75,False
+tt1285016,The Social Network,Adapted Screenplay,KENWRIGHT,male,88,13,3,1,4,0.75,False
+tt1285016,The Social Network,Adapted Screenplay,LAWYER,male,112,14,1,0,1,1.0,False
+tt1285016,The Social Network,Adapted Screenplay,MALE FRIEND,male,22,2,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,MARK,male,4371,580,197,25,222,0.8874,True
+tt1285016,The Social Network,Adapted Screenplay,MARYLIN,female,296,44,11,1,12,0.9167,True
+tt1285016,The Social Network,Adapted Screenplay,MAURICE,male,27,3,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,MR. WINKLEVOSS,male,41,7,1,1,2,0.5,False
+tt1285016,The Social Network,Adapted Screenplay,PETER,male,46,8,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,POLICEMAN,male,47,9,2,0,2,1.0,False
+tt1285016,The Social Network,Adapted Screenplay,PRINCE ALBERT,male,58,10,3,0,3,1.0,False
+tt1285016,The Social Network,Adapted Screenplay,PROFESSOR,male,104,9,1,0,1,1.0,False
+tt1285016,The Social Network,Adapted Screenplay,SEAN,male,2010,265,69,10,79,0.8734,True
+tt1285016,The Social Network,Adapted Screenplay,SECRETARY,female,23,5,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,SENIOR,male,44,11,0,0,0,,False
+tt1285016,The Social Network,Adapted Screenplay,SPEAKER,male,144,6,2,1,3,0.6667,False
+tt1285016,The Social Network,Adapted Screenplay,STUART,male,63,7,3,1,4,0.75,False
+tt1285016,The Social Network,Adapted Screenplay,SUMMERS,male,300,42,14,2,16,0.875,True
+tt1285016,The Social Network,Adapted Screenplay,SY,male,266,37,5,2,7,0.7143,True
+tt1285016,The Social Network,Adapted Screenplay,TYLER,male,668,85,16,5,21,0.7619,True
+tt1033575,The Descendants,Adapted Screenplay,ALEXANDRA,female,1609,268,71,17,88,0.8068,True
+tt1033575,The Descendants,Adapted Screenplay,ALICE,female,64,15,4,0,4,1.0,False
+tt1033575,The Descendants,Adapted Screenplay,BARB HIGGINS,female,289,36,10,0,10,1.0,True
+tt1033575,The Descendants,Adapted Screenplay,BARRY THORSON,male,17,3,1,0,1,1.0,False
+tt1033575,The Descendants,Adapted Screenplay,BRIAN SPEER,male,200,44,20,1,21,0.9524,True
+tt1033575,The Descendants,Adapted Screenplay,BUZZ,male,31,8,2,0,2,1.0,False
+tt1033575,The Descendants,Adapted Screenplay,CLERK,female,27,4,1,0,1,1.0,False
+tt1033575,The Descendants,Adapted Screenplay,COUSIN HUGH,male,486,83,8,4,12,0.6667,True
+tt1033575,The Descendants,Adapted Screenplay,COUSIN RALPH,male,146,29,5,0,5,1.0,True
+tt1033575,The Descendants,Adapted Screenplay,COUSIN SIX,male,53,8,0,1,1,0.0,False
+tt1033575,The Descendants,Adapted Screenplay,DORM SUPERVISOR,female,68,15,1,0,1,1.0,False
+tt1033575,The Descendants,Adapted Screenplay,DR. HERMAN,male,233,24,9,4,13,0.6923,True
+tt1033575,The Descendants,Adapted Screenplay,DR. JOHNSTON,male,329,49,10,1,11,0.9091,True
+tt1033575,The Descendants,Adapted Screenplay,JULIE,female,484,86,40,1,41,0.9756,True
+tt1033575,The Descendants,Adapted Screenplay,KAI,female,264,36,5,1,6,0.8333,True
+tt1033575,The Descendants,Adapted Screenplay,MARK,male,142,23,4,0,4,1.0,False
+tt1033575,The Descendants,Adapted Screenplay,MATT,male,6086,917,236,58,294,0.8027,True
+tt1033575,The Descendants,Adapted Screenplay,MRS. THULL,female,46,6,0,0,0,,False
+tt1033575,The Descendants,Adapted Screenplay,MS. HAYASHI,female,87,6,1,1,2,0.5,False
+tt1033575,The Descendants,Adapted Screenplay,NEUROLOGIST,male,29,2,0,0,0,,False
+tt1033575,The Descendants,Adapted Screenplay,NOE,male,18,4,0,0,0,,False
+tt1033575,The Descendants,Adapted Screenplay,NURSE JOY,female,33,9,1,0,1,1.0,False
+tt1033575,The Descendants,Adapted Screenplay,RALPH,male,111,11,1,1,2,0.5,False
+tt1033575,The Descendants,Adapted Screenplay,REINA,female,67,16,4,1,5,0.8,True
+tt1033575,The Descendants,Adapted Screenplay,SCOTT THORSON,male,473,66,8,1,9,0.8889,True
+tt1033575,The Descendants,Adapted Screenplay,SCOTTIE,female,809,158,47,8,55,0.8545,True
+tt1033575,The Descendants,Adapted Screenplay,SHOPKEEPER,male,34,5,1,0,1,1.0,False
+tt1033575,The Descendants,Adapted Screenplay,SID,male,868,148,57,5,62,0.9194,True
+tt1033575,The Descendants,Adapted Screenplay,TROY,male,199,25,20,4,24,0.8333,True
+tt1024648,Argo,Adapted Screenplay,A.D.,male,18,3,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,AL GOLACINSKI,male,75,9,2,1,3,0.6667,False
+tt1024648,Argo,Adapted Screenplay,ANGELA BELK,female,35,2,2,0,2,1.0,False
+tt1024648,Argo,Adapted Screenplay,ANN SWIFT,female,48,4,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,ANNOUNCEMENT,unknown,28,3,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,AZIZI,male,30,7,1,0,1,1.0,False
+tt1024648,Argo,Adapted Screenplay,BATES,male,134,16,0,1,1,0.0,False
+tt1024648,Argo,Adapted Screenplay,BEHROUZ,male,61,9,2,1,3,0.6667,False
+tt1024648,Argo,Adapted Screenplay,BOB ANDERS,male,190,43,4,0,4,1.0,False
+tt1024648,Argo,Adapted Screenplay,BROKAW,male,43,2,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,BUTLER,male,28,4,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,CHAMBERS,male,374,61,3,1,4,0.75,False
+tt1024648,Argo,Adapted Screenplay,CONSUL OFFICIAL,male,18,2,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,CORA LIJEK,female,106,17,1,0,1,1.0,False
+tt1024648,Argo,Adapted Screenplay,ENGELL,male,99,20,0,1,1,0.0,False
+tt1024648,Argo,Adapted Screenplay,FLIGHT ATTENDANT,female,59,6,1,1,2,0.5,False
+tt1024648,Argo,Adapted Screenplay,GENCO,male,22,5,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,IMMIGRATION OFFICER,male,21,3,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,JOE STAFFORD,male,389,59,5,4,9,0.5556,True
+tt1024648,Argo,Adapted Screenplay,JORDAN,male,143,17,3,0,3,1.0,False
+tt1024648,Argo,Adapted Screenplay,KATHY STAFFORD,female,30,9,0,1,1,0.0,False
+tt1024648,Argo,Adapted Screenplay,KHALKALI,male,44,6,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,KHOMEINI,male,45,3,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,KLEIN,male,88,11,4,0,4,1.0,False
+tt1024648,Argo,Adapted Screenplay,LAMONT,male,58,9,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,LEE SCHATZ,male,50,13,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,MALICK,male,23,4,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,MALINOV,male,79,15,1,0,1,1.0,False
+tt1024648,Argo,Adapted Screenplay,MARK LIJEK,male,166,24,0,3,3,0.0,False
+tt1024648,Argo,Adapted Screenplay,MARMOR,male,31,2,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,MENDEZ,male,1366,215,33,11,44,0.75,True
+tt1024648,Argo,Adapted Screenplay,NEWSCASTER,male,32,2,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,NICHOLLS,male,154,20,2,0,2,1.0,False
+tt1024648,Argo,Adapted Screenplay,O’DONNELL,unknown,906,129,9,3,12,0.75,True
+tt1024648,Argo,Adapted Screenplay,P.A.,male,16,7,1,0,1,1.0,False
+tt1024648,Argo,Adapted Screenplay,PAT TAYLOR,male,38,5,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,PENDER,male,268,40,4,1,5,0.8,True
+tt1024648,Argo,Adapted Screenplay,PRESIDENT CARTER,male,29,3,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,PRINCESS ALEPPA,female,42,7,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,PRODUCER,male,17,4,1,0,1,1.0,False
+tt1024648,Argo,Adapted Screenplay,PUBLICIST,male,44,6,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,REPORTER,male,21,5,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,REZA,male,57,6,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,SADEQ GHOTBZADEH,male,20,1,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,SAHAR,female,35,9,1,0,1,1.0,False
+tt1024648,Argo,Adapted Screenplay,SIEGEL,male,692,84,24,8,32,0.75,True
+tt1024648,Argo,Adapted Screenplay,SOSA,male,25,5,1,0,1,1.0,False
+tt1024648,Argo,Adapted Screenplay,STROUP,male,33,4,3,0,3,1.0,False
+tt1024648,Argo,Adapted Screenplay,TAYLOR,male,198,31,2,0,2,1.0,False
+tt1024648,Argo,Adapted Screenplay,TED KOPPEL,male,20,3,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,TEHRAN MARY,female,59,5,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,TITTERTON,male,46,7,0,0,0,,False
+tt1024648,Argo,Adapted Screenplay,TURNER,male,53,6,0,1,1,0.0,False
+tt1024648,Argo,Adapted Screenplay,WALTER CRONKITE,male,19,1,0,0,0,,False
+tt2024544,12 Years a Slave,Adapted Screenplay,ANNE,female,68,16,3,3,6,0.5,True
+tt2024544,12 Years a Slave,Adapted Screenplay,ARMSBY,male,407,51,18,1,19,0.9474,True
+tt2024544,12 Years a Slave,Adapted Screenplay,BASS,male,562,68,24,7,31,0.7742,True
+tt2024544,12 Years a Slave,Adapted Screenplay,BOB,male,44,6,1,1,2,0.5,False
+tt2024544,12 Years a Slave,Adapted Screenplay,BROWN,male,482,50,9,4,13,0.6923,True
+tt2024544,12 Years a Slave,Adapted Screenplay,BURCH,male,90,20,1,0,1,1.0,False
+tt2024544,12 Years a Slave,Adapted Screenplay,CAPTAIN,male,24,5,3,0,3,1.0,False
+tt2024544,12 Years a Slave,Adapted Screenplay,CELESTE,female,455,56,13,6,19,0.6842,True
+tt2024544,12 Years a Slave,Adapted Screenplay,CHAPIN,male,211,28,5,0,5,1.0,True
+tt2024544,12 Years a Slave,Adapted Screenplay,CLEMENS,male,194,22,5,2,7,0.7143,True
+tt2024544,12 Years a Slave,Adapted Screenplay,EDWARD,male,16,6,0,0,0,,False
+tt2024544,12 Years a Slave,Adapted Screenplay,ELIZA,female,438,55,17,13,30,0.5667,True
+tt2024544,12 Years a Slave,Adapted Screenplay,EMILY,female,29,7,4,0,4,1.0,False
+tt2024544,12 Years a Slave,Adapted Screenplay,EPPS,male,1359,238,48,18,66,0.7273,True
+tt2024544,12 Years a Slave,Adapted Screenplay,FORD,male,782,74,18,3,21,0.8571,True
+tt2024544,12 Years a Slave,Adapted Screenplay,FREEMAN,male,282,61,3,0,3,1.0,False
+tt2024544,12 Years a Slave,Adapted Screenplay,HAMILTON,male,271,41,2,1,3,0.6667,False
+tt2024544,12 Years a Slave,Adapted Screenplay,JOHN,male,69,12,0,1,1,0.0,False
+tt2024544,12 Years a Slave,Adapted Screenplay,JUDGE TURNER,male,54,9,1,0,1,1.0,False
+tt2024544,12 Years a Slave,Adapted Screenplay,MARGARET,female,73,11,3,1,4,0.75,False
+tt2024544,12 Years a Slave,Adapted Screenplay,MISTRESS EPPS,female,305,52,4,4,8,0.5,True
+tt2024544,12 Years a Slave,Adapted Screenplay,MISTRESS SHAW,female,262,30,8,3,11,0.7273,True
+tt2024544,12 Years a Slave,Adapted Screenplay,MR. MOON,male,52,9,2,0,2,1.0,False
+tt2024544,12 Years a Slave,Adapted Screenplay,MRS. FORD,female,53,10,1,0,1,1.0,False
+tt2024544,12 Years a Slave,Adapted Screenplay,OVERSEER,male,28,3,0,0,0,,False
+tt2024544,12 Years a Slave,Adapted Screenplay,PARKER,male,136,26,1,1,2,0.5,False
+tt2024544,12 Years a Slave,Adapted Screenplay,PATSEY,female,260,44,23,4,27,0.8519,True
+tt2024544,12 Years a Slave,Adapted Screenplay,RADBURN,male,178,31,3,0,3,1.0,False
+tt2024544,12 Years a Slave,Adapted Screenplay,RANDALL,male,18,6,0,0,0,,False
+tt2024544,12 Years a Slave,Adapted Screenplay,RAY,male,63,11,1,1,2,0.5,False
+tt2024544,12 Years a Slave,Adapted Screenplay,ROBERT,male,17,2,2,0,2,1.0,False
+tt2024544,12 Years a Slave,Adapted Screenplay,SHERIFF,male,91,16,1,3,4,0.25,False
+tt2024544,12 Years a Slave,Adapted Screenplay,SOLOMON,male,2146,313,108,18,126,0.8571,True
+tt2024544,12 Years a Slave,Adapted Screenplay,TIBEATS,male,343,48,13,2,15,0.8667,True
+tt2024544,12 Years a Slave,Adapted Screenplay,TREACH,male,91,21,0,0,0,,False
+tt2024544,12 Years a Slave,Adapted Screenplay,UNCLE ABRAM,male,168,20,3,2,5,0.6,True
+tt2024544,12 Years a Slave,Adapted Screenplay,WINSLOW,male,61,8,0,1,1,0.0,False
+tt2084970,The Imitation Game,Adapted Screenplay,ALAN TURING,male,3525,584,137,28,165,0.8303,True
+tt2084970,The Imitation Game,Adapted Screenplay,CHARLES RICHARDS,male,25,4,0,0,0,,False
+tt2084970,The Imitation Game,Adapted Screenplay,CHRISTOPHER,male,113,17,2,0,2,1.0,False
+tt2084970,The Imitation Game,Adapted Screenplay,COMMANDER DENNISTON,male,896,134,19,1,20,0.95,True
+tt2084970,The Imitation Game,Adapted Screenplay,DETECTIVE NOCK,male,606,111,20,5,25,0.8,True
+tt2084970,The Imitation Game,Adapted Screenplay,HEADMASTER,male,144,24,2,1,3,0.6667,False
+tt2084970,The Imitation Game,Adapted Screenplay,HELEN,female,206,32,8,1,9,0.8889,True
+tt2084970,The Imitation Game,Adapted Screenplay,HUGH ALEXANDER,male,812,125,20,10,30,0.6667,True
+tt2084970,The Imitation Game,Adapted Screenplay,JOAN CLARKE,female,1566,249,62,13,75,0.8267,True
+tt2084970,The Imitation Game,Adapted Screenplay,JOHN CAIRNCROSS,male,538,86,8,6,14,0.5714,True
+tt2084970,The Imitation Game,Adapted Screenplay,MI-6 AGENT,male,52,8,1,0,1,1.0,False
+tt2084970,The Imitation Game,Adapted Screenplay,PETER HILTON,male,311,67,8,1,9,0.8889,True
+tt2084970,The Imitation Game,Adapted Screenplay,SERGEANT STAEHL,male,116,20,5,0,5,1.0,True
+tt2084970,The Imitation Game,Adapted Screenplay,SGT. STAEHL,male,239,43,4,2,6,0.6667,True
+tt2084970,The Imitation Game,Adapted Screenplay,STEWART MENZIES,male,528,71,10,1,11,0.9091,True
+tt2084970,The Imitation Game,Adapted Screenplay,SUPERINTENDANT SMITH,male,144,29,3,1,4,0.75,False
+tt2084970,The Imitation Game,Adapted Screenplay,TEACHER,male,28,5,0,0,0,,False
+tt2084970,The Imitation Game,Adapted Screenplay,YOUNG ALAN,male,178,40,13,3,16,0.8125,True
+tt1596363,The Big Short,Adapted Screenplay,1010 WINS ANCR,male,34,2,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,ALL,unknown,29,6,2,2,4,0.5,False
+tt1596363,The Big Short,Adapted Screenplay,ANALYST #2,male,26,4,1,2,3,0.3333,False
+tt1596363,The Big Short,Adapted Screenplay,ANTHONY BOURDAIN,male,135,10,7,0,7,1.0,True
+tt1596363,The Big Short,Adapted Screenplay,ASIAN AMERICAN ASSISTANT,female,35,3,2,0,2,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,ASSISTANT,female,60,13,5,1,6,0.8333,True
+tt1596363,The Big Short,Adapted Screenplay,BEAR REP #1,male,80,11,3,1,4,0.75,False
+tt1596363,The Big Short,Adapted Screenplay,BEAR REP #2,male,16,3,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,BEN,male,657,100,23,5,28,0.8214,True
+tt1596363,The Big Short,Adapted Screenplay,BERNANKE,male,37,1,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,BLACK,male,147,20,7,2,9,0.7778,True
+tt1596363,The Big Short,Adapted Screenplay,BOND TRADER,male,16,2,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,BOURDAIN,male,112,12,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,BRUCE MILLER,male,81,10,4,0,4,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,BUSINESSMAN,male,43,6,4,0,4,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,CAB DRIVER,male,60,10,2,0,2,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,CASEY,male,107,11,2,1,3,0.6667,False
+tt1596363,The Big Short,Adapted Screenplay,CHARLIE,male,1048,169,28,8,36,0.7778,True
+tt1596363,The Big Short,Adapted Screenplay,CYNTHIA,female,412,69,10,3,13,0.7692,True
+tt1596363,The Big Short,Adapted Screenplay,DANCER,female,66,16,6,1,7,0.8571,True
+tt1596363,The Big Short,Adapted Screenplay,DANNY,male,465,91,22,1,23,0.9565,True
+tt1596363,The Big Short,Adapted Screenplay,DEEB WINSTON,male,108,15,3,1,4,0.75,False
+tt1596363,The Big Short,Adapted Screenplay,DEUTSCHE SALES REP,male,54,9,2,0,2,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,DIMINUTIVE EXEC,male,22,4,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,DR. THALER,male,252,27,2,0,2,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,EVIE,female,99,14,6,0,6,1.0,True
+tt1596363,The Big Short,Adapted Screenplay,FUND MANAGER,male,44,6,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,GEORGIA,female,182,26,6,1,7,0.8571,True
+tt1596363,The Big Short,Adapted Screenplay,GOVERNMENT OFFICIAL,male,23,2,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,GUY IN GAME JERSEY,male,19,2,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,JAMIE,male,965,148,24,7,31,0.7742,True
+tt1596363,The Big Short,Adapted Screenplay,JARED,male,892,102,25,3,28,0.8929,True
+tt1596363,The Big Short,Adapted Screenplay,JARED VENNETT,male,923,82,10,3,13,0.7692,True
+tt1596363,The Big Short,Adapted Screenplay,JIM CRAMER,male,32,5,0,1,1,0.0,False
+tt1596363,The Big Short,Adapted Screenplay,KATHY TAO,female,192,27,6,1,7,0.8571,True
+tt1596363,The Big Short,Adapted Screenplay,LAWRENCE FIELDS,male,373,51,4,3,7,0.5714,True
+tt1596363,The Big Short,Adapted Screenplay,LAWYER,male,41,6,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,LEHMAN BROTHERS REP,male,16,5,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,LEWIS RANIERI,male,128,18,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,LONG CHAIN OF BETTERS,unknown,16,7,2,0,2,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,LUCY THALIA,female,51,11,4,0,4,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,MARGOT ROBBIE,female,168,11,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,MARK,male,2335,354,73,24,97,0.7526,True
+tt1596363,The Big Short,Adapted Screenplay,MAROON,male,85,13,4,1,5,0.8,True
+tt1596363,The Big Short,Adapted Screenplay,MARTIN BLAINE,male,39,5,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,MED SCHOOL FRIEND,male,78,11,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,MERRILL REP,male,35,6,0,1,1,0.0,False
+tt1596363,The Big Short,Adapted Screenplay,MICHAEL BURRY,male,812,116,38,2,40,0.95,True
+tt1596363,The Big Short,Adapted Screenplay,MIKE,male,750,98,33,3,36,0.9167,True
+tt1596363,The Big Short,Adapted Screenplay,MIKE'S ASSISTANT,female,23,8,2,0,2,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,MODERN TRADER,male,374,35,3,0,3,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,MOM,female,23,4,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,MR. CHAU,male,135,21,6,2,8,0.75,True
+tt1596363,The Big Short,Adapted Screenplay,NICHOLAS,male,20,3,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,OPTION ONE CEO,male,54,8,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,PORTER,male,267,46,8,2,10,0.8,True
+tt1596363,The Big Short,Adapted Screenplay,PORTER COLLINS,male,23,3,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,PR PERSON,female,16,4,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,PUB-GOER,male,18,3,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,RABBI,male,40,5,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,REAL ESTATE AGENT,female,114,17,2,0,2,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,SALES REP,male,76,10,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,SELENA GOMEZ,female,155,22,6,0,6,1.0,True
+tt1596363,The Big Short,Adapted Screenplay,SEMINAR LEADER,male,34,6,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,SNIPPETS OF BUSINESS NEWS,unknown,21,2,0,0,0,,False
+tt1596363,The Big Short,Adapted Screenplay,TATTOOED NECK,male,40,6,3,0,3,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,TED JIANG,male,53,7,3,0,3,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,THE HOST,male,27,4,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,THERAPIST,female,32,4,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,TRADER,male,70,11,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,VINNY,male,702,122,5,7,12,0.4167,True
+tt1596363,The Big Short,Adapted Screenplay,WIFE,female,46,10,1,0,1,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,WOMAN IN GLASSES,female,34,4,3,0,3,1.0,False
+tt1596363,The Big Short,Adapted Screenplay,YOUNG ANALYST,male,128,27,10,0,10,1.0,True
+tt1596363,The Big Short,Adapted Screenplay,YOUNG BANKER,male,100,19,3,2,5,0.6,True
+tt4975722,Moonlight,Adapted Screenplay,BLACK,male,407,104,22,11,33,0.6667,True
+tt4975722,Moonlight,Adapted Screenplay,CHIRON,male,189,55,15,4,19,0.7895,True
+tt4975722,Moonlight,Adapted Screenplay,JUAN,male,636,104,21,9,30,0.7,True
+tt4975722,Moonlight,Adapted Screenplay,KEVIN,male,1498,257,72,18,90,0.8,True
+tt4975722,Moonlight,Adapted Screenplay,LITTLE,male,77,24,5,3,8,0.625,True
+tt4975722,Moonlight,Adapted Screenplay,MR. PIERCE,male,76,10,1,2,3,0.3333,False
+tt4975722,Moonlight,Adapted Screenplay,PAULA,female,639,100,29,13,42,0.6905,True
+tt4975722,Moonlight,Adapted Screenplay,PIZZO,male,54,8,0,0,0,,False
+tt4975722,Moonlight,Adapted Screenplay,PORTABLE BOY 1,male,34,7,0,0,0,,False
+tt4975722,Moonlight,Adapted Screenplay,PORTABLE BOY 3,male,18,2,0,0,0,,False
+tt4975722,Moonlight,Adapted Screenplay,PRINCIPAL WILLIAMS,female,56,6,0,1,1,0.0,False
+tt4975722,Moonlight,Adapted Screenplay,TERESA,female,231,39,5,1,6,0.8333,True
+tt4975722,Moonlight,Adapted Screenplay,TERRELL,male,441,59,16,2,18,0.8889,True
+tt4975722,Moonlight,Adapted Screenplay,TERRENCE,male,25,4,0,0,0,,False
+tt4975722,Moonlight,Adapted Screenplay,TRAVIS,male,68,14,9,0,9,1.0,True
+tt4975722,Moonlight,Adapted Screenplay,WILLIAMS,female,102,9,6,3,9,0.6667,True
+tt5726616,Call Me by Your Name,Adapted Screenplay,ANCHISE,male,21,5,3,0,3,1.0,False
+tt5726616,Call Me by Your Name,Adapted Screenplay,ANNELLA,female,347,56,4,0,4,1.0,False
+tt5726616,Call Me by Your Name,Adapted Screenplay,CHIARA,female,60,17,3,1,4,0.75,False
+tt5726616,Call Me by Your Name,Adapted Screenplay,ELENA,female,72,15,1,0,1,1.0,False
+tt5726616,Call Me by Your Name,Adapted Screenplay,ELIO,male,1180,242,82,12,94,0.8723,True
+tt5726616,Call Me by Your Name,Adapted Screenplay,MAFALDA,female,26,7,2,1,3,0.6667,False
+tt5726616,Call Me by Your Name,Adapted Screenplay,MARCO,male,41,6,0,0,0,,False
+tt5726616,Call Me by Your Name,Adapted Screenplay,MARZIA,female,265,51,14,9,23,0.6087,True
+tt5726616,Call Me by Your Name,Adapted Screenplay,OLIVER,male,1377,240,70,20,90,0.7778,True
+tt5726616,Call Me by Your Name,Adapted Screenplay,PERLMAN,male,1036,118,24,11,35,0.6857,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,AGENT Y,male,115,19,4,0,4,1.0,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,BOVREGARD- KLAN NARRATOR,male,171,12,0,1,1,0.0,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,BUTCH,male,888,168,20,4,24,0.8333,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,CHIEF TAGGERT,male,679,95,16,3,19,0.8421,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,CHUCK,male,1457,256,69,13,82,0.8415,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,DAVID DUKE,male,629,82,21,4,25,0.84,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,DEEP THROAT,male,46,11,1,0,1,1.0,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,DUANE,male,185,33,2,1,3,0.6667,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,HAKIM,male,21,2,0,0,0,,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,JEROME TOMPKINS,male,364,29,6,1,7,0.8571,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,JIMMY,male,85,15,1,1,2,0.5,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,KEN,male,787,116,19,8,27,0.7037,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,KWAME TURE,male,935,68,14,11,25,0.56,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,LEON,male,16,3,0,0,0,,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,LOUISE,female,156,29,6,5,11,0.5455,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,MR. WOODS,male,132,14,0,0,0,,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,OFFICER CLOUGHERTY,male,43,7,1,0,1,1.0,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,OFFICER MORRIS,male,31,4,1,0,1,1.0,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,PATRICE,female,638,89,18,9,27,0.6667,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,PLEASANT MAN,male,27,5,3,0,3,1.0,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,PRE-RECORDED MESSAGE,unknown,20,3,0,0,0,,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,RON STALLWORTH,male,3204,512,146,29,175,0.8343,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,SGT. MORRIS,male,222,30,10,2,12,0.8333,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,SGT. TRAPP,male,294,37,4,1,5,0.8,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,VOICE,male,18,3,0,0,0,,False
+tt7349662,BlacKkKlansman,Adapted Screenplay,WALKER,male,252,41,3,2,5,0.6,True
+tt7349662,BlacKkKlansman,Adapted Screenplay,WHEATON,male,31,6,0,0,0,,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,ADOLF,male,1487,203,71,11,82,0.8659,True
+tt2584384,Jojo Rabbit,Adapted Screenplay,CHILDREN,unknown,42,8,2,1,3,0.6667,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,CHRISTOPH,male,47,13,0,0,0,,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,DEERTZ,male,334,54,7,1,8,0.875,True
+tt2584384,Jojo Rabbit,Adapted Screenplay,ELSA,female,1845,325,64,22,86,0.7442,True
+tt2584384,Jojo Rabbit,Adapted Screenplay,FINKEL,male,76,26,1,0,1,1.0,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,FRAU BETZLER,female,1095,180,34,8,42,0.8095,True
+tt2584384,Jojo Rabbit,Adapted Screenplay,FRAULEIN RAHM,female,98,12,3,0,3,1.0,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,HANS,male,121,11,0,0,0,,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,HERR GRUSCH,male,57,10,1,0,1,1.0,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,HITLER,male,46,5,0,0,0,,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,JOJO,male,3956,698,226,29,255,0.8863,True
+tt2584384,Jojo Rabbit,Adapted Screenplay,JUNGVOLK,male,26,2,0,0,0,,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,KLENZENDORF,male,1163,151,34,4,38,0.8947,True
+tt2584384,Jojo Rabbit,Adapted Screenplay,OFFICER 1,male,24,4,1,0,1,1.0,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,PARTISAN,male,29,9,0,0,0,,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,RUSSIAN TEACHER,female,56,9,0,0,0,,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,SECRETARY,female,73,12,1,0,1,1.0,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,WOMAN,female,25,8,0,0,0,,False
+tt2584384,Jojo Rabbit,Adapted Screenplay,YORKI,male,838,131,40,9,49,0.8163,True
+tt10272386,The Father,Adapted Screenplay,ANNE,female,1732,422,79,22,101,0.7822,True
+tt10272386,The Father,Adapted Screenplay,ANTHONY,male,3666,875,230,59,289,0.7958,True
+tt10272386,The Father,Adapted Screenplay,DOCTOR,male,18,4,0,0,0,,False
+tt10272386,The Father,Adapted Screenplay,LAURA,female,431,122,32,4,36,0.8889,True
+tt10272386,The Father,Adapted Screenplay,MAN,male,367,88,17,8,25,0.68,True
+tt10272386,The Father,Adapted Screenplay,PAUL,male,618,146,26,6,32,0.8125,True
+tt10272386,The Father,Adapted Screenplay,WOMAN,female,557,149,13,6,19,0.6842,True
+tt10366460,CODA,Adapted Screenplay,BERNARDO,male,1210,266,42,11,53,0.7925,True
+tt10366460,CODA,Adapted Screenplay,BRADY,male,167,21,5,0,5,1.0,True
+tt10366460,CODA,Adapted Screenplay,CHORUS,unknown,25,3,1,0,1,1.0,False
+tt10366460,CODA,Adapted Screenplay,CHUBS,male,33,5,1,0,1,1.0,False
+tt10366460,CODA,Adapted Screenplay,COAST GUARD OFFICER,male,102,12,1,0,1,1.0,False
+tt10366460,CODA,Adapted Screenplay,DOCTOR,male,52,4,1,0,1,1.0,False
+tt10366460,CODA,Adapted Screenplay,FEMALE JURY MEMBER,female,24,6,1,0,1,1.0,False
+tt10366460,CODA,Adapted Screenplay,FRANK,male,561,111,17,9,26,0.6538,True
+tt10366460,CODA,Adapted Screenplay,GERTIE,female,215,39,7,3,10,0.7,True
+tt10366460,CODA,Adapted Screenplay,GIO,male,60,10,0,0,0,,False
+tt10366460,CODA,Adapted Screenplay,JACKIE,female,486,99,16,5,21,0.7619,True
+tt10366460,CODA,Adapted Screenplay,JOANNE,female,58,11,6,1,7,0.8571,True
+tt10366460,CODA,Adapted Screenplay,JOHN KAUFMAN,male,38,5,0,0,0,,False
+tt10366460,CODA,Adapted Screenplay,LEO,male,335,70,14,4,18,0.7778,True
+tt10366460,CODA,Adapted Screenplay,MALE JURY MEMBER,male,32,2,0,0,0,,False
+tt10366460,CODA,Adapted Screenplay,MILES,male,607,108,34,8,42,0.8095,True
+tt10366460,CODA,Adapted Screenplay,MONDO,male,26,4,0,1,1,0.0,False
+tt10366460,CODA,Adapted Screenplay,MS. SIMON,female,48,4,0,0,0,,False
+tt10366460,CODA,Adapted Screenplay,NINA,female,24,3,0,0,0,,False
+tt10366460,CODA,Adapted Screenplay,RADIO,unknown,75,24,0,0,0,,False
+tt10366460,CODA,Adapted Screenplay,RUBY,female,1550,315,93,12,105,0.8857,True
+tt10366460,CODA,Adapted Screenplay,STUDENT,male,25,4,0,0,0,,False
+tt10366460,CODA,Adapted Screenplay,TONY,male,81,10,4,0,4,1.0,False
+tt13669038,Women Talking,Adapted Screenplay,AGATA,female,1749,235,19,17,36,0.5278,True
+tt13669038,Women Talking,Adapted Screenplay,ANNA,female,41,5,0,1,1,0.0,False
+tt13669038,Women Talking,Adapted Screenplay,AUGUST,male,1234,153,44,12,56,0.7857,True
+tt13669038,Women Talking,Adapted Screenplay,AUTJE,female,384,66,9,6,15,0.6,True
+tt13669038,Women Talking,Adapted Screenplay,EARNEST,male,44,8,0,2,2,0.0,False
+tt13669038,Women Talking,Adapted Screenplay,GRETA,female,1037,137,24,13,37,0.6486,True
+tt13669038,Women Talking,Adapted Screenplay,HELENA,female,42,5,0,0,0,,False
+tt13669038,Women Talking,Adapted Screenplay,JULIUS,male,25,7,1,0,1,1.0,False
+tt13669038,Women Talking,Adapted Screenplay,LOUDSPEAKER,male,31,3,2,0,2,1.0,False
+tt13669038,Women Talking,Adapted Screenplay,MARICHE,female,1049,136,19,13,32,0.5938,True
+tt13669038,Women Talking,Adapted Screenplay,MEJAL,female,463,78,13,5,18,0.7222,True
+tt13669038,Women Talking,Adapted Screenplay,MELVIN,male,81,18,7,0,7,1.0,True
+tt13669038,Women Talking,Adapted Screenplay,NEITJE,female,232,43,9,1,10,0.9,True
+tt13669038,Women Talking,Adapted Screenplay,ONA,female,1595,208,42,12,54,0.7778,True
+tt13669038,Women Talking,Adapted Screenplay,PETERS,male,30,6,0,0,0,,False
+tt13669038,Women Talking,Adapted Screenplay,SALOME,female,1214,172,41,17,58,0.7069,True
+tt13669038,Women Talking,Adapted Screenplay,SCARFACE JANZ,male,173,21,2,2,4,0.5,False
+tt13669038,Women Talking,Adapted Screenplay,THE WOMEN,female,58,1,0,0,0,,False
+tt23561236,American Fiction,Adapted Screenplay,AGNES,female,187,37,8,3,11,0.7273,True
+tt23561236,American Fiction,Adapted Screenplay,AILENE,female,178,28,10,1,11,0.9091,True
+tt23561236,American Fiction,Adapted Screenplay,ARTHUR,male,917,147,22,3,25,0.88,True
+tt23561236,American Fiction,Adapted Screenplay,AUTHOR,male,37,2,1,1,2,0.5,False
+tt23561236,American Fiction,Adapted Screenplay,BRITTANY,female,45,5,4,0,4,1.0,False
+tt23561236,American Fiction,Adapted Screenplay,CARL,male,329,35,12,1,13,0.9231,True
+tt23561236,American Fiction,Adapted Screenplay,CLIFF,male,846,161,47,10,57,0.8246,True
+tt23561236,American Fiction,Adapted Screenplay,CORALINE,female,560,116,26,2,28,0.9286,True
+tt23561236,American Fiction,Adapted Screenplay,DANIEL,male,204,25,10,1,11,0.9091,True
+tt23561236,American Fiction,Adapted Screenplay,DOCTOR,male,34,7,2,0,2,1.0,False
+tt23561236,American Fiction,Adapted Screenplay,DR. BULGER,male,39,5,1,0,1,1.0,False
+tt23561236,American Fiction,Adapted Screenplay,GILDA,female,17,2,0,0,0,,False
+tt23561236,American Fiction,Adapted Screenplay,JOHN,male,222,28,3,0,3,1.0,False
+tt23561236,American Fiction,Adapted Screenplay,KENNY,male,42,7,2,0,2,1.0,False
+tt23561236,American Fiction,Adapted Screenplay,KENYA,female,106,14,1,4,5,0.2,True
+tt23561236,American Fiction,Adapted Screenplay,LEO,male,80,13,0,0,0,,False
+tt23561236,American Fiction,Adapted Screenplay,LISA,female,510,78,20,2,22,0.9091,True
+tt23561236,American Fiction,Adapted Screenplay,LORRAINE,female,288,66,15,4,19,0.7895,True
+tt23561236,American Fiction,Adapted Screenplay,LUZ,female,80,10,1,0,1,1.0,False
+tt23561236,American Fiction,Adapted Screenplay,MAJESTIC,male,105,16,0,1,1,0.0,False
+tt23561236,American Fiction,Adapted Screenplay,MANDEL,male,74,14,2,0,2,1.0,False
+tt23561236,American Fiction,Adapted Screenplay,MAYNARD,male,117,26,6,0,6,1.0,True
+tt23561236,American Fiction,Adapted Screenplay,MODERATOR,male,110,12,0,2,2,0.0,False
+tt23561236,American Fiction,Adapted Screenplay,MONK,male,3531,655,210,31,241,0.8714,True
+tt23561236,American Fiction,Adapted Screenplay,NED,male,47,9,4,0,4,1.0,False
+tt23561236,American Fiction,Adapted Screenplay,ORDERLY,male,39,7,1,0,1,1.0,False
+tt23561236,American Fiction,Adapted Screenplay,PAULA,female,355,56,12,2,14,0.8571,True
+tt23561236,American Fiction,Adapted Screenplay,SINTARA,female,519,57,22,3,25,0.88,True
+tt23561236,American Fiction,Adapted Screenplay,VAN,male,197,36,23,2,25,0.92,True
+tt23561236,American Fiction,Adapted Screenplay,WILEY,male,427,73,11,1,12,0.9167,True
+tt23561236,American Fiction,Adapted Screenplay,WILLY,male,164,35,5,1,6,0.8333,True
+tt23561236,American Fiction,Adapted Screenplay,WILSON,male,109,13,7,0,7,1.0,True
+tt23561236,American Fiction,Adapted Screenplay,PHILLIP,male,24,5,1,1,2,0.5,False
+tt20215234,Conclave,Adapted Screenplay,ADEYEMI,male,464,65,21,6,27,0.7778,True
+tt20215234,Conclave,Adapted Screenplay,ALL CARDINALS,male,26,3,0,0,0,,False
+tt20215234,Conclave,Adapted Screenplay,ARCHBISHOP MANDORFF,male,136,21,1,0,1,1.0,False
+tt20215234,Conclave,Adapted Screenplay,ARCHBISHOP WOZNIAK,male,249,36,10,3,13,0.7692,True
+tt20215234,Conclave,Adapted Screenplay,BELLINI,male,1262,152,40,6,46,0.8696,True
+tt20215234,Conclave,Adapted Screenplay,BENITEZ,male,945,108,47,17,64,0.7344,True
+tt20215234,Conclave,Adapted Screenplay,CARDINAL BROTZKUS,male,28,4,1,1,2,0.5,False
+tt20215234,Conclave,Adapted Screenplay,CARDINAL LOMBARDI,male,170,38,0,0,0,,False
+tt20215234,Conclave,Adapted Screenplay,CARDINAL MENDOZA,male,59,12,2,0,2,1.0,False
+tt20215234,Conclave,Adapted Screenplay,CARDINAL NAKITANDA,male,111,13,0,3,3,0.0,False
+tt20215234,Conclave,Adapted Screenplay,CARDINAL SABBADIN,male,431,47,6,4,10,0.6,True
+tt20215234,Conclave,Adapted Screenplay,CARDINAL VILLANUEVA,male,48,4,1,2,3,0.3333,False
+tt20215234,Conclave,Adapted Screenplay,GUERRINI,male,29,3,1,1,2,0.5,False
+tt20215234,Conclave,Adapted Screenplay,KRASINSKI,male,46,1,0,0,0,,False
+tt20215234,Conclave,Adapted Screenplay,LAWRENCE,male,3904,508,144,39,183,0.7869,True
+tt20215234,Conclave,Adapted Screenplay,LOMBARDI,male,21,3,0,0,0,,False
+tt20215234,Conclave,Adapted Screenplay,MONSIGNOR O'MALLEY,unknown,615,87,32,2,34,0.9412,True
+tt20215234,Conclave,Adapted Screenplay,SISTER AGNES,female,249,26,8,3,11,0.7273,True
+tt20215234,Conclave,Adapted Screenplay,TEDESCO,male,537,61,8,5,13,0.6154,True
+tt20215234,Conclave,Adapted Screenplay,TREMBLAY,male,659,95,37,5,42,0.881,True
