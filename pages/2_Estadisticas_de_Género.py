@@ -29,7 +29,7 @@ st.caption(
     "Por eso el total de personajes aquí (3,119) es algo menor que en la landing page (3,186)."
 )
 
-COLORES_GENERO = {"male": "#fcc000", "female": "#e7e6e6", "unknown": "#b0b0b0"}
+COLORES_GENERO = {"male": "#3B6EA5", "female": "#C1447E", "unknown": "#b0b0b0"}
 NOMBRES_GENERO = {"male": "Masculino", "female": "Femenino", "unknown": "Desconocido"}
 
 # ----------------------------
@@ -110,7 +110,7 @@ fig_corte = px.bar(
     title=titulo_corte,
     labels={"Gender_ES": "Género", "count": "Número de personajes"},
     color="Gender_ES",
-    color_discrete_map={"Masculino": "#ffc000", "Femenino": "#e7e6e6", "Desconocido": "#b0b0b0"}
+    color_discrete_map={"Masculino": "#3B6EA5", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"}
 )
 st.plotly_chart(fig_corte, width="stretch")
 
@@ -149,7 +149,7 @@ with col_donut1:
         conteo_personajes_total, names="Gender_ES", values="Cantidad", hole=0.45,
         title="Personajes por sexo (total)",
         color="Gender_ES",
-        color_discrete_map={"Masculino": "#fcc000", "Femenino": "#e7e6e6", "Desconocido": "#b0b0b0"}
+        color_discrete_map={"Masculino": "#3B6EA5", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"}
     )
     fig_personajes_total.update_traces(textinfo="value+percent", texttemplate="%{value:,}<br>%{percent}")
     st.plotly_chart(fig_personajes_total, width="stretch")
@@ -197,7 +197,7 @@ with col_donut2:
         palabras_por_genero, names="Gender_ES", values="Words", hole=0.45,
         title=f"Palabras totales por sexo (personajes con {corte}+ palabras)",
         color="Gender_ES",
-        color_discrete_map={"Masculino": "#fcc000", "Femenino": "#e7e6e6", "Desconocido": "#b0b0b0"}
+        color_discrete_map={"Masculino": "#3B6EA5", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"}
     )
     fig_palabras.update_traces(textinfo="value+percent", texttemplate="%{value:,}<br>%{percent}")
     st.plotly_chart(fig_palabras, width="stretch")
@@ -208,7 +208,7 @@ with col_donut3:
         media_df, names="Gender_ES", values="Media", hole=0.45,
         title="Media de palabras por personaje (no por película)",
         color="Gender_ES",
-        color_discrete_map={"Masculino": "#fcc000", "Femenino": "#e7e6e6", "Desconocido": "#b0b0b0"}
+        color_discrete_map={"Masculino": "#3B6EA5", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"}
     )
     fig_media_personaje.update_traces(textinfo="value+percent", texttemplate="%{value:.1f}<br>%{percent}")
     st.plotly_chart(fig_media_personaje, width="stretch")
@@ -237,7 +237,7 @@ fig_box = px.box(
     df_filtrado, x="Gender_ES", y="Words", color="Gender_ES",
     title="Distribución de palabras por personaje (según género)",
     labels={"Gender_ES": "Género", "Words": "Palabras"},
-    color_discrete_map={"Masculino": "#fcc000", "Femenino": "#e7e6e6", "Desconocido": "#b0b0b0"}
+    color_discrete_map={"Masculino": "#3B6EA5", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"}
 )
 st.plotly_chart(fig_box, width="stretch")
 
@@ -254,7 +254,7 @@ fig_award = px.bar(
     conteo_award_genero, x="Award", y="Cantidad", color="Gender_ES", barmode="group",
     title="Número de personajes por categoría de Oscar y género",
     labels={"Award": "Categoría de Oscar", "Gender_ES": "Género"},
-    color_discrete_map={"Masculino": "#ffc000", "Femenino": "#e7e6e6", "Desconocido": "#b0b0b0"},
+    color_discrete_map={"Masculino": "#3B6EA5", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"},
     category_orders={"Gender_ES": ["Masculino", "Femenino", "Desconocido"]},
     text="Cantidad"
 )
@@ -288,7 +288,7 @@ with col_der:
         top10.sort_values("Palabras"),
         x="Palabras", y="Personaje", orientation="h",
         title=f"Top 10 personajes {genero_top.lower()}s por palabras",
-        color_discrete_sequence=["#ffc000" if genero_top == "Masculino" else "#e7e6e6"],
+        color_discrete_sequence=["#3B6EA5" if genero_top == "Masculino" else "#C1447E"],
         text="Palabras"
     )
     fig_top10.update_traces(textposition="outside", cliponaxis=False)
@@ -307,8 +307,8 @@ st.markdown(
     """
 )
  
-COLOR_MASCULINO = "#ffc000"
-COLOR_FEMENINO = "#e7e6e6"
+COLOR_MASCULINO = "#3B6EA5"
+COLOR_FEMENINO = "#C1447E"
 COLORES_GENERO = {"Masculino": COLOR_MASCULINO, "Femenino": COLOR_FEMENINO, "Desconocido": "#7f7f7f"}
 NOMBRES_GENERO = {"male": "Masculino", "female": "Femenino", "unknown": "Desconocido"}
  
@@ -369,7 +369,7 @@ with col_donut1:
     conteo_personajes = df_pelicula["Gender_ES"].value_counts().reset_index()
     conteo_personajes.columns = ["Gender_ES", "Cantidad"]
     fig_personajes = px.pie(
-        conteo_personajes, names="Gender_ES", values="Cantidad", hole=0.55,
+        conteo_personajes, names="Gender_ES", values="Cantidad", hole=0.45,
         color="Gender_ES", color_discrete_map=COLORES_GENERO
     )
     fig_personajes.update_traces(textinfo="value+percent", texttemplate="%{value}<br>%{percent}")
@@ -379,7 +379,7 @@ with col_donut2:
     st.markdown("**Total de palabras por sexo**")
     conteo_palabras = df_pelicula.groupby("Gender_ES")["Words"].sum().reset_index()
     fig_palabras = px.pie(
-        conteo_palabras, names="Gender_ES", values="Words", hole=0.55,
+        conteo_palabras, names="Gender_ES", values="Words", hole=0.45,
         color="Gender_ES", color_discrete_map=COLORES_GENERO
     )
     fig_palabras.update_traces(textinfo="value+percent", texttemplate="%{value:,}<br>%{percent}")
@@ -390,7 +390,7 @@ st.divider()
 # ----------------------------
 # SUNBURST: REPARTO DE PERSONAJES PRINCIPALES
 # ----------------------------
-st.subheader(f"Quién se come el pastel en {pelicula_seleccionada}")
+st.subheader(f"Cómo es la distribución en {pelicula_seleccionada}")
 st.markdown(
     """
     Al seleccionar los diez personajes con más diálogo de la película, los
@@ -407,7 +407,7 @@ fig_sunburst = px.sunburst(
     top10_pelicula, path=["Gender_ES", "Character"], values="Words",
     color="Gender_ES", color_discrete_map=COLORES_GENERO,
     title="Reparto de personajes principales",
-    height=700
+    height=550
 )
 fig_sunburst.update_traces(textinfo="label", textfont_size=14)
 fig_sunburst.update_layout(margin=dict(t=60, l=10, r=10, b=10))

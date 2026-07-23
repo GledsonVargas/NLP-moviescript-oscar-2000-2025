@@ -97,7 +97,7 @@ resumen_genero = pd.DataFrame({
     ],
 })
  
-colores_genero = {"Masculino": "#ffc000", "Femenino": "#e7e6e6", "Desconocido": "#b0b0b0"}
+colores_genero = {"Masculino": "#3B6EA5", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"}
  
 col1, col2, col3, col4, col5 = st.columns(5)
 col1.metric("Películas únicas", f"{df_unicas.shape[0]}")
@@ -175,11 +175,11 @@ titulo_rol = f"Distribución de {rol_seleccionado.lower()} por género{sufijo_ti
 col_grafico, col_texto = st.columns([2, 1])
  
 with col_grafico:
-    fig_rol = px.bar(
-        resumen_rol, x="Género", y="Cantidad", text="Cantidad",
-        title=titulo_rol, color="Género", color_discrete_map=colores_genero
+    fig_rol = px.pie(
+        resumen_rol, names="Género", values="Cantidad",
+        title=titulo_rol, color="Género", color_discrete_map=colores_genero, hole=0.45
     )
-    fig_rol.update_traces(textposition="outside", cliponaxis=False)
+    fig_rol.update_traces(textinfo="label+value", textposition="outside")
     st.plotly_chart(fig_rol, width="stretch")
  
 with col_texto:
@@ -275,7 +275,7 @@ else:  # Por representación de género de personajes
     fig = px.bar(
         resumen_largo, x=col_genero_cine, y="Promedio", color="Tipo", barmode="group",
         title="Promedio de personajes masculinos/femeninos por género cinematográfico",
-        color_discrete_map={"Promedio personajes masculinos": "#ffc000", "Promedio personajes femeninos": "#e7e6e6"}
+        color_discrete_map={"Promedio personajes masculinos": "#3B6EA5", "Promedio personajes femeninos": "#C1447E"}
     )
     st.plotly_chart(fig, width="stretch")
  
