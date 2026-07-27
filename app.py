@@ -461,3 +461,90 @@ nombres_legibles = {
 
 tabla_final = df[columnas_mostrar].rename(columns=nombres_legibles)
 st.dataframe(tabla_final, width="stretch")
+
+st.divider()
+
+# ----------------------------
+# TOP 10 PERSONAJES CON MÁS PALABRAS, POR GÉNERO
+# -----------------------------------------------------------------------------
+# Esta sección necesita una tabla a nivel de PERSONAJE (no de película), así
+# que la construimos aquí a partir de Script_Dict/Characters_Genders, que ya
+# están disponibles en `df` (Dataset_final.pkl). Se guarda en `df_personajes`
+# para no confundirla con `df` (a nivel película) usado en el resto de esta
+# página.
+# -----------------------------------------------------------------------------
+st.subheader("Top 10 personajes con más palabras")
+
+
+def normalize_name_personaje(name):
+    """Unifica apóstrofes (' vs ' vs ') y espacios, igual que en Estadísticas de Género."""
+    name = name.replace("’", "'").replace("‘", "'")
+    name = re.sub(r"\s+", " ", name).strip()
+    return name.upper()
+
+
+NOMBRES_GENERO_PERSONAJE = {"male": "Masculino", "female": "Femenino", "unknown": "Desconocido"}
+
+
+@st.cache_data
+def construir_df_personajes(df_in):
+    rows = []
+    for _, row in df_in.iterrows():
+        script = row["Script_Dict"]
+        genders = row["Characters_Genders"]
+        if not isinstance(script, dict):
+            continue
+        genders = genders if isinstance(genders, dict) else {}
+        genders_norm = {normalize_name_personaje(k): v for k, v in genders.items()}
+        for character, text in script.items():
+            n_words = len(str(text).split())
+            gender_raw = genders_norm.get(normalize_name_personaje(character), "unknown")
+            rows.append({
+                "IMDb_ID": row["IMDb_ID"],
+                "Title": row["Title"],
+                "Character": character,
+                "Gender": gender_raw,
+                "Words": n_words,
+            })
+    dfc = pd.DataFrame(rows)
+    dfc = dfc[dfc["Words"] > 0].reset_index(drop=True)
+    dfc["Gender_ES"] = dfc["Gender"].map(NOMBRES_GENERO_PERSONAJE)
+    return dfc
+
+
+df_personajes = construir_df_personajes(df)
+
+# Deduplicar por pelicula+personaje para no contar dos veces las nominaciones repetidas
+df_top = df_personajes.drop_duplicates(subset=["Title", "Character"])
+
+genero_top = st.radio(
+    "Selecciona género:", ["Masculino", "Femenino", "Desconocido"], horizontal=True,
+    key="genero_top_principal",
+)
+
+COLOR_TOP = {
+    "Masculino": "#3B6EA5",
+    "Femenino": "#C1447E",
+    "Desconocido": "#7f7f7f",
+}
+
+top10 = (
+    df_top[df_top["Gender_ES"] == genero_top]
+    .sort_values("Words", ascending=False)
+    .head(10)[["Title", "Character", "Words"]]
+)
+top10.columns = ["Película", "Personaje", "Palabras"]
+
+col_izq, col_der = st.columns([1, 1])
+with col_izq:
+    st.dataframe(top10, width="stretch", hide_index=True)
+with col_der:
+    fig_top10 = px.bar(
+        top10.sort_values("Palabras"),
+        x="Palabras", y="Personaje", orientation="h",
+        title=f"Top 10 personajes {genero_top.lower()}s por palabras",
+        color_discrete_sequence=[COLOR_TOP[genero_top]],
+        text="Palabras"
+    )
+    fig_top10.update_traces(textposition="outside", cliponaxis=False)
+    st.plotly_chart(fig_top10, width="stretch")
