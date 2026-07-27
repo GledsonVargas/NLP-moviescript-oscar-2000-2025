@@ -54,7 +54,7 @@ st.divider()
 # ----------------------------
 @st.cache_data
 def cargar_datos():
-    df = pd.read_pickle("Dataset_final.pkl")
+    df = pd.read_pickle("dataset_final_75.pkl")
     return df
 
 def split_sentences(texto):
