@@ -19,7 +19,7 @@ st.markdown(
 )
 
 
-def divider_grueso(color="#888888", grosor_px=4):
+def divider_grueso(color="#0A0A0A", grosor_px=4):
     """Un st.divider() más grueso que el estándar, para separar secciones clave."""
     st.markdown(
         f"<hr style='height:{grosor_px}px;border:none;background-color:{color};"
@@ -28,12 +28,12 @@ def divider_grueso(color="#888888", grosor_px=4):
     )
 
 
-st.title("Estadísticas de Género")
+st.title("1. Estadísticas de Género")
 st.markdown(
     """
     Esta página explora cómo se reparte el diálogo entre personajes masculinos y
     femeninos: cuántos personajes hay de cada género, cuántas palabras hablan,
-    y cómo varía esto según la categoría de Oscar.
+    y cómo varía esto según la categoría de Oscar y si la dirección o guion está escrito por diferente género.
     """
 )
 
@@ -45,10 +45,10 @@ COLORES_GENERO_ES = {"Masculino": "#3B6EA5", "Femenino": "#C1447E", "Desconocido
 # CARGA DE DATOS
 # -----------------------------------------------------------------------------
 # Antes esta página leía df_sentiment_flat.pkl (pensado para análisis de
-# sentimiento, que aquí no se usa). Como dataset_final_75.pkl ya trae
+# sentimiento, que aquí no se usa). Como Dataset_final.pkl ya trae
 # Script_Dict (diálogo por personaje) y Characters_Genders (género por
 # personaje), construimos la tabla de personajes directamente desde ahí.
-# Ventaja adicional: dataset_final_75.pkl SÍ incluye "Anatomy of a Fall" y
+# Ventaja adicional: Dataset_final.pkl SÍ incluye "Anatomy of a Fall" y
 # "Talk to Her" (df_sentiment_flat.pkl las excluía por no estar
 # predominantemente en inglés), así que esta página ahora cubre las 58
 # películas completas en vez de 56.
@@ -100,10 +100,29 @@ def cargar_datos():
 
 df = cargar_datos()
 
+# ----------------------------
+# CARGA DE DATOS A NIVEL PELÍCULA (director/guionista)
+# -----------------------------------------------------------------------------
+# Varias secciones de esta página (Directores/guionistas, Relación de género,
+# Una mirada femenina, y el gráfico de "Personajes por categoría de Oscar")
+# necesitan columnas que solo existen en Dataset_final.pkl "en crudo"
+# (male_director, female_director, male_writer, female_writer, Director,
+# Writers...), no en la tabla `df` aplanada por personaje. Por eso se carga
+# aparte, con nombres distintos (df_peliculas / df_peliculas_unicas) para no
+# pisar el `df` de arriba.
+# -----------------------------------------------------------------------------
+@st.cache_data
+def cargar_datos_peliculas():
+    return pd.read_pickle("dataset_final_75.pkl")
+
+
+df_peliculas = cargar_datos_peliculas()
+df_peliculas_unicas = df_peliculas.drop_duplicates(subset="IMDb_ID")
+
 n_peliculas_unicas_total = df["IMDb_ID"].nunique()
 n_nominaciones_total = df[["Title", "Award"]].drop_duplicates().shape[0]
 
-st.caption(
+st.markdown(
     f"Nota: esta página usa {n_peliculas_unicas_total} películas únicas "
     f"({n_nominaciones_total} nominaciones en total, ya que algunas películas "
     f"están nominadas en más de una categoría de Oscar). El total de personajes "
@@ -239,7 +258,7 @@ col_donut1, col_texto1 = st.columns([1, 1])
 with col_donut1:
     fig_personajes_total = px.pie(
         conteo_personajes_total, names="Gender_ES", values="Cantidad", hole=0.45,
-        title="Personajes por sexo (total)",
+        title="Personajes por género (total)",
         color="Gender_ES",
         color_discrete_map=COLORES_GENERO_ES,
     )
@@ -265,7 +284,7 @@ st.divider()
 # ----------------------------
 # TOTALES VS. PROMEDIOS: PALABRAS
 # ----------------------------
-st.subheader("Palabras por sexo")
+st.subheader("Palabras por género")
 st.markdown(
     """
     Más palabras para los hombres, pero una historia distinta por personaje.
@@ -287,7 +306,7 @@ col_donut2, col_donut3 = st.columns(2)
 with col_donut2:
     fig_palabras = px.pie(
         palabras_por_genero, names="Gender_ES", values="Words", hole=0.45,
-        title=f"Palabras totales por sexo (personajes con {corte}+ palabras)",
+        title=f"Palabras totales por género (personajes con {corte}+ palabras)",
         color="Gender_ES",
         color_discrete_map=COLORES_GENERO_ES,
     )
@@ -339,12 +358,12 @@ st.divider()
 # PERSONAJES POR CATEGORÍA DE OSCAR (Award) Y GÉNERO
 # ----------------------------
 st.subheader("Personajes por categoría de Oscar y género")
-st.caption(
-    "Este gráfico es un conteo absoluto por categoría de Oscar: no se ve "
-    "afectado por el toggle de 'Películas únicas / Total de películas' de "
-    "más arriba, porque dentro de cada categoría no hay duplicados que "
-    "deduplicar (una película solo aparece una vez por categoría en la que "
-    "está nominada). Sí respeta el umbral de palabras del slider."
+st.markdown(
+    "Este gráfico compara, dentro de cada categoría de Oscar, cómo cambia el reparto de " \
+    "personajes por género según quién dirige o escribe. Para cada categoría se muestran tres grupos: " \
+    "todos los personajes, solo los de películas con mujer en la dirección, y solo los de películas con " \
+    "mujer en el guion. Así se puede ver si la presencia femenina detrás de cámara coincide con más " \
+    "personajes femeninos delante de cámara, categoría por categoría. "
 )
 
 # OJO: aquí NO se puede reutilizar df_filtrado, porque ese dataframe puede
@@ -355,81 +374,93 @@ st.caption(
 # por sí sola no tenga ningún duplicado que eliminar. Para este gráfico
 # partimos de `df` sin deduplicar entre categorías, y solo aplicamos el
 # umbral de palabras.
-df_award_view = df[df["Words"] >= corte]
+df_award_view = df[df["Words"] >= corte].copy()
+df_award_view["Award_ES"] = df_award_view["Award"].map(TRADUCCION_AWARD)
 
-conteo_award_genero = df_award_view.groupby(["Award", "Gender_ES"]).size().reset_index(name="Cantidad")
+peliculas_con_dir_f = df_peliculas_unicas[df_peliculas_unicas["female_director"] > 0]["Title"].unique()
+peliculas_con_guion_f = df_peliculas_unicas[df_peliculas_unicas["female_writer"] > 0]["Title"].unique()
+
+# --- 3 sub-grupos por cada categoría de Oscar: Todas / Mujer en dirección /
+# Mujer en guion. Cada sub-grupo se calcula DENTRO de esa categoría de Oscar
+# (no mezcla nominaciones de otras categorías). ---
+base_todas = df_award_view.groupby(["Award_ES", "Gender_ES"]).size().reset_index(name="Cantidad")
+base_todas.insert(1, "Subgrupo", "Todas")
+
+base_dir = (
+    df_award_view[df_award_view["Title"].isin(peliculas_con_dir_f)]
+    .groupby(["Award_ES", "Gender_ES"]).size().reset_index(name="Cantidad")
+)
+base_dir.insert(1, "Subgrupo", "Mujer en dirección")
+
+base_guion = (
+    df_award_view[df_award_view["Title"].isin(peliculas_con_guion_f)]
+    .groupby(["Award_ES", "Gender_ES"]).size().reset_index(name="Cantidad")
+)
+base_guion.insert(1, "Subgrupo", "Mujer en guion")
+
+conteo_award_genero = pd.concat([base_todas, base_dir, base_guion], ignore_index=True)
+orden_subgrupo = ["Todas", "Mujer en dirección", "Mujer en guion"]
 
 fig_award = px.bar(
-    conteo_award_genero, x="Award", y="Cantidad", color="Gender_ES", barmode="group",
+    conteo_award_genero, x="Subgrupo", y="Cantidad", color="Gender_ES", barmode="group",
+    facet_col="Award_ES",
     title="Número de personajes por categoría de Oscar y género",
-    labels={"Award": "Categoría de Oscar", "Gender_ES": "Género"},
+    labels={"Subgrupo": "", "Gender_ES": "Género"},
     color_discrete_map=COLORES_GENERO_ES,
-    category_orders={"Gender_ES": ["Masculino", "Femenino", "Desconocido"]},
-    text="Cantidad"
+    category_orders={
+        "Gender_ES": ["Masculino", "Femenino", "Desconocido"],
+        "Award_ES": list(TRADUCCION_AWARD.values()),
+        "Subgrupo": orden_subgrupo,
+    },
+    text="Cantidad",
 )
 fig_award.update_traces(textposition="outside", cliponaxis=False)
+fig_award.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))
+# fig_award.update_xaxes(tickangle=-15)
 st.plotly_chart(fig_award, width="stretch")
 
 st.divider()
 
-# ----------------------------
-# TOP 10 PERSONAJES CON MÁS PALABRAS, POR GÉNERO
-# ----------------------------
-st.subheader("Top 10 personajes con más palabras")
+# # ----------------------------
+# # TOP 10 PERSONAJES CON MÁS PALABRAS, POR GÉNERO
+# # ----------------------------
+# st.subheader("Top 10 personajes con más palabras")
 
-# Deduplicar por pelicula+personaje para no contar dos veces las nominaciones repetidas
-df_top = df.drop_duplicates(subset=["Title", "Character"])
+# # Deduplicar por pelicula+personaje para no contar dos veces las nominaciones repetidas
+# df_top = df.drop_duplicates(subset=["Title", "Character"])
 
-genero_top = st.radio(
-    "Selecciona género:", ["Masculino", "Femenino", "Desconocido"], horizontal=True
-)
+# genero_top = st.radio(
+#     "Selecciona género:", ["Masculino", "Femenino", "Desconocido"], horizontal=True
+# )
 
-COLOR_TOP = {
-    "Masculino": "#3B6EA5",
-    "Femenino": "#C1447E",
-    "Desconocido": "#7f7f7f",
-}
+# COLOR_TOP = {
+#     "Masculino": "#3B6EA5",
+#     "Femenino": "#C1447E",
+#     "Desconocido": "#7f7f7f",
+# }
 
-top10 = (
-    df_top[df_top["Gender_ES"] == genero_top]
-    .sort_values("Words", ascending=False)
-    .head(10)[["Title", "Character", "Words"]]
-)
-top10.columns = ["Película", "Personaje", "Palabras"]
+# top10 = (
+#     df_top[df_top["Gender_ES"] == genero_top]
+#     .sort_values("Words", ascending=False)
+#     .head(10)[["Title", "Character", "Words"]]
+# )
+# top10.columns = ["Película", "Personaje", "Palabras"]
 
-col_izq, col_der = st.columns([1, 1])
-with col_izq:
-    st.dataframe(top10, width="stretch", hide_index=True)
-with col_der:
-    fig_top10 = px.bar(
-        top10.sort_values("Palabras"),
-        x="Palabras", y="Personaje", orientation="h",
-        title=f"Top 10 personajes {genero_top.lower()}s por palabras",
-        color_discrete_sequence=[COLOR_TOP[genero_top]],
-        text="Palabras"
-    )
-    fig_top10.update_traces(textposition="outside", cliponaxis=False)
-    st.plotly_chart(fig_top10, width="stretch")
+# col_izq, col_der = st.columns([1, 1])
+# with col_izq:
+#     st.dataframe(top10, width="stretch", hide_index=True)
+# with col_der:
+#     fig_top10 = px.bar(
+#         top10.sort_values("Palabras"),
+#         x="Palabras", y="Personaje", orientation="h",
+#         title=f"Top 10 personajes {genero_top.lower()}s por palabras",
+#         color_discrete_sequence=[COLOR_TOP[genero_top]],
+#         text="Palabras"
+#     )
+#     fig_top10.update_traces(textposition="outside", cliponaxis=False)
+#     st.plotly_chart(fig_top10, width="stretch")
 
-divider_grueso()
-
-# ----------------------------
-# CARGA DE DATOS A NIVEL PELÍCULA (director/guionista)
-# -----------------------------------------------------------------------------
-# Las dos secciones de abajo (Directores/guionistas y Relación de género en
-# dirección/guion) necesitan columnas que solo existen en dataset_final_75.pkl
-# "en crudo" (male_director, female_director, male_writer, female_writer,
-# Director, Writers...), no en la tabla `df` aplanada por personaje que usa
-# el resto de esta página. Por eso se carga aparte, con nombres distintos
-# (df_peliculas / df_peliculas_unicas) para no pisar el `df` de arriba.
-# -----------------------------------------------------------------------------
-@st.cache_data
-def cargar_datos_peliculas():
-    return pd.read_pickle("dataset_final_75.pkl")
-
-
-df_peliculas = cargar_datos_peliculas()
-df_peliculas_unicas = df_peliculas.drop_duplicates(subset="IMDb_ID")
+# divider_grueso()
 
 # ----------------------------
 # DIRECTORES Y GUIONISTAS POR GÉNERO
@@ -501,13 +532,13 @@ with col_texto:
         """
     )
 
-divider_grueso()
+st.divider()
 
 # ----------------------------
 # RELACIÓN DE GÉNERO ENTRE DIRECCIÓN Y GUION
 # ----------------------------
 st.subheader("Relación de género entre dirección y guion")
-st.caption(
+st.markdown(
     "Se busca conocer si existe una tendencia a formar equipos del mismo "
     "género o si por el contrario hay diversidad en los dos campos. Este "
     f"apartado trabaja siempre por **película única** ({df_peliculas_unicas.shape[0]} películas), "
@@ -600,7 +631,7 @@ with col_der_rel:
     with st.expander(f"Ver tabla ({n_relacion} películas)"):
         st.dataframe(tabla_relacion, width="stretch", hide_index=True)
 
-st.divider()
+divider_grueso()
 
 # ----------------------------
 # UNA MIRADA FEMENINA
@@ -618,7 +649,7 @@ st.divider()
 #     sin importar la dirección.
 #   - Mujer directora y guionista: dirección Y guion 100% femeninos a la vez.
 # -----------------------------------------------------------------------------
-st.title("Una mirada femenina")
+st.title("2. Mujeres Directoras / Guionistas")
 st.markdown(
     """
     Aquí nos centramos solo en las películas donde una mujer formó parte del
@@ -686,10 +717,10 @@ else:
 
     st.markdown("")
 
-    # --- Donuts: total de personajes y de palabras, por sexo ---
-    col_donut1, col_donut2 = st.columns(2)
+    # --- Donuts: total de personajes, de palabras y media, por sexo ---
+    col_donut1, col_donut2, col_donut3 = st.columns(3)
     with col_donut1:
-        st.markdown("**Total de personajes por sexo**")
+        st.markdown("**Total de personajes por género**")
         conteo_personajes_fem = df_personajes_patron["Gender_ES"].value_counts().reset_index()
         conteo_personajes_fem.columns = ["Gender_ES", "Cantidad"]
         fig_personajes_fem = px.pie(
@@ -699,7 +730,7 @@ else:
         fig_personajes_fem.update_traces(textinfo="value+percent", texttemplate="%{value}<br>%{percent}")
         st.plotly_chart(fig_personajes_fem, width="stretch")
     with col_donut2:
-        st.markdown("**Total de palabras por sexo**")
+        st.markdown("**Total de palabras por género**")
         conteo_palabras_fem = df_personajes_patron.groupby("Gender_ES")["Words"].sum().reset_index()
         fig_palabras_fem = px.pie(
             conteo_palabras_fem, names="Gender_ES", values="Words", hole=0.45,
@@ -707,8 +738,21 @@ else:
         )
         fig_palabras_fem.update_traces(textinfo="value+percent", texttemplate="%{value:,}<br>%{percent}")
         st.plotly_chart(fig_palabras_fem, width="stretch")
-
-    st.divider()
+    with col_donut3:
+        st.markdown("**Media de palabras por género**")
+        media_fem = pd.DataFrame({
+            "Gender_ES": ["Masculino", "Femenino"],
+            "Media": [
+                dfp_m["Words"].mean() if len(dfp_m) > 0 else 0,
+                dfp_f["Words"].mean() if len(dfp_f) > 0 else 0,
+            ],
+        })
+        fig_media_fem = px.pie(
+            media_fem, names="Gender_ES", values="Media", hole=0.45,
+            color="Gender_ES", color_discrete_map=COLORES_GENERO_ES,
+        )
+        fig_media_fem.update_traces(textinfo="value+percent", texttemplate="%{value:.0f}<br>%{percent}")
+        st.plotly_chart(fig_media_fem, width="stretch")
 
     # --- Tabla de películas del patrón seleccionado ---
     premios_por_pelicula_fem = (
@@ -738,6 +782,76 @@ else:
     with st.expander(f"Ver tabla ({n_femenina} películas)"):
         st.dataframe(tabla_femenina, width="stretch", hide_index=True)
 
+    st.divider()
+
+    # --- Comparativa fija entre grupos: ¿cambia el peso narrativo por sexo
+    # según quién dirige/escribe? Estos dos gráficos NO dependen del pill de
+    # arriba: comparan siempre los mismos grupos entre sí. ---
+    st.markdown("#### ¿Cambia el peso narrativo según quién dirige o escribe?")
+    st.markdown(
+        "Comparación fija entre grupos de películas (no cambia con el filtro "
+        "de arriba), para ver si la media de palabras por personaje y el % "
+        "de personajes femeninos varían según la composición del equipo "
+        "creativo."
+    )
+
+    GRUPOS_COMPARATIVA = {
+        "Equipo 100% masculino": lambda d: (
+            (d["male_director"] > 0) & (d["female_director"] == 0)
+            & (d["male_writer"] > 0) & (d["female_writer"] == 0)
+        ),
+        "Todas las películas": lambda d: pd.Series(True, index=d.index),
+        **CONDICIONES_MIRADA_FEMENINA,
+    }
+
+    filas_comparativa = []
+    for nombre_grupo, condicion in GRUPOS_COMPARATIVA.items():
+        titulos_grupo = df_peliculas_unicas[condicion(df_peliculas_unicas)]["Title"].unique()
+        sub_grupo = df[df["Title"].isin(titulos_grupo)].drop_duplicates(subset=["Title", "Character"])
+        m_grupo = sub_grupo[sub_grupo["Gender_ES"] == "Masculino"]
+        f_grupo = sub_grupo[sub_grupo["Gender_ES"] == "Femenino"]
+        total_mf = len(m_grupo) + len(f_grupo)
+        filas_comparativa.append({
+            "Grupo": nombre_grupo,
+            "Media Masculino": m_grupo["Words"].mean() if len(m_grupo) > 0 else 0,
+            "Media Femenino": f_grupo["Words"].mean() if len(f_grupo) > 0 else 0,
+            "% personajes femeninos": (len(f_grupo) / total_mf * 100) if total_mf > 0 else 0,
+        })
+    df_comparativa = pd.DataFrame(filas_comparativa)
+
+    col_comp1, col_comp2 = st.columns(2)
+    with col_comp1:
+        df_comp_media = df_comparativa.melt(
+            id_vars="Grupo", value_vars=["Media Masculino", "Media Femenino"],
+            var_name="Serie", value_name="Media de palabras",
+        )
+        df_comp_media["Serie"] = df_comp_media["Serie"].map({
+            "Media Masculino": "Masculino", "Media Femenino": "Femenino",
+        })
+        fig_comp_media = px.bar(
+            df_comp_media, x="Grupo", y="Media de palabras", color="Serie", barmode="group",
+            title="Media de palabras por personaje, según equipo creativo",
+            color_discrete_map=COLORES_GENERO_ES,
+            text="Media de palabras",
+        )
+        fig_comp_media.update_traces(texttemplate="%{text:.0f}", textposition="outside", cliponaxis=False)
+        fig_comp_media.update_layout(xaxis_title="", xaxis_tickangle=-20)
+        st.plotly_chart(fig_comp_media, width="stretch")
+    with col_comp2:
+        fig_comp_pct = px.bar(
+            df_comparativa, x="Grupo", y="% personajes femeninos",
+            title="% de personajes femeninos, según equipo creativo",
+            text="% personajes femeninos",
+        )
+        fig_comp_pct.update_traces(
+            texttemplate="%{text:.1f}%", textposition="outside",
+            marker_color="#C1447E", cliponaxis=False,
+        )
+        fig_comp_pct.update_layout(xaxis_title="", xaxis_tickangle=-20)
+        st.plotly_chart(fig_comp_pct, width="stretch")
+
+    st.divider()
+
     # --- Sunburst: top 10 personajes (por palabras) dentro de este patrón ---
     top10_patron = df_personajes_patron.sort_values("Words", ascending=False).head(10)
 
@@ -751,12 +865,12 @@ else:
     fig_sunburst_fem.update_layout(margin=dict(t=60, l=10, r=10, b=10))
     st.plotly_chart(fig_sunburst_fem, width="stretch")
 
-st.divider()
+divider_grueso()
 
 # ----------------------------
 # MIRANDO CON LUPA
 # ----------------------------
-st.title("Mirando con lupa...")
+st.title("3. Mirando con lupa...")
 
 st.markdown(
     """
@@ -823,7 +937,7 @@ with col_donut1:
     st.plotly_chart(fig_personajes, width="stretch")
 
 with col_donut2:
-    st.markdown("**Total de palabras por sexo**")
+    st.markdown("**Total de palabras por género**")
     conteo_palabras = df_pelicula.groupby("Gender_ES")["Words"].sum().reset_index()
     fig_palabras = px.pie(
         conteo_palabras, names="Gender_ES", values="Words", hole=0.45,
