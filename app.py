@@ -85,10 +85,10 @@ df_unicas = df.drop_duplicates(subset="IMDb_ID")
 # ----------------------------
 st.subheader("Vista general del dataset")
 st.caption(
-    "Estas cifras incluyen las 77 nominaciones completas, incluyendo 2 películas "
-    "(Talk to Her y Anatomy of a Fall) que se excluyen de los análisis de NLP "
-    "por no estar predominantemente en inglés. Por eso los totales aquí son "
-    "ligeramente superiores a los de las páginas de análisis de NLP."
+    "Estas cifras incluyen las 75 nominaciones completas de las 78 totales. "
+    "Se excluyen del análisis 3 películas: Talk to Her y Anatomy of a Fall, "
+    "por no estar predominantemente en inglés, y The Artist "
+    "(ganadora a mejor película en 2012), por no tener diálogos."
 )
 
 # --- Modo de conteo: solo afecta a Personajes analizados, Palabras y Frases totales ---
@@ -165,181 +165,8 @@ with col_der:
     fig_palabras.update_traces(textinfo="value+percent", texttemplate="%{value:,}<br>(%{percent})")
     st.plotly_chart(fig_palabras, width="stretch")
 
-divider_grueso()
-
-# ----------------------------
-# DIRECTORES Y GUIONISTAS POR GÉNERO
-# ----------------------------
-st.subheader("Directores y guionistas por género")
-
-rol_seleccionado = st.segmented_control(
-    "Selecciona qué rol quieres ver:",
-    options=["Directores", "Guionistas"],
-    default="Directores",
-)
-
-TRADUCCION_AWARD_ROL = {
-    "Best Picture": "Mejor Película",
-    "Adapted Screenplay": "Mejor Guion Adaptado",
-    "Original Screenplay": "Mejor Guion Original",
-}
-TRADUCCION_AWARD_ROL_INV = {v: k for k, v in TRADUCCION_AWARD_ROL.items()}
-
-award_rol_seleccionado = st.segmented_control(
-    "Categoría de Oscar",
-    options=["Todas"] + list(TRADUCCION_AWARD_ROL.values()),
-    default="Todas",
-)
-
-columna_male = "male_director" if rol_seleccionado == "Directores" else "male_writer"
-columna_female = "female_director" if rol_seleccionado == "Directores" else "female_writer"
-
-if award_rol_seleccionado and award_rol_seleccionado != "Todas":
-    # Filtramos por categoria de Oscar: cada fila ya es una nominacion, no hace falta deduplicar
-    base_rol = df[df["Award"] == TRADUCCION_AWARD_ROL_INV[award_rol_seleccionado]]
-    sufijo_titulo = f" — {award_rol_seleccionado}"
-else:
-    # Sin filtro de Award: usamos peliculas unicas para no contar dos veces
-    # a un mismo director/guionista si su pelicula fue nominada en varias categorias
-    base_rol = df_unicas
-    sufijo_titulo = " (todas las categorías, por película única)"
-
-resumen_rol = pd.DataFrame({
-    "Género": ["Masculino", "Femenino"],
-    "Cantidad": [base_rol[columna_male].sum(), base_rol[columna_female].sum()]
-})
-titulo_rol = f"Distribución de {rol_seleccionado.lower()} por género{sufijo_titulo}"
-
-col_grafico, col_texto = st.columns([2, 1])
-
-with col_grafico:
-    fig_rol = px.bar(
-        resumen_rol, x="Género", y="Cantidad",
-        title=titulo_rol, color="Género", color_discrete_map=colores_genero,
-        text="Cantidad",
-    )
-    fig_rol.update_traces(textposition="outside", cliponaxis=False)
-    fig_rol.update_layout(showlegend=False)
-    st.plotly_chart(fig_rol, width="stretch")
-
-with col_texto:
-    total_directores = base_rol["male_director"].sum() + base_rol["female_director"].sum()
-    total_guionistas = base_rol["male_writer"].sum() + base_rol["female_writer"].sum()
-    pct_directoras = (base_rol["female_director"].sum() / total_directores * 100) if total_directores > 0 else 0
-    pct_guionistas = (base_rol["female_writer"].sum() / total_guionistas * 100) if total_guionistas > 0 else 0
-
-    st.metric("% Mujeres directoras", f"{pct_directoras:.1f}%")
-    st.metric("% Mujeres en guion", f"{pct_guionistas:.1f}%")
-
-    st.markdown(
-        """
-        El primer resultado relevante es que, tanto en dirección como en guion,
-        la representatividad femenina se mantiene en un rango similar
-        (frente a la representatividad de hombres), algo que sugiere que la
-        subrepresentación femenina no es exclusiva de un rol creativo en
-        particular, sino que se replica de forma consistente en ambas
-        funciones dentro de las películas premiadas de la muestra.
-        """
-    )
-
 st.divider()
 
-# ----------------------------
-# RELACIÓN DE GÉNERO ENTRE DIRECCIÓN Y GUION
-# ----------------------------
-st.subheader("Relación de género entre dirección y guion")
-st.caption(
-    "Este apartado trabaja siempre por **película única** (58 películas), "
-    "independientemente del modo de conteo elegido más arriba: la composición "
-    "de género del equipo de dirección y guion es una propiedad de la "
-    "película, no de la nominación."
-)
-
-
-def clasificar_relacion(row):
-    md, fd = row["male_director"], row["female_director"]
-    mw, fw = row["male_writer"], row["female_writer"]
-    if md > 0 and fd == 0 and mw > 0 and fw == 0:
-        return "Masculina"
-    if fd > 0 and md == 0 and fw > 0 and mw == 0:
-        return "Femenina"
-    return "Mixta"
-
-
-df_relacion = df_unicas.copy()
-df_relacion["Relación"] = df_relacion.apply(clasificar_relacion, axis=1)
-
-colores_relacion = {"Masculina": "#3B6EA5", "Mixta": "#8E6BAE", "Femenina": "#C1447E"}
-orden_relacion = ["Masculina", "Mixta", "Femenina"]
-
-col_izq_rel, col_der_rel = st.columns(2)
-
-with col_izq_rel:
-    conteo_relacion = (
-        df_relacion["Relación"].value_counts()
-        .reindex(orden_relacion, fill_value=0)
-        .reset_index()
-    )
-    conteo_relacion.columns = ["Relación", "Cantidad"]
-    fig_relacion = px.pie(
-        conteo_relacion, names="Relación", values="Cantidad", hole=0.45,
-        title=f"Relación de género en dirección y guion ({df_unicas.shape[0]} películas únicas)",
-        color="Relación", color_discrete_map=colores_relacion,
-        category_orders={"Relación": orden_relacion},
-    )
-    fig_relacion.update_traces(textinfo="label+value+percent")
-    st.plotly_chart(fig_relacion, width="stretch")
-
-with col_der_rel:
-    relacion_seleccionada = st.segmented_control(
-        "Filtrar por relación de género",
-        options=orden_relacion,
-        default="Masculina",
-        key="relacion_genero_filtro",
-    ) or "Masculina"
-
-    df_relacion_filtrada = df_relacion[df_relacion["Relación"] == relacion_seleccionada]
-    n_relacion = df_relacion_filtrada.shape[0]
-    pct_relacion = (n_relacion / df_unicas.shape[0] * 100) if df_unicas.shape[0] > 0 else 0
-
-    st.metric(
-        f"Películas — relación {relacion_seleccionada.lower()}",
-        f"{n_relacion}",
-        f"{pct_relacion:.1f}% del total",
-    )
-
-    # Una película única puede tener más de una nominación (p. ej. Mejor
-    # Película + Mejor Guion Adaptado), así que sacamos todas sus categorías
-    # de Oscar desde `df` completo (no `df_unicas`), aunque esta tabla siga
-    # siendo por película única.
-    premios_por_pelicula = (
-        df.groupby("IMDb_ID")["Award"]
-        .apply(lambda s: ", ".join(TRADUCCION_AWARD_ROL.get(a, a) for a in sorted(s.unique())))
-    )
-
-    tabla_relacion = df_relacion_filtrada[[
-        "IMDb_ID", "Title", "Director", "male_director", "female_director",
-        "Writers", "male_writer", "female_writer",
-    ]].copy()
-    tabla_relacion["Categoría(s) de Oscar"] = tabla_relacion["IMDb_ID"].map(premios_por_pelicula)
-    tabla_relacion = tabla_relacion.rename(columns={
-        "Title": "Película",
-        "Director": "Director/a(s)",
-        "male_director": "Directores (H)",
-        "female_director": "Directoras (M)",
-        "Writers": "Guionista(s)",
-        "male_writer": "Guionistas (H)",
-        "female_writer": "Guionistas (M)",
-    })
-    tabla_relacion = tabla_relacion[[
-        "Película", "Director/a(s)", "Directores (H)", "Directoras (M)",
-        "Guionista(s)", "Guionistas (H)", "Guionistas (M)", "Categoría(s) de Oscar",
-    ]]
-
-    with st.expander(f"Ver tabla ({n_relacion} películas)"):
-        st.dataframe(tabla_relacion, width="stretch", hide_index=True)
-
-st.divider()
 
 
 # ----------------------------
