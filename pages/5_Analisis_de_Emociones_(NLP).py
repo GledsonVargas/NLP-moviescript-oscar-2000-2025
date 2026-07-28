@@ -29,7 +29,7 @@ st.markdown(
     """
 )
 
-COLORES_GENERO = {"Masculino": "#2a78d6", "Femenino": "#e87ba4", "Desconocido": "#b0b0b0"}
+COLORES_GENERO = {"Masculino": "#2a78d6", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"}
 NOMBRES_GENERO = {"male": "Masculino", "female": "Femenino", "unknown": "Desconocido"}
 TRADUCCION_AWARD = {
     "Best Picture": "Mejor Película",
@@ -55,7 +55,21 @@ def cargar_datos():
     df["Gender_ES"] = df["Gender"].map(NOMBRES_GENERO)
     return df
 
+
+# -----------------------------------------------------------------------------
+# Carga adicional a nivel película (director/guionista), necesaria para los
+# pills de "Equipo creativo" del radar. df_hartmann_emotions.csv no trae estas
+# columnas, así que se cargan aparte desde Dataset_final.pkl.
+# -----------------------------------------------------------------------------
+@st.cache_data
+def cargar_datos_peliculas():
+    return pd.read_pickle("Dataset_final.pkl")
+
+
 df = cargar_datos()
+df_peliculas_unicas = cargar_datos_peliculas().drop_duplicates(subset="IMDb_ID")
+peliculas_con_dir_f = set(df_peliculas_unicas[df_peliculas_unicas["female_director"] > 0]["Title"])
+peliculas_con_guion_f = set(df_peliculas_unicas[df_peliculas_unicas["female_writer"] > 0]["Title"])
 
 st.divider()
 
@@ -84,12 +98,29 @@ with col_a:
 with col_b:
     corte_palabras = st.slider("Palabras mínimas del personaje", 0, int(df["Words"].max()), 20, step=5)
 
-df_filtrado = df[
-    (df["Gender_ES"].isin(generos_seleccionados)) &
-    (df["Words"] >= corte_palabras)
-]
+# --- Base: género + award ya aplicados, SIN el corte de palabras todavía ---
+# (para poder calcular cuántos personajes se excluyen exactamente por el slider)
+df_base = df[df["Gender_ES"].isin(generos_seleccionados)]
 if award_seleccionado and award_seleccionado != "Todas":
-    df_filtrado = df_filtrado[df_filtrado["Award"] == TRADUCCION_AWARD_INV[award_seleccionado]]
+    df_base = df_base[df_base["Award"] == TRADUCCION_AWARD_INV[award_seleccionado]]
+
+conteo_antes = df_base["Gender_ES"].value_counts()
+
+df_filtrado = df_base[df_base["Words"] >= corte_palabras]
+conteo_despues = df_filtrado["Gender_ES"].value_counts()
+
+excluidos_m = conteo_antes.get("Masculino", 0) - conteo_despues.get("Masculino", 0)
+excluidos_f = conteo_antes.get("Femenino", 0) - conteo_despues.get("Femenino", 0)
+total_antes_m = conteo_antes.get("Masculino", 0)
+total_antes_f = conteo_antes.get("Femenino", 0)
+pct_m = (excluidos_m / total_antes_m * 100) if total_antes_m > 0 else 0
+pct_f = (excluidos_f / total_antes_f * 100) if total_antes_f > 0 else 0
+
+st.caption(
+    f"Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
+    f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
+    f"**{corte_palabras}** palabras."
+)
 
 st.caption(f"Personajes incluidos con estos filtros: **{len(df_filtrado):,}**")
 
@@ -99,6 +130,7 @@ st.divider()
 # EMOCIÓN DOMINANTE POR GÉNERO
 # ----------------------------
 st.subheader("Emoción dominante por género")
+st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**")
 
 conteo_dominante = df_filtrado.groupby(["Gender_ES", "Emotion_Dominant"]).size().reset_index(name="Cantidad")
 conteo_dominante["Emotion_Dominant_ES"] = conteo_dominante["Emotion_Dominant"].str.capitalize().map({
@@ -118,28 +150,165 @@ st.divider()
 
 # ----------------------------
 # PERFIL EMOCIONAL PROMEDIO: GRÁFICO DE RADAR
-# ----------------------------
+# -----------------------------------------------------------------------------
+# Este radar tiene sus propios filtros (independientes de los de arriba), para
+# poder comparar de forma rápida distintos recortes sin perder los filtros
+# generales de la página.
+# -----------------------------------------------------------------------------
 st.subheader("Perfil emocional promedio por género")
-st.caption("Promedio de las 7 probabilidades de emoción, comparado entre géneros.")
-
-promedio_emociones = df_filtrado.groupby("Gender_ES")[EMOCIONES].mean()
-
-fig_radar = go.Figure()
-for genero in promedio_emociones.index:
-    valores = promedio_emociones.loc[genero, EMOCIONES].tolist()
-    valores.append(valores[0])  # cerrar el polígono
-    etiquetas = [NOMBRES_EMOCIONES[e] for e in EMOCIONES] + [NOMBRES_EMOCIONES[EMOCIONES[0]]]
-    fig_radar.add_trace(go.Scatterpolar(
-        r=valores, theta=etiquetas, fill='toself', name=genero,
-        line_color=COLORES_GENERO.get(genero, "#888888")
-    ))
-
-fig_radar.update_layout(
-    polar=dict(radialaxis=dict(visible=True)),
-    title="Perfil emocional promedio por género",
-    showlegend=True
+st.markdown(
+    """
+    Cada eje es una de las 7 emociones de Hartmann; cada línea es el promedio
+    de esa emoción para todos los personajes de ese género. Cuanto más lejos
+    del centro, más presente está esa emoción en el diálogo. Usa los dos
+    filtros de abajo para ver si el perfil cambia según la categoría de Oscar
+    o según si hay una mujer en el equipo de dirección o guion.
+    """
 )
-st.plotly_chart(fig_radar, width="stretch")
+
+col_radar_1, col_radar_2 = st.columns(2)
+with col_radar_1:
+    award_radar = st.segmented_control(
+        "Categoría de Oscar",
+        options=["Todas"] + list(TRADUCCION_AWARD.values()),
+        default="Todas",
+        key="award_radar",
+    ) or "Todas"
+with col_radar_2:
+    equipo_radar = st.segmented_control(
+        "Equipo creativo",
+        options=["Todas las películas", "Mujer en dirección", "Mujer en guion"],
+        default="Todas las películas",
+        key="equipo_radar",
+    ) or "Todas las películas"
+
+df_radar = df_filtrado.copy()
+if award_radar != "Todas":
+    df_radar = df_radar[df_radar["Award"] == TRADUCCION_AWARD_INV[award_radar]]
+if equipo_radar == "Mujer en dirección":
+    df_radar = df_radar[df_radar["Title"].isin(peliculas_con_dir_f)]
+elif equipo_radar == "Mujer en guion":
+    df_radar = df_radar[df_radar["Title"].isin(peliculas_con_guion_f)]
+
+if df_radar.empty:
+    st.info("No hay personajes que cumplan esta combinación de filtros.")
+else:
+    promedio_emociones = df_radar.groupby("Gender_ES")[EMOCIONES].mean()
+
+    fig_radar = go.Figure()
+    for genero in promedio_emociones.index:
+        valores = promedio_emociones.loc[genero, EMOCIONES].tolist()
+        valores.append(valores[0])  # cerrar el polígono
+        etiquetas = [NOMBRES_EMOCIONES[e] for e in EMOCIONES] + [NOMBRES_EMOCIONES[EMOCIONES[0]]]
+        fig_radar.add_trace(go.Scatterpolar(
+            r=valores, theta=etiquetas, fill='toself', name=genero,
+            line_color=COLORES_GENERO.get(genero, "#888888")
+        ))
+
+    fig_radar.update_layout(
+        polar=dict(radialaxis=dict(visible=True)),
+        title=f"Perfil emocional promedio por género — {award_radar} / {equipo_radar}",
+        showlegend=True,
+    )
+    st.plotly_chart(fig_radar, width="stretch")
+    st.caption(f"Personajes en este recorte: **{len(df_radar):,}**")
+
+st.divider()
+
+# ----------------------------
+# PERFIL EMOCIONAL FEMENINO, SEGÚN EQUIPO CREATIVO (DIAGRAMA DE CALOR)
+# -----------------------------------------------------------------------------
+# Compara el perfil de las 7 emociones en personajes FEMENINOS, según si su
+# película tiene o no una mujer en dirección o guion. Usa los filtros
+# generales de arriba (Award, Words), no los pills del radar.
+# -----------------------------------------------------------------------------
+st.subheader("Perfil emocional femenino, según equipo creativo")
+st.markdown(
+    """
+    Aquí nos quedamos solo con los personajes femeninos y los separamos en dos
+    grupos: los de películas con una mujer en dirección o guion, y los del
+    resto. El color de cada celda es el % promedio de esa emoción en ese
+    grupo — así se ve de un vistazo qué emociones ganan o pierden peso cuando
+    hay una mujer en el equipo creativo.
+    """
+)
+
+df_heatmap = df_filtrado[df_filtrado["Gender_ES"] == "Femenino"].copy()
+if df_heatmap.empty:
+    st.info("No hay personajes femeninos que cumplan los filtros generales de arriba.")
+else:
+    df_heatmap["Grupo"] = df_heatmap["Title"].apply(
+        lambda t: "Con mujer en dirección o guion"
+        if (t in peliculas_con_dir_f or t in peliculas_con_guion_f)
+        else "Sin mujer en dirección ni guion"
+    )
+
+    tabla_heatmap = (df_heatmap.groupby("Grupo")[EMOCIONES].mean() * 100)
+    tabla_heatmap = tabla_heatmap.rename(columns=NOMBRES_EMOCIONES)
+    orden_grupo = ["Sin mujer en dirección ni guion", "Con mujer en dirección o guion"]
+    tabla_heatmap = tabla_heatmap.reindex([g for g in orden_grupo if g in tabla_heatmap.index])
+
+    fig_heatmap = px.imshow(
+        tabla_heatmap,
+        text_auto=".1f",
+        color_continuous_scale="Blues",
+        aspect="auto",
+        labels=dict(x="Emoción", y="", color="% promedio"),
+    )
+    fig_heatmap.update_layout(title="Perfil emocional femenino, según equipo creativo")
+    st.plotly_chart(fig_heatmap, width="stretch")
+
+    n_por_grupo = df_heatmap["Grupo"].value_counts()
+    st.caption(
+        "Personajes femeninos en cada grupo: "
+        + ", ".join(f"**{g}**: {n_por_grupo.get(g, 0):,}" for g in orden_grupo)
+    )
+
+st.divider()
+
+# ----------------------------
+# EVOLUCIÓN TEMPORAL DE LAS EMOCIONES
+# -----------------------------------------------------------------------------
+# Media de una emoción (elegida por el usuario) a lo largo de los años, por
+# género, para ver si la brecha emocional entre géneros se ha reducido o
+# ampliado desde 2000.
+# -----------------------------------------------------------------------------
+st.subheader("Evolución temporal de las emociones")
+st.markdown(
+    """
+    ¿La brecha emocional entre personajes masculinos y femeninos se mantiene
+    igual a lo largo de los años, o ha cambiado? Elige una emoción y compara
+    su media año a año (2000–2025) entre géneros.
+    """
+)
+
+emocion_evolucion = st.selectbox(
+    "Elige una emoción",
+    options=EMOCIONES,
+    format_func=lambda e: NOMBRES_EMOCIONES[e],
+    key="emocion_evolucion",
+)
+
+evolucion = (
+    df_filtrado.groupby(["Oscar_Year", "Gender_ES"])[emocion_evolucion]
+    .mean()
+    .reset_index()
+)
+
+fig_evolucion = px.line(
+    evolucion, x="Oscar_Year", y=emocion_evolucion, color="Gender_ES",
+    title=f"Media de {NOMBRES_EMOCIONES[emocion_evolucion].lower()} por año y género",
+    labels={"Oscar_Year": "Año", emocion_evolucion: f"Media de {NOMBRES_EMOCIONES[emocion_evolucion].lower()}", "Gender_ES": "Género"},
+    color_discrete_map=COLORES_GENERO,
+    markers=True,
+)
+st.plotly_chart(fig_evolucion, width="stretch")
+st.caption(
+    "Cada punto es la media de esa emoción entre todos los personajes de ese "
+    "año y género que cumplen los filtros generales de arriba. Algunos años "
+    "tienen pocos personajes (mínimo ~65), así que las oscilaciones bruscas "
+    "de un año a otro pueden deberse al tamaño de muestra, no a una tendencia real."
+)
 
 st.divider()
 
@@ -148,7 +317,7 @@ st.divider()
 # ----------------------------
 st.subheader("Comparación detallada, emoción por emoción")
 
-promedio_largo = promedio_emociones.reset_index().melt(
+promedio_largo = df_filtrado.groupby("Gender_ES")[EMOCIONES].mean().reset_index().melt(
     id_vars="Gender_ES", var_name="Emoción", value_name="Probabilidad promedio"
 )
 promedio_largo["Emoción"] = promedio_largo["Emoción"].map(NOMBRES_EMOCIONES)
@@ -162,30 +331,31 @@ st.plotly_chart(fig_barras_emociones, width="stretch")
 
 st.divider()
 
-# ----------------------------
-# TOP PERSONAJES POR EMOCIÓN ESPECÍFICA
-# ----------------------------
-st.subheader("Top personajes por emoción")
+# # ----------------------------
+# # TOP PERSONAJES POR EMOCIÓN ESPECÍFICA
+# # ----------------------------
+# st.subheader("Top personajes por emoción")
 
-emocion_elegida = st.selectbox(
-    "Elige una emoción",
-    options=EMOCIONES,
-    format_func=lambda e: NOMBRES_EMOCIONES[e]
-)
+# emocion_elegida = st.selectbox(
+#     "Elige una emoción",
+#     options=EMOCIONES,
+#     format_func=lambda e: NOMBRES_EMOCIONES[e],
+#     key="emocion_top",
+# )
 
-top_emocion = df_filtrado.sort_values(emocion_elegida, ascending=False).head(10)[
-    ["Title", "Character", "Gender_ES", emocion_elegida]
-]
-top_emocion = top_emocion.rename(columns={emocion_elegida: NOMBRES_EMOCIONES[emocion_elegida]})
+# top_emocion = df_filtrado.sort_values(emocion_elegida, ascending=False).head(10)[
+#     ["Title", "Character", "Gender_ES", emocion_elegida]
+# ]
+# top_emocion = top_emocion.rename(columns={emocion_elegida: NOMBRES_EMOCIONES[emocion_elegida]})
 
-col_tabla, col_grafico = st.columns([1, 1])
-with col_tabla:
-    st.dataframe(top_emocion, width="stretch", hide_index=True)
-with col_grafico:
-    fig_top = px.bar(
-        top_emocion.sort_values(NOMBRES_EMOCIONES[emocion_elegida]),
-        x=NOMBRES_EMOCIONES[emocion_elegida], y="Character", orientation="h",
-        title=f"Top 10 personajes — {NOMBRES_EMOCIONES[emocion_elegida]}",
-        color_discrete_sequence=["#7a5cf0"]
-    )
-    st.plotly_chart(fig_top, width="stretch")
+# col_tabla, col_grafico = st.columns([1, 1])
+# with col_tabla:
+#     st.dataframe(top_emocion, width="stretch", hide_index=True)
+# with col_grafico:
+#     fig_top = px.bar(
+#         top_emocion.sort_values(NOMBRES_EMOCIONES[emocion_elegida]),
+#         x=NOMBRES_EMOCIONES[emocion_elegida], y="Character", orientation="h",
+#         title=f"Top 10 personajes — {NOMBRES_EMOCIONES[emocion_elegida]}",
+#         color_discrete_sequence=["#7a5cf0"]
+#     )
+#     st.plotly_chart(fig_top, width="stretch")
