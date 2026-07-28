@@ -5,3 +5,18 @@ venvs.txt
 nltk.ipynb
 metodologia_bertopic.docx
 CSVs limpios/
+# Datasets y archivos derivados
+Dataset_final.csv
+Dataset_final_NLP_flatten.pkl
+conteo.ipynb
+dataset_final_75.csv
+metadatos_guion_adaptado.csv
+metadatos_guion_adaptado.pkl
+metadatos_guion_original.csv
+metadatos_guion_original.pkl
+metadatos_mejor_pelicula.csv
+metadatos_mejor_pelicula.pkl
+personajes_rol_bechdel.csv
+personajes_rol_bechdel.pkl
+premio_conteo_media_palabras.ipynb
+topicos_masculinos.txt
