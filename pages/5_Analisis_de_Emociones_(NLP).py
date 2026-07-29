@@ -29,7 +29,7 @@ st.markdown(
     """
 )
 
-COLORES_GENERO = {"Masculino": "#2a78d6", "Femenino": "#e87ba4", "Desconocido": "#b0b0b0"}
+COLORES_GENERO = {"Masculino": "#2a78d6", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"}
 NOMBRES_GENERO = {"male": "Masculino", "female": "Femenino", "unknown": "Desconocido"}
 TRADUCCION_AWARD = {
     "Best Picture": "Mejor Película",
@@ -384,6 +384,8 @@ st.caption(
     "tienen pocos personajes (mínimo ~65), así que las oscilaciones bruscas "
     "de un año a otro pueden deberse al tamaño de muestra, no a una tendencia real."
 )
+
+st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**")
 
 st.divider()
 
