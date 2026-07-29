@@ -29,7 +29,7 @@ st.markdown(
     """
 )
 
-COLORES_GENERO = {"Masculino": "#2a78d6", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"}
+COLORES_GENERO = {"Masculino": "#2a78d6", "Femenino": "#e87ba4", "Desconocido": "#b0b0b0"}
 NOMBRES_GENERO = {"male": "Masculino", "female": "Femenino", "unknown": "Desconocido"}
 TRADUCCION_AWARD = {
     "Best Picture": "Mejor Película",
@@ -267,6 +267,81 @@ else:
 st.divider()
 
 # ----------------------------
+# PERFIL EMOCIONAL: TOP 10 PERSONAJES CON MÁS PALABRAS (M vs F)
+# -----------------------------------------------------------------------------
+# No usa df_filtrado ni el slider de palabras de arriba (usarlo aquí sería
+# circular, ya que este gráfico se basa precisamente en quiénes tienen más
+# palabras). Se parte de `df` completo, deduplicado por Título+Personaje para
+# no contar dos veces a un personaje de una película nominada en varias
+# categorías de Oscar (56 películas únicas).
+#
+# Nota: "BERTIE" (The King's Speech) estaba etiquetado como "female" en
+# df_hartmann_emotions.csv (personaje masculino, Jorge VI) — ya corregido a
+# "male" en el CSV.
+# -----------------------------------------------------------------------------
+st.subheader("Perfil emocional: Top 10 personajes con más palabras (M vs F)")
+st.markdown(
+    """
+    Aquí comparamos el perfil emocional de los 10 personajes masculinos y los
+    10 personajes femeninos con más palabras de diálogo de todo el dataset
+    (no depende de los filtros de arriba). Sirve para ver si los perfiles
+    protagónicos más grandes —los papeles con más peso— siguen el mismo
+    patrón que el promedio general, o si se comportan distinto.
+    """
+)
+
+df_dedup_top = df.drop_duplicates(subset=["Title", "Character"])
+top10_m = df_dedup_top[df_dedup_top["Gender_ES"] == "Masculino"].sort_values("Words", ascending=False).head(10)
+top10_f = df_dedup_top[df_dedup_top["Gender_ES"] == "Femenino"].sort_values("Words", ascending=False).head(10)
+
+tabla_top10 = pd.DataFrame({
+    "Top 10 masculino": (top10_m[EMOCIONES].mean() * 100),
+    "Top 10 femenino": (top10_f[EMOCIONES].mean() * 100),
+}).T
+tabla_top10 = tabla_top10.rename(columns=NOMBRES_EMOCIONES)
+
+fig_heatmap_top10 = px.imshow(
+    tabla_top10,
+    text_auto=".1f",
+    color_continuous_scale="Blues",
+    aspect="auto",
+    labels=dict(x="Emoción", y="", color="% promedio"),
+)
+fig_heatmap_top10.update_layout(title="Perfil emocional — Top 10 personajes con más palabras")
+st.plotly_chart(fig_heatmap_top10, width="stretch")
+
+st.caption(
+    f"Basado en los 10 personajes masculinos y los 10 femeninos con más "
+    f"palabras del dataset completo (top masculino: "
+    f"{int(top10_m['Words'].min()):,}–{int(top10_m['Words'].max()):,} palabras; "
+    f"top femenino: {int(top10_f['Words'].min()):,}–{int(top10_f['Words'].max()):,} palabras)."
+)
+
+EMOTION_DOMINANT_ES = {
+    "anger": "Ira", "disgust": "Asco", "fear": "Miedo", "joy": "Alegría",
+    "neutral": "Neutro", "sadness": "Tristeza", "surprise": "Sorpresa",
+}
+
+
+def tabla_top10_personajes(top_df):
+    tabla = top_df[["Character", "Title", "Words", "Emotion_Dominant"]].copy()
+    tabla["Emotion_Dominant"] = tabla["Emotion_Dominant"].str.lower().map(EMOTION_DOMINANT_ES)
+    tabla.insert(0, "#", range(1, len(tabla) + 1))
+    tabla.columns = ["#", "Personaje", "Película", "Palabras", "Emoción dominante"]
+    return tabla
+
+
+col_tabla_m, col_tabla_f = st.columns(2)
+with col_tabla_m:
+    st.markdown("**Top 10 masculino**")
+    st.dataframe(tabla_top10_personajes(top10_m), width="stretch", hide_index=True)
+with col_tabla_f:
+    st.markdown("**Top 10 femenino**")
+    st.dataframe(tabla_top10_personajes(top10_f), width="stretch", hide_index=True)
+
+st.divider()
+
+# ----------------------------
 # EVOLUCIÓN TEMPORAL DE LAS EMOCIONES
 # -----------------------------------------------------------------------------
 # Media de una emoción (elegida por el usuario) a lo largo de los años, por
@@ -330,32 +405,3 @@ fig_barras_emociones = px.bar(
 st.plotly_chart(fig_barras_emociones, width="stretch")
 
 st.divider()
-
-# # ----------------------------
-# # TOP PERSONAJES POR EMOCIÓN ESPECÍFICA
-# # ----------------------------
-# st.subheader("Top personajes por emoción")
-
-# emocion_elegida = st.selectbox(
-#     "Elige una emoción",
-#     options=EMOCIONES,
-#     format_func=lambda e: NOMBRES_EMOCIONES[e],
-#     key="emocion_top",
-# )
-
-# top_emocion = df_filtrado.sort_values(emocion_elegida, ascending=False).head(10)[
-#     ["Title", "Character", "Gender_ES", emocion_elegida]
-# ]
-# top_emocion = top_emocion.rename(columns={emocion_elegida: NOMBRES_EMOCIONES[emocion_elegida]})
-
-# col_tabla, col_grafico = st.columns([1, 1])
-# with col_tabla:
-#     st.dataframe(top_emocion, width="stretch", hide_index=True)
-# with col_grafico:
-#     fig_top = px.bar(
-#         top_emocion.sort_values(NOMBRES_EMOCIONES[emocion_elegida]),
-#         x=NOMBRES_EMOCIONES[emocion_elegida], y="Character", orientation="h",
-#         title=f"Top 10 personajes — {NOMBRES_EMOCIONES[emocion_elegida]}",
-#         color_discrete_sequence=["#7a5cf0"]
-#     )
-#     st.plotly_chart(fig_top, width="stretch")
