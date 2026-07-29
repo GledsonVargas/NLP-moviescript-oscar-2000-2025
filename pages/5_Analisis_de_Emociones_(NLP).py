@@ -130,7 +130,10 @@ st.divider()
 # EMOCIÓN DOMINANTE POR GÉNERO
 # ----------------------------
 st.subheader("Emoción dominante por género")
-st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**")
+st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**"
+           f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
+           f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
+           f"**{corte_palabras}** palabras.")
 
 conteo_dominante = df_filtrado.groupby(["Gender_ES", "Emotion_Dominant"]).size().reset_index(name="Cantidad")
 conteo_dominante["Emotion_Dominant_ES"] = conteo_dominante["Emotion_Dominant"].str.capitalize().map({
@@ -142,8 +145,10 @@ fig_dominante = px.bar(
     conteo_dominante, x="Emotion_Dominant_ES", y="Cantidad", color="Gender_ES", barmode="group",
     title="Número de personajes según su emoción dominante",
     labels={"Emotion_Dominant_ES": "Emoción dominante", "Gender_ES": "Género"},
-    color_discrete_map=COLORES_GENERO
+    color_discrete_map=COLORES_GENERO,
+    text="Cantidad",
 )
+fig_dominante.update_traces(textposition="outside", cliponaxis=False)
 st.plotly_chart(fig_dominante, width="stretch")
 
 st.divider()
@@ -165,6 +170,11 @@ st.markdown(
     o según si hay una mujer en el equipo de dirección o guion.
     """
 )
+
+# st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**"
+#     f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
+#     f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
+#     f"**{corte_palabras}** palabras.")
 
 col_radar_1, col_radar_2 = st.columns(2)
 with col_radar_1:
@@ -211,7 +221,11 @@ else:
         showlegend=True,
     )
     st.plotly_chart(fig_radar, width="stretch")
-    st.caption(f"Personajes en este recorte: **{len(df_radar):,}**")
+    st.caption(f"Personajes en este recorte: **{len(df_radar):,}**"
+        f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
+        f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
+        f"**{corte_palabras}** palabras.")
+    
 
 st.divider()
 
@@ -347,6 +361,13 @@ st.divider()
 # Media de una emoción (elegida por el usuario) a lo largo de los años, por
 # género, para ver si la brecha emocional entre géneros se ha reducido o
 # ampliado desde 2000.
+#
+# Opciones especiales del selector:
+#   - "TODAS": grid de 7 paneles (uno por emoción), cada uno con 2 líneas
+#     (Masculino/Femenino) — para comparar géneros emoción por emoción.
+#   - "SIETE_F" / "SIETE_M": UN solo gráfico con 7 líneas de color (una por
+#     emoción), para UN género a la vez — para comparar las 7 emociones
+#     entre sí dentro del mismo género.
 # -----------------------------------------------------------------------------
 st.subheader("Evolución temporal de las emociones")
 st.markdown(
@@ -357,35 +378,91 @@ st.markdown(
     """
 )
 
+OPCIONES_EVOLUCION = ["TODAS", "SIETE_F", "SIETE_M"] + EMOCIONES
+NOMBRES_OPCIONES_EVOLUCION = {
+    "TODAS": "Las 7 emociones (masculino y femenino)",
+    "SIETE_F": "Las 7 emociones (femenino)",
+    "SIETE_M": "Las 7 emociones (masculino)",
+}
+
 emocion_evolucion = st.selectbox(
     "Elige una emoción",
-    options=EMOCIONES,
-    format_func=lambda e: NOMBRES_EMOCIONES[e],
+    options=OPCIONES_EVOLUCION,
+    format_func=lambda e: NOMBRES_OPCIONES_EVOLUCION.get(e) or NOMBRES_EMOCIONES[e],
     key="emocion_evolucion",
 )
 
-evolucion = (
-    df_filtrado.groupby(["Oscar_Year", "Gender_ES"])[emocion_evolucion]
-    .mean()
-    .reset_index()
-)
+if emocion_evolucion == "TODAS":
+    evolucion_todas = (
+        df_filtrado.groupby(["Oscar_Year", "Gender_ES"])[EMOCIONES]
+        .mean()
+        .reset_index()
+        .melt(id_vars=["Oscar_Year", "Gender_ES"], var_name="Emoción_col", value_name="Media")
+    )
+    evolucion_todas["Emoción"] = evolucion_todas["Emoción_col"].map(NOMBRES_EMOCIONES)
 
-fig_evolucion = px.line(
-    evolucion, x="Oscar_Year", y=emocion_evolucion, color="Gender_ES",
-    title=f"Media de {NOMBRES_EMOCIONES[emocion_evolucion].lower()} por año y género",
-    labels={"Oscar_Year": "Año", emocion_evolucion: f"Media de {NOMBRES_EMOCIONES[emocion_evolucion].lower()}", "Gender_ES": "Género"},
-    color_discrete_map=COLORES_GENERO,
-    markers=True,
-)
-st.plotly_chart(fig_evolucion, width="stretch")
+    fig_evolucion = px.line(
+        evolucion_todas, x="Oscar_Year", y="Media", color="Gender_ES",
+        facet_col="Emoción", facet_col_wrap=4,
+        title="Media de cada emoción por año y género",
+        labels={"Oscar_Year": "Año", "Media": "Media", "Gender_ES": "Género"},
+        color_discrete_map=COLORES_GENERO,
+        markers=True,
+        category_orders={"Emoción": [NOMBRES_EMOCIONES[e] for e in EMOCIONES]},
+    )
+    fig_evolucion.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))
+    fig_evolucion.update_yaxes(matches=None, showticklabels=True)
+    fig_evolucion.update_layout(height=600)
+    st.plotly_chart(fig_evolucion, width="stretch")
+
+elif emocion_evolucion in ("SIETE_F", "SIETE_M"):
+    genero_elegido = "Femenino" if emocion_evolucion == "SIETE_F" else "Masculino"
+    df_genero_evolucion = df_filtrado[df_filtrado["Gender_ES"] == genero_elegido]
+
+    evolucion_genero = (
+        df_genero_evolucion.groupby("Oscar_Year")[EMOCIONES]
+        .mean()
+        .reset_index()
+        .melt(id_vars="Oscar_Year", var_name="Emoción_col", value_name="Media")
+    )
+    evolucion_genero["Emoción"] = evolucion_genero["Emoción_col"].map(NOMBRES_EMOCIONES)
+
+    fig_evolucion = px.line(
+        evolucion_genero, x="Oscar_Year", y="Media", color="Emoción",
+        title=f"Media de cada emoción por año — personajes {genero_elegido.lower()}s",
+        labels={"Oscar_Year": "Año", "Media": "Media", "Emoción": "Emoción"},
+        markers=True,
+        category_orders={"Emoción": [NOMBRES_EMOCIONES[e] for e in EMOCIONES]},
+    )
+    st.plotly_chart(fig_evolucion, width="stretch")
+    st.caption(f"Personajes {genero_elegido.lower()}s en este recorte: **{len(df_genero_evolucion):,}**")
+
+else:
+    evolucion = (
+        df_filtrado.groupby(["Oscar_Year", "Gender_ES"])[emocion_evolucion]
+        .mean()
+        .reset_index()
+    )
+
+    fig_evolucion = px.line(
+        evolucion, x="Oscar_Year", y=emocion_evolucion, color="Gender_ES",
+        title=f"Media de {NOMBRES_EMOCIONES[emocion_evolucion].lower()} por año y género",
+        labels={"Oscar_Year": "Año", emocion_evolucion: f"Media de {NOMBRES_EMOCIONES[emocion_evolucion].lower()}", "Gender_ES": "Género"},
+        color_discrete_map=COLORES_GENERO,
+        markers=True,
+    )
+    st.plotly_chart(fig_evolucion, width="stretch")
+    st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**"
+           f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
+           f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
+           f"**{corte_palabras}** palabras.")
+
 st.caption(
     "Cada punto es la media de esa emoción entre todos los personajes de ese "
     "año y género que cumplen los filtros generales de arriba. Algunos años "
     "tienen pocos personajes (mínimo ~65), así que las oscilaciones bruscas "
     "de un año a otro pueden deberse al tamaño de muestra, no a una tendencia real."
 )
-
-st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**")
 
 st.divider()
 
@@ -402,8 +479,15 @@ promedio_largo["Emoción"] = promedio_largo["Emoción"].map(NOMBRES_EMOCIONES)
 fig_barras_emociones = px.bar(
     promedio_largo, x="Emoción", y="Probabilidad promedio", color="Gender_ES", barmode="group",
     title="Probabilidad promedio de cada emoción, por género",
-    color_discrete_map=COLORES_GENERO
+    color_discrete_map=COLORES_GENERO,
+    text="Probabilidad promedio",
 )
+fig_barras_emociones.update_traces(texttemplate="%{text:.1%}", textposition="outside", cliponaxis=False)
 st.plotly_chart(fig_barras_emociones, width="stretch")
+
+st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**"
+           f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
+           f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
+           f"**{corte_palabras}** palabras.")
 
 st.divider()
