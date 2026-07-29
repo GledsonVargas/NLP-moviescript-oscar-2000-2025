@@ -29,7 +29,8 @@ st.markdown(
     """
 )
 
-COLORES_GENERO = {"Masculino": "#2a78d6", "Femenino": "#e87ba4", "Desconocido": "#b0b0b0"}
+COLORES_GENERO = {"Masculino": "#2a78d6", "Femenino": "#C1447E", "Desconocido": "#b0b0b0"}
+COLORES_ETIQUETA = {"POSITIVE": "#ffc000", "NEGATIVE": "#e7e6e6"}
 NOMBRES_GENERO = {"male": "Masculino", "female": "Femenino", "unknown": "Desconocido"}
 TRADUCCION_AWARD = {
     "Best Picture": "Mejor Película",
@@ -47,7 +48,22 @@ def cargar_datos():
     df["Gender_ES"] = df["Gender"].map(NOMBRES_GENERO)
     return df
 
+
+# -----------------------------------------------------------------------------
+# Carga adicional a nivel película (director/guionista), necesaria para el
+# cruce con "equipo creativo". df_sentiment_flat.pkl no trae estas columnas,
+# así que se cargan aparte desde Dataset_final.pkl (mismo patrón que en la
+# página de Emociones).
+# -----------------------------------------------------------------------------
+@st.cache_data
+def cargar_datos_peliculas():
+    return pd.read_pickle("Dataset_final.pkl")
+
+
 df = cargar_datos()
+df_peliculas_unicas = cargar_datos_peliculas().drop_duplicates(subset="IMDb_ID")
+peliculas_con_dir_f = set(df_peliculas_unicas[df_peliculas_unicas["female_director"] > 0]["Title"])
+peliculas_con_guion_f = set(df_peliculas_unicas[df_peliculas_unicas["female_writer"] > 0]["Title"])
 
 st.divider()
 
@@ -105,23 +121,19 @@ if modelo in ("VADER", "Ambos"):
         )
         st.plotly_chart(fig_vader_box, width="stretch")
     with col2:
-        conteo_vader_label = df_filtrado.groupby(["Gender_ES", "Vader_Label"]).size().reset_index(name="Cantidad")
+        conteo_vader_label = (
+            df_filtrado[df_filtrado["Vader_Label"] != "NEUTRAL"]
+            .groupby(["Gender_ES", "Vader_Label"]).size().reset_index(name="Cantidad")
+        )
         fig_vader_label = px.bar(
             conteo_vader_label, x="Gender_ES", y="Cantidad", color="Vader_Label", barmode="group",
-            title="Etiqueta VADER (POSITIVE/NEGATIVE/NEUTRAL) por género",
-            labels={"Gender_ES": "Género", "Vader_Label": "Etiqueta"}
+            title="Etiqueta VADER (POSITIVE/NEGATIVE) por género",
+            labels={"Gender_ES": "Género", "Vader_Label": "Etiqueta"},
+            color_discrete_map=COLORES_ETIQUETA,
         )
         st.plotly_chart(fig_vader_label, width="stretch")
-
-    st.markdown("**Proporciones promedio pos/neu/neg de VADER, por género**")
-    proporciones_vader = df_filtrado.groupby("Gender_ES")[["Vader_Pos", "Vader_Neu", "Vader_Neg"]].mean().reset_index()
-    proporciones_largo = proporciones_vader.melt(id_vars="Gender_ES", var_name="Componente", value_name="Promedio")
-    fig_proporciones = px.bar(
-        proporciones_largo, x="Gender_ES", y="Promedio", color="Componente", barmode="group",
-        title="Proporción promedio de palabras positivas/neutras/negativas (VADER)",
-        labels={"Gender_ES": "Género"}
-    )
-    st.plotly_chart(fig_proporciones, width="stretch")
+        n_neutral = (df_filtrado["Vader_Label"] == "NEUTRAL").sum()
+        st.caption(f"No incluye los **{n_neutral:,}** personajes con etiqueta NEUTRAL.")
 
     st.divider()
 
@@ -145,7 +157,8 @@ if modelo in ("DistilBERT", "Ambos"):
         fig_distil_label = px.bar(
             conteo_distil_label, x="Gender_ES", y="Cantidad", color="Distilbert_Label", barmode="group",
             title="Etiqueta DistilBERT (POSITIVE/NEGATIVE) por género",
-            labels={"Gender_ES": "Género", "Distilbert_Label": "Etiqueta"}
+            labels={"Gender_ES": "Género", "Distilbert_Label": "Etiqueta"},
+            color_discrete_map=COLORES_ETIQUETA,
         )
         st.plotly_chart(fig_distil_label, width="stretch")
 
@@ -187,23 +200,185 @@ if modelo == "Ambos":
             help="Solo se comparan personajes donde VADER dio POSITIVE o NEGATIVE (excluye NEUTRAL)."
         )
 
+    # --- % de acuerdo entre modelos, desglosado por género ---
+    st.markdown("**¿Los modelos coinciden igual para todos los géneros?**")
+    st.caption(
+        "Mismo cálculo que la métrica de arriba, pero por separado para cada "
+        "género (excluye personajes donde VADER dio NEUTRAL, ya que ahí no hay "
+        "nada que comparar con DistilBERT)."
+    )
+
+    df_comparable = df_filtrado[df_filtrado["Vader_Label"] != "NEUTRAL"].copy()
+    df_comparable["Coincide"] = (
+        ((df_comparable["Vader_Label"] == "POSITIVE") & (df_comparable["Distilbert_Label"] == "POSITIVE")) |
+        ((df_comparable["Vader_Label"] == "NEGATIVE") & (df_comparable["Distilbert_Label"] == "NEGATIVE"))
+    )
+    acuerdo_genero = (
+        df_comparable.groupby("Gender_ES")["Coincide"].mean().reset_index()
+    )
+    acuerdo_genero["% Coincidencia"] = acuerdo_genero["Coincide"] * 100
+
+    fig_acuerdo = px.bar(
+        acuerdo_genero, x="Gender_ES", y="% Coincidencia", color="Gender_ES",
+        title="% de acuerdo entre VADER y DistilBERT, por género",
+        labels={"Gender_ES": "Género"},
+        color_discrete_map=COLORES_GENERO,
+        text="% Coincidencia",
+    )
+    fig_acuerdo.update_traces(texttemplate="%{text:.1f}%", textposition="outside", cliponaxis=False)
+    fig_acuerdo.update_layout(showlegend=False, yaxis_range=[0, 100])
+    st.plotly_chart(fig_acuerdo, width="stretch")
+
+    st.divider()
+
+# ----------------------------
+# EVOLUCIÓN TEMPORAL DEL SENTIMIENTO
+# -----------------------------------------------------------------------------
+# Media de Vader_Compound y/o Distilbert_Score por año y género, para ver si
+# el tono del diálogo ha cambiado desde 2000.
+# -----------------------------------------------------------------------------
+st.subheader("Evolución temporal del sentimiento")
+st.markdown(
+    """
+    ¿El tono del diálogo (positivo/negativo) se ha mantenido igual entre
+    géneros a lo largo de los años, o ha cambiado? Cada punto es la media de
+    ese año y género entre los personajes que cumplen los filtros de arriba.
+    """
+)
+
+columnas_evolucion = []
+if modelo in ("VADER", "Ambos"):
+    columnas_evolucion.append(("Vader_Compound", "VADER (Compound)"))
+if modelo in ("DistilBERT", "Ambos"):
+    columnas_evolucion.append(("Distilbert_Score", "DistilBERT (Score)"))
+
+col_evol = st.columns(len(columnas_evolucion)) if len(columnas_evolucion) > 1 else [st]
+for col_widget, (columna, etiqueta) in zip(col_evol, columnas_evolucion):
+    evolucion = (
+        df_filtrado.groupby(["Oscar_Year", "Gender_ES"])[columna]
+        .mean()
+        .reset_index()
+    )
+    fig_evolucion = px.line(
+        evolucion, x="Oscar_Year", y=columna, color="Gender_ES",
+        title=f"Media de {etiqueta} por año y género",
+        labels={"Oscar_Year": "Año", columna: etiqueta, "Gender_ES": "Género"},
+        color_discrete_map=COLORES_GENERO,
+        markers=True,
+    )
+    col_widget.plotly_chart(fig_evolucion, width="stretch")
+
+st.caption(
+    "Algunos años tienen pocos personajes, así que las oscilaciones bruscas de "
+    "un año a otro pueden deberse al tamaño de muestra, no a una tendencia real."
+)
+
 st.divider()
 
 # ----------------------------
-# TABLA: PERSONAJES MÁS POSITIVOS / NEGATIVOS
+# SENTIMIENTO SEGÚN EQUIPO CREATIVO
+# -----------------------------------------------------------------------------
+# ¿El tono del diálogo femenino cambia según si hay una mujer en dirección o
+# guion? Mismo patrón que en la página de Emociones.
+# -----------------------------------------------------------------------------
+st.subheader("Sentimiento femenino, según equipo creativo")
+st.markdown(
+    """
+    Nos quedamos solo con los personajes femeninos y los separamos según si su
+    película tiene una mujer en dirección o guion, o ninguna de las dos. Así
+    vemos si el tono del diálogo femenino cambia con quién dirige o escribe.
+    """
+)
+
+df_equipo = df_filtrado[df_filtrado["Gender_ES"] == "Femenino"].copy()
+if df_equipo.empty:
+    st.info("No hay personajes femeninos que cumplan los filtros generales de arriba.")
+else:
+    df_equipo["Equipo creativo"] = df_equipo["Title"].apply(
+        lambda t: "Con mujer en dirección o guion"
+        if (t in peliculas_con_dir_f or t in peliculas_con_guion_f)
+        else "Sin mujer en dirección ni guion"
+    )
+    orden_equipo = ["Sin mujer en dirección ni guion", "Con mujer en dirección o guion"]
+
+    col_eq1, col_eq2 = st.columns(2)
+    with col_eq1:
+        if modelo in ("VADER", "Ambos"):
+            fig_eq_vader = px.box(
+                df_equipo, x="Equipo creativo", y="Vader_Compound", color="Equipo creativo",
+                title="Vader_Compound femenino, según equipo creativo",
+                category_orders={"Equipo creativo": orden_equipo},
+                color_discrete_sequence=["#b0b0b0", "#C1447E"],
+            )
+            fig_eq_vader.update_layout(showlegend=False, xaxis_title="")
+            st.plotly_chart(fig_eq_vader, width="stretch")
+    with col_eq2:
+        if modelo in ("DistilBERT", "Ambos"):
+            fig_eq_distil = px.box(
+                df_equipo, x="Equipo creativo", y="Distilbert_Score", color="Equipo creativo",
+                title="Distilbert_Score femenino, según equipo creativo",
+                category_orders={"Equipo creativo": orden_equipo},
+                color_discrete_sequence=["#b0b0b0", "#C1447E"],
+            )
+            fig_eq_distil.update_layout(showlegend=False, xaxis_title="")
+            st.plotly_chart(fig_eq_distil, width="stretch")
+
+    n_por_equipo = df_equipo["Equipo creativo"].value_counts()
+    st.caption(
+        "Personajes femeninos en cada grupo: "
+        + ", ".join(f"**{g}**: {n_por_equipo.get(g, 0):,}" for g in orden_equipo)
+    )
+
+st.divider()
+
 # ----------------------------
-st.subheader("Personajes más extremos")
+# PALABRAS VS. EXTREMIDAD DEL SENTIMIENTO
+# -----------------------------------------------------------------------------
+# ¿Los personajes con más diálogo tienen un sentimiento más extremo o más
+# moderado? VADER y DistilBERT se comportan de forma opuesta aquí.
+# -----------------------------------------------------------------------------
+st.subheader("Palabras vs. extremidad del sentimiento")
+st.markdown(
+    """
+    ¿Hablar más hace que el tono de un personaje sea más extremo o más
+    moderado? Aquí comparamos el número de palabras de cada personaje con el
+    valor absoluto de su score (qué tan lejos de cero, sin importar el signo).
+    """
+)
 
-columna_score = "Vader_Compound" if modelo == "VADER" else "Distilbert_Score"
-if modelo == "Ambos":
-    columna_score = st.radio("Ordenar según:", ["Vader_Compound", "Distilbert_Score"], horizontal=True)
+col_ext1, col_ext2 = st.columns(2)
+with col_ext1:
+    if modelo in ("VADER", "Ambos"):
+        df_ext = df_filtrado.copy()
+        df_ext["|Vader_Compound|"] = df_ext["Vader_Compound"].abs()
+        fig_ext_vader = px.scatter(
+            df_ext, x="Words", y="|Vader_Compound|", color="Gender_ES",
+            title="Palabras vs. |Vader_Compound|",
+            labels={"Words": "Palabras", "|Vader_Compound|": "|Compound|"},
+            color_discrete_map=COLORES_GENERO,
+            opacity=0.5,
+        )
+        st.plotly_chart(fig_ext_vader, width="stretch")
+with col_ext2:
+    if modelo in ("DistilBERT", "Ambos"):
+        df_ext2 = df_filtrado.copy()
+        df_ext2["|Distilbert_Score|"] = df_ext2["Distilbert_Score"].abs()
+        fig_ext_distil = px.scatter(
+            df_ext2, x="Words", y="|Distilbert_Score|", color="Gender_ES",
+            title="Palabras vs. |Distilbert_Score|",
+            labels={"Words": "Palabras", "|Distilbert_Score|": "|Score|"},
+            color_discrete_map=COLORES_GENERO,
+            opacity=0.5,
+        )
+        st.plotly_chart(fig_ext_distil, width="stretch")
 
-col_pos, col_neg = st.columns(2)
-with col_pos:
-    st.markdown("**Más positivos**")
-    top_pos = df_filtrado.sort_values(columna_score, ascending=False).head(10)[["Title", "Character", "Gender_ES", columna_score]]
-    st.dataframe(top_pos, width="stretch", hide_index=True)
-with col_neg:
-    st.markdown("**Más negativos**")
-    top_neg = df_filtrado.sort_values(columna_score, ascending=True).head(10)[["Title", "Character", "Gender_ES", columna_score]]
-    st.dataframe(top_neg, width="stretch", hide_index=True)
+st.caption(
+    "Si ves la línea de tendencia subir en VADER y bajar en DistilBERT (con "
+    "los filtros por defecto), no es un error: son dos formas distintas de "
+    "procesar texto largo. VADER acumula carga emocional sobre el texto "
+    "completo (a más palabras, compound más extremo); DistilBERT trocea el "
+    "diálogo en fragmentos y promedia sus scores (a más palabras/fragmentos, "
+    "el promedio tiende a moderarse)."
+)
+
+st.divider()
