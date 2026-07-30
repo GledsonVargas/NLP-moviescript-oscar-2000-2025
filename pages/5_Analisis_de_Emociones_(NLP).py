@@ -46,6 +46,20 @@ NOMBRES_EMOCIONES = {
     "Emotion_Sadness": "Tristeza", "Emotion_Surprise": "Sorpresa",
 }
 
+
+def pill_excluir_neutro(key):
+    """Pill toggle reutilizable: devuelve True si el usuario activó 'Excluir neutro'."""
+    seleccion = st.pills(
+        "Filtro de emociones",
+        options=["Excluir neutro"],
+        selection_mode="multi",
+        default=[],
+        key=key,
+        label_visibility="collapsed",
+    )
+    return "Excluir neutro" in seleccion
+
+
 # ----------------------------
 # CARGA DE DATOS
 # ----------------------------
@@ -135,7 +149,13 @@ st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**"
            f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
            f"**{corte_palabras}** palabras.")
 
-conteo_dominante = df_filtrado.groupby(["Gender_ES", "Emotion_Dominant"]).size().reset_index(name="Cantidad")
+excluir_neutro_dominante = pill_excluir_neutro("pill_dominante")
+
+df_dominante_base = df_filtrado.copy()
+if excluir_neutro_dominante:
+    df_dominante_base = df_dominante_base[df_dominante_base["Emotion_Dominant"].str.lower() != "neutral"]
+
+conteo_dominante = df_dominante_base.groupby(["Gender_ES", "Emotion_Dominant"]).size().reset_index(name="Cantidad")
 conteo_dominante["Emotion_Dominant_ES"] = conteo_dominante["Emotion_Dominant"].str.capitalize().map({
     "Anger": "Ira", "Disgust": "Asco", "Fear": "Miedo", "Joy": "Alegría",
     "Neutral": "Neutro", "Sadness": "Tristeza", "Surprise": "Sorpresa"
@@ -192,6 +212,9 @@ with col_radar_2:
         key="equipo_radar",
     ) or "Todas las películas"
 
+excluir_neutro_radar = pill_excluir_neutro("pill_radar")
+emociones_radar = [e for e in EMOCIONES if not (excluir_neutro_radar and e == "Emotion_Neutral")]
+
 df_radar = df_filtrado.copy()
 if award_radar != "Todas":
     df_radar = df_radar[df_radar["Award"] == TRADUCCION_AWARD_INV[award_radar]]
@@ -203,13 +226,13 @@ elif equipo_radar == "Mujer en guion":
 if df_radar.empty:
     st.info("No hay personajes que cumplan esta combinación de filtros.")
 else:
-    promedio_emociones = df_radar.groupby("Gender_ES")[EMOCIONES].mean()
+    promedio_emociones = df_radar.groupby("Gender_ES")[emociones_radar].mean()
 
     fig_radar = go.Figure()
     for genero in promedio_emociones.index:
-        valores = promedio_emociones.loc[genero, EMOCIONES].tolist()
+        valores = promedio_emociones.loc[genero, emociones_radar].tolist()
         valores.append(valores[0])  # cerrar el polígono
-        etiquetas = [NOMBRES_EMOCIONES[e] for e in EMOCIONES] + [NOMBRES_EMOCIONES[EMOCIONES[0]]]
+        etiquetas = [NOMBRES_EMOCIONES[e] for e in emociones_radar] + [NOMBRES_EMOCIONES[emociones_radar[0]]]
         fig_radar.add_trace(go.Scatterpolar(
             r=valores, theta=etiquetas, fill='toself', name=genero,
             line_color=COLORES_GENERO.get(genero, "#888888")
@@ -225,7 +248,7 @@ else:
         f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
         f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
         f"**{corte_palabras}** palabras.")
-    
+
 
 st.divider()
 
@@ -247,6 +270,9 @@ st.markdown(
     """
 )
 
+excluir_neutro_heatmap = pill_excluir_neutro("pill_heatmap")
+emociones_heatmap = [e for e in EMOCIONES if not (excluir_neutro_heatmap and e == "Emotion_Neutral")]
+
 df_heatmap = df_filtrado[df_filtrado["Gender_ES"] == "Femenino"].copy()
 if df_heatmap.empty:
     st.info("No hay personajes femeninos que cumplan los filtros generales de arriba.")
@@ -257,7 +283,7 @@ else:
         else "Sin mujer en dirección ni guion"
     )
 
-    tabla_heatmap = (df_heatmap.groupby("Grupo")[EMOCIONES].mean() * 100)
+    tabla_heatmap = (df_heatmap.groupby("Grupo")[emociones_heatmap].mean() * 100)
     tabla_heatmap = tabla_heatmap.rename(columns=NOMBRES_EMOCIONES)
     orden_grupo = ["Sin mujer en dirección ni guion", "Con mujer en dirección o guion"]
     tabla_heatmap = tabla_heatmap.reindex([g for g in orden_grupo if g in tabla_heatmap.index])
@@ -304,13 +330,16 @@ st.markdown(
     """
 )
 
+excluir_neutro_top10 = pill_excluir_neutro("pill_top10")
+emociones_top10 = [e for e in EMOCIONES if not (excluir_neutro_top10 and e == "Emotion_Neutral")]
+
 df_dedup_top = df.drop_duplicates(subset=["Title", "Character"])
 top10_m = df_dedup_top[df_dedup_top["Gender_ES"] == "Masculino"].sort_values("Words", ascending=False).head(10)
 top10_f = df_dedup_top[df_dedup_top["Gender_ES"] == "Femenino"].sort_values("Words", ascending=False).head(10)
 
 tabla_top10 = pd.DataFrame({
-    "Top 10 masculino": (top10_m[EMOCIONES].mean() * 100),
-    "Top 10 femenino": (top10_f[EMOCIONES].mean() * 100),
+    "Top 10 masculino": (top10_m[emociones_top10].mean() * 100),
+    "Top 10 femenino": (top10_f[emociones_top10].mean() * 100),
 }).T
 tabla_top10 = tabla_top10.rename(columns=NOMBRES_EMOCIONES)
 
@@ -385,16 +414,27 @@ NOMBRES_OPCIONES_EVOLUCION = {
     "SIETE_M": "Las 7 emociones (masculino)",
 }
 
+excluir_neutro_evolucion = pill_excluir_neutro("pill_evolucion")
+emociones_evolucion_activas = [e for e in EMOCIONES if not (excluir_neutro_evolucion and e == "Emotion_Neutral")]
+opciones_evolucion_activas = [
+    o for o in OPCIONES_EVOLUCION if not (excluir_neutro_evolucion and o == "Emotion_Neutral")
+]
+
+# Si la emoción actualmente elegida deja de estar disponible (p.ej. "Neutro"
+# al activar el pill), volvemos a "TODAS" para no romper el selectbox.
+if st.session_state.get("emocion_evolucion") not in opciones_evolucion_activas:
+    st.session_state["emocion_evolucion"] = "TODAS"
+
 emocion_evolucion = st.selectbox(
     "Elige una emoción",
-    options=OPCIONES_EVOLUCION,
+    options=opciones_evolucion_activas,
     format_func=lambda e: NOMBRES_OPCIONES_EVOLUCION.get(e) or NOMBRES_EMOCIONES[e],
     key="emocion_evolucion",
 )
 
 if emocion_evolucion == "TODAS":
     evolucion_todas = (
-        df_filtrado.groupby(["Oscar_Year", "Gender_ES"])[EMOCIONES]
+        df_filtrado.groupby(["Oscar_Year", "Gender_ES"])[emociones_evolucion_activas]
         .mean()
         .reset_index()
         .melt(id_vars=["Oscar_Year", "Gender_ES"], var_name="Emoción_col", value_name="Media")
@@ -408,7 +448,7 @@ if emocion_evolucion == "TODAS":
         labels={"Oscar_Year": "Año", "Media": "Media", "Gender_ES": "Género"},
         color_discrete_map=COLORES_GENERO,
         markers=True,
-        category_orders={"Emoción": [NOMBRES_EMOCIONES[e] for e in EMOCIONES]},
+        category_orders={"Emoción": [NOMBRES_EMOCIONES[e] for e in emociones_evolucion_activas]},
     )
     fig_evolucion.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))
     fig_evolucion.update_yaxes(matches=None, showticklabels=True)
@@ -420,7 +460,7 @@ elif emocion_evolucion in ("SIETE_F", "SIETE_M"):
     df_genero_evolucion = df_filtrado[df_filtrado["Gender_ES"] == genero_elegido]
 
     evolucion_genero = (
-        df_genero_evolucion.groupby("Oscar_Year")[EMOCIONES]
+        df_genero_evolucion.groupby("Oscar_Year")[emociones_evolucion_activas]
         .mean()
         .reset_index()
         .melt(id_vars="Oscar_Year", var_name="Emoción_col", value_name="Media")
@@ -432,7 +472,7 @@ elif emocion_evolucion in ("SIETE_F", "SIETE_M"):
         title=f"Media de cada emoción por año — personajes {genero_elegido.lower()}s",
         labels={"Oscar_Year": "Año", "Media": "Media", "Emoción": "Emoción"},
         markers=True,
-        category_orders={"Emoción": [NOMBRES_EMOCIONES[e] for e in EMOCIONES]},
+        category_orders={"Emoción": [NOMBRES_EMOCIONES[e] for e in emociones_evolucion_activas]},
     )
     st.plotly_chart(fig_evolucion, width="stretch")
     st.caption(f"Personajes {genero_elegido.lower()}s en este recorte: **{len(df_genero_evolucion):,}**")
@@ -471,7 +511,10 @@ st.divider()
 # ----------------------------
 st.subheader("Comparación detallada, emoción por emoción")
 
-promedio_largo = df_filtrado.groupby("Gender_ES")[EMOCIONES].mean().reset_index().melt(
+excluir_neutro_barras = pill_excluir_neutro("pill_barras")
+emociones_barras = [e for e in EMOCIONES if not (excluir_neutro_barras and e == "Emotion_Neutral")]
+
+promedio_largo = df_filtrado.groupby("Gender_ES")[emociones_barras].mean().reset_index().melt(
     id_vars="Gender_ES", var_name="Emoción", value_name="Probabilidad promedio"
 )
 promedio_largo["Emoción"] = promedio_largo["Emoción"].map(NOMBRES_EMOCIONES)

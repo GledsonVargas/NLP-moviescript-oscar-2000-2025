@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.set_page_config(page_title="Análisis de Sentimiento", page_icon="💬", layout="wide")
+st.set_page_config(page_title="Análisis de Sentimiento", layout="wide")
 
 st.markdown(
     """
@@ -38,6 +38,8 @@ TRADUCCION_AWARD = {
     "Adapted Screenplay": "Mejor Guion Adaptado",
 }
 TRADUCCION_AWARD_INV = {v: k for k, v in TRADUCCION_AWARD.items()}
+VADER_LABEL_ES = {"POSITIVE": "Positivo", "NEGATIVE": "Negativo", "NEUTRAL": "Neutro"}
+DISTIL_LABEL_ES = {"POSITIVE": "Positivo", "NEGATIVE": "Negativo"}
 
 # ----------------------------
 # CARGA DE DATOS
@@ -52,12 +54,12 @@ def cargar_datos():
 # -----------------------------------------------------------------------------
 # Carga adicional a nivel película (director/guionista), necesaria para el
 # cruce con "equipo creativo". df_sentiment_flat.pkl no trae estas columnas,
-# así que se cargan aparte desde Dataset_final.pkl (mismo patrón que en la
-# página de Emociones).
+# así que se cargan aparte desde dataset_final_75.pkl (mismo patrón que en la
+# página de Emociones, aunque ahí el archivo pueda tener otro nombre).
 # -----------------------------------------------------------------------------
 @st.cache_data
 def cargar_datos_peliculas():
-    return pd.read_pickle("Dataset_final.pkl")
+    return pd.read_pickle("dataset_final_75.pkl")
 
 
 df = cargar_datos()
@@ -70,7 +72,7 @@ st.divider()
 # ----------------------------
 # FILTROS
 # ----------------------------
-st.subheader("🎛️ Filtros")
+st.subheader("Filtros")
 
 modelo = st.segmented_control(
     "Modelo de sentimiento",
@@ -380,5 +382,163 @@ st.caption(
     "diálogo en fragmentos y promedia sus scores (a más palabras/fragmentos, "
     "el promedio tiende a moderarse)."
 )
+
+st.divider()
+
+# ----------------------------
+# PERSONAJES DESTACADOS Y EQUIPO CREATIVO
+# -----------------------------------------------------------------------------
+# Sección independiente de los filtros generales de arriba (Género, Award,
+# palabras mínimas): cada botón de abajo aplica su propio recorte de datos.
+# Las 6 vistas comparten la misma estructura (scatter + coincidencia entre
+# modelos + tabla), mostrando siempre como máximo los 10 (o 20) personajes
+# con más palabras de cada género para no saturar el gráfico. Las 4 últimas
+# vistas cruzan esto con la composición del equipo de dirección/guion a
+# nivel película, usando dataset_final_75.pkl (no df_sentiment_flat.pkl).
+# -----------------------------------------------------------------------------
+st.subheader("Personajes destacados y equipo creativo")
+st.markdown(
+    """
+    Esta sección **no depende de los filtros generales de arriba**: cada botón
+    aplica su propio recorte. Los dos primeros muestran a los personajes con
+    más palabras de diálogo de cada género (10 o 20 por género, sobre todo el
+    dataset); los otros cuatro se quedan solo con las películas cuyo equipo de
+    dirección o guion incluye a una mujer, y dentro de ese recorte muestran a
+    los 10 personajes con más palabras de cada género (para no saturar el
+    gráfico con demasiados puntos).
+    """
+)
+
+opciones_destacados = [
+    "Top 10 por género",
+    "Top 20 por género",
+    "Top 10 con mujer en dirección o guion",
+    "Top 10 con directora mujer",
+    "Top 10 con guionista mujer",
+    "Top 10 con directora y guionista mujer",
+]
+
+opcion_destacados = st.pills(
+    "Selecciona una vista",
+    options=opciones_destacados,
+    selection_mode="single",
+    default="Top 10 por género",
+    key="pill_destacados",
+    label_visibility="collapsed",
+)
+opcion_destacados = opcion_destacados or "Top 10 por género"
+
+
+def mostrar_top_personajes(df_personajes, n_top, texto_contexto):
+    """
+    Muestra, para un subconjunto de personajes ya recortado (df_personajes):
+    - los top n_top masculinos y n_top femeninos por palabras,
+    - un scatter Palabras vs. Vader_Compound / Distilbert_Score,
+    - la coincidencia entre modelos (VADER vs. DistilBERT) para esos personajes,
+    - una tabla con el detalle de cada uno.
+    """
+    df_dedup = df_personajes.drop_duplicates(subset=["Title", "Character"])
+    top_m = df_dedup[df_dedup["Gender_ES"] == "Masculino"].sort_values("Words", ascending=False).head(n_top)
+    top_f = df_dedup[df_dedup["Gender_ES"] == "Femenino"].sort_values("Words", ascending=False).head(n_top)
+    df_top = pd.concat([top_m, top_f])
+
+    st.caption(texto_contexto)
+
+    col_top1, col_top2 = st.columns(2)
+    with col_top1:
+        if modelo in ("VADER", "Ambos"):
+            fig_top_vader = px.scatter(
+                df_top, x="Words", y="Vader_Compound", color="Gender_ES",
+                hover_data=["Character", "Title"],
+                title="Palabras vs. Vader_Compound",
+                labels={"Words": "Palabras", "Vader_Compound": "Compound (-1 a +1)", "Gender_ES": "Género"},
+                color_discrete_map=COLORES_GENERO,
+            )
+            st.plotly_chart(fig_top_vader, width="stretch")
+    with col_top2:
+        if modelo in ("DistilBERT", "Ambos"):
+            fig_top_distil = px.scatter(
+                df_top, x="Words", y="Distilbert_Score", color="Gender_ES",
+                hover_data=["Character", "Title"],
+                title="Palabras vs. Distilbert_Score",
+                labels={"Words": "Palabras", "Distilbert_Score": "Score (-1 a +1)", "Gender_ES": "Género"},
+                color_discrete_map=COLORES_GENERO,
+            )
+            st.plotly_chart(fig_top_distil, width="stretch")
+
+    coincide_top = (
+        (df_top["Vader_Label"] != "NEUTRAL") &
+        (
+            ((df_top["Vader_Label"] == "POSITIVE") & (df_top["Distilbert_Label"] == "POSITIVE")) |
+            ((df_top["Vader_Label"] == "NEGATIVE") & (df_top["Distilbert_Label"] == "NEGATIVE"))
+        )
+    )
+    total_comparable_top = (df_top["Vader_Label"] != "NEUTRAL").sum()
+    if total_comparable_top > 0:
+        pct_coincidencia_top = coincide_top.sum() / total_comparable_top * 100
+        st.metric(
+            "Coincidencia entre modelos",
+            f"{pct_coincidencia_top:.1f}%",
+            help=(
+                "Solo se comparan personajes donde VADER dio POSITIVE o NEGATIVE "
+                "(excluye NEUTRAL). Calculado sobre los personajes de esta vista."
+            ),
+        )
+
+    tabla_top = df_top[[
+        "Character", "Gender_ES", "Title", "Words", "Vader_Label", "Distilbert_Label"
+    ]].copy()
+    tabla_top["Vader_Label"] = tabla_top["Vader_Label"].map(VADER_LABEL_ES)
+    tabla_top["Distilbert_Label"] = tabla_top["Distilbert_Label"].map(DISTIL_LABEL_ES)
+    tabla_top = tabla_top.sort_values(["Gender_ES", "Words"], ascending=[True, False])
+    tabla_top.columns = [
+        "Personaje", "Género", "Película", "Palabras",
+        "Sentimiento (VADER)", "Sentimiento (DistilBERT)",
+    ]
+    st.dataframe(tabla_top, width="stretch", hide_index=True)
+
+
+if opcion_destacados in ("Top 10 por género", "Top 20 por género"):
+    n_top_general = 10 if opcion_destacados == "Top 10 por género" else 20
+    mostrar_top_personajes(
+        df, n_top_general,
+        f"Los {n_top_general} personajes masculinos y los {n_top_general} femeninos con más "
+        f"palabras de diálogo de todo el dataset ({n_top_general * 2} puntos en total). "
+        f"No usa el slider de palabras mínimas ni el resto de filtros de arriba.",
+    )
+
+else:
+    if opcion_destacados == "Top 10 con mujer en dirección o guion":
+        peliculas_filtradas = df_peliculas_unicas[
+            (df_peliculas_unicas["female_director"] > 0) | (df_peliculas_unicas["female_writer"] > 0)
+        ]
+        descripcion_equipo = "con al menos una mujer en dirección o en guion"
+    elif opcion_destacados == "Top 10 con directora mujer":
+        peliculas_filtradas = df_peliculas_unicas[df_peliculas_unicas["female_director"] > 0]
+        descripcion_equipo = "con al menos una mujer en la dirección"
+    elif opcion_destacados == "Top 10 con guionista mujer":
+        peliculas_filtradas = df_peliculas_unicas[df_peliculas_unicas["female_writer"] > 0]
+        descripcion_equipo = "con al menos una mujer en el guion"
+    else:  # "Top 10 con directora y guionista mujer"
+        peliculas_filtradas = df_peliculas_unicas[
+            (df_peliculas_unicas["female_director"] > 0) & (df_peliculas_unicas["female_writer"] > 0)
+        ]
+        descripcion_equipo = "con mujer en dirección y en guion, a la vez"
+
+    titulos_filtrados = set(peliculas_filtradas["Title"])
+    df_personajes_equipo = df[df["Title"].isin(titulos_filtrados)]
+
+    if df_personajes_equipo.empty:
+        st.info("No hay películas que cumplan esta combinación de filtros.")
+    else:
+        n_personajes_total = df_personajes_equipo.drop_duplicates(subset=["Title", "Character"]).shape[0]
+        mostrar_top_personajes(
+            df_personajes_equipo, 10,
+            f"{len(peliculas_filtradas)} películas {descripcion_equipo} (de "
+            f"{len(df_peliculas_unicas)} en total). Se muestran los 10 personajes "
+            f"masculinos y los 10 femeninos con más palabras dentro de ese "
+            f"subconjunto (de {n_personajes_total} personajes en total). No usa "
+            f"el slider de palabras mínimas ni el resto de filtros de arriba.",
+        )
 
 st.divider()
