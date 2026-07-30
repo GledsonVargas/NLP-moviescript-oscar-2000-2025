@@ -99,7 +99,9 @@ st.divider()
 # -----------------------------------------------------------------------------
 def resolver_vista_agencia(vista, df_filtrado_slider, texto_exclusion):
     if vista == "Según nº de menciones":
-        caption = f"Personajes en este recorte: **{len(df_filtrado_slider):,}**. " + texto_exclusion
+        caption = f"Personajes en este recorte: **{len(df_filtrado_slider):,}**."
+        if texto_exclusion:
+            caption += " " + texto_exclusion
         return df_filtrado_slider, caption
 
     # Requisito de validez del dato (no depende del checkbox de arriba):
@@ -197,11 +199,7 @@ award_seleccionado = st.segmented_control(
     options=["Todas"] + list(TRADUCCION_AWARD.values()),
     default="Todas",
 )
-st.caption(
-    "Con \"Todas\", cada personaje se cuenta una sola vez aunque su película "
-    "esté nominada en más de una categoría (algunas películas repiten en 2 "
-    "categorías de Oscar; no las contamos dos veces)."
-)
+st.caption('Con "Todas", contamos solamente las 56 películas únicas.')
 
 col_a, col_b, col_c = st.columns(3)
 with col_a:
@@ -213,9 +211,12 @@ with col_a:
 with col_b:
     solo_confiables = st.checkbox("Solo casos confiables (≥5 menciones en 1ª persona)", value=True)
 with col_c:
+    # Empieza en 1, no en 0: un personaje con 0 menciones en 1ª persona tiene
+    # el Índice de Agencia indefinido (0/0) y se excluye siempre, así que
+    # dejar el slider en 0 no cambia nada respecto a 1.
     min_menciones = st.slider(
         "Mínimo de menciones en 1ª persona", 0,
-        int(df["N_FirstPerson_Mentions"].max()), 0
+        int(df["N_FirstPerson_Mentions"].max()), value=1
     )
 
 # --- Base: género + award ya aplicados, SIN confiabilidad/mínimo de menciones
@@ -267,15 +268,17 @@ if excl_controles_m > 0 or excl_controles_f > 0:
         f"**{excl_controles_f:,}** femeninos por el checkbox de confiabilidad "
         f"y/o el mínimo de menciones que elegiste arriba."
     )
-frases_exclusion.append(
-    f"Independientemente de esos controles, **{excl_indefinido_m:,}** personajes "
-    f"masculinos **({pct_indefinido_m:.1f}%)** y **{excl_indefinido_f:,}** femeninos "
-    f"**({pct_indefinido_f:.1f}%)** no tienen ninguna mención en primera persona, así "
-    f"que su Índice de Agencia queda indefinido (0/0) y siempre se excluyen, aunque "
-    f"el checkbox esté desactivado y el slider en 0."
-)
+if excl_indefinido_m > 0 or excl_indefinido_f > 0:
+    frases_exclusion.append(
+        f"Independientemente de esos controles, **{excl_indefinido_m:,}** personajes "
+        f"masculinos **({pct_indefinido_m:.1f}%)** y **{excl_indefinido_f:,}** femeninos "
+        f"**({pct_indefinido_f:.1f}%)** no tienen ninguna mención en primera persona, así "
+        f"que su Índice de Agencia queda indefinido (0/0) y siempre se excluyen, aunque "
+        f"el checkbox esté desactivado y el slider en 0."
+    )
 texto_exclusion = " ".join(frases_exclusion)
-st.caption(texto_exclusion)
+if texto_exclusion:
+    st.caption(texto_exclusion)
 
 st.divider()
 
