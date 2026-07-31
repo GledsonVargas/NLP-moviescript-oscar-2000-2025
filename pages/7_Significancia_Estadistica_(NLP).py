@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from scipy.stats import mannwhitneyu, chi2_contingency
+from scipy.stats import mannwhitneyu, chi2_contingency, spearmanr
 import statsmodels.formula.api as smf
 
 st.set_page_config(page_title="Significancia Estadística", layout="wide")
@@ -207,6 +207,73 @@ fig_detalle = px.box(
     color_discrete_map=COLORES_GENERO
 )
 st.plotly_chart(fig_detalle, width="stretch")
+
+st.divider()
+
+# ----------------------------
+# CORRELACIÓN DE SPEARMAN (PALABRAS VS. OTRAS MÉTRICAS)
+# -----------------------------------------------------------------------------
+# Mann-Whitney compara grupos y Chi-cuadrado compara categóricas, pero
+# ninguno responde si los personajes que hablan MÁS tienden a tener más/menos
+# agencia o un sentimiento más extremo — eso es una relación entre DOS
+# variables continuas. Spearman mide relación monótona (no asume linealidad
+# ni normalidad), lo cual es apropiado porque "Words" está muy sesgada.
+# -----------------------------------------------------------------------------
+st.subheader("Correlación de Spearman: palabras vs. otras métricas")
+st.markdown(
+    """
+    Mann-Whitney compara grupos (M vs. F) y Chi-cuadrado compara variables
+    categóricas, pero ninguno de los dos responde: **¿los personajes que
+    hablan más tienden a tener más o menos agencia, o un sentimiento más
+    extremo?** Eso es una relación entre **dos variables continuas**
+    (palabras y agencia/sentimiento), y para eso usamos el **coeficiente de
+    Spearman (ρ)**: mide si la relación es monótona (creciente o decreciente),
+    sin asumir que sea lineal — útil aquí porque el número de palabras está
+    muy sesgado (pocos personajes hablan muchísimo, la mayoría habla poco).
+    """
+)
+
+
+def fila_spearman(nombre, df, col_x, col_y):
+    datos = df[[col_x, col_y]].dropna()
+    if len(datos) < 3:
+        return None
+    rho, p = spearmanr(datos[col_x], datos[col_y])
+    return {
+        "Relación": nombre,
+        "ρ (rho)": round(rho, 3),
+        "p-valor": round(p, 4),
+        "N": len(datos),
+        "¿Significativo? (p<0.05)": "Sí" if p < 0.05 else "No",
+    }
+
+
+sent_f_spearman = sent_f.copy()
+sent_f_spearman["|Vader_Compound|"] = sent_f_spearman["Vader_Compound"].abs()
+sent_f_spearman["|Distilbert_Score|"] = sent_f_spearman["Distilbert_Score"].abs()
+
+filas_spearman = [
+    fila
+    for fila in [
+        fila_spearman("Palabras vs. Índice de Agencia", agencia_f, "Words", "Agency_Index"),
+        fila_spearman("Palabras vs. |Vader_Compound| (extremidad)", sent_f_spearman, "Words", "|Vader_Compound|"),
+        fila_spearman("Palabras vs. |Distilbert_Score| (extremidad)", sent_f_spearman, "Words", "|Distilbert_Score|"),
+    ]
+    if fila is not None
+]
+
+tabla_spearman = pd.DataFrame(filas_spearman)
+st.dataframe(
+    resaltar_columna(tabla_spearman, "¿Significativo? (p<0.05)"),
+    width="stretch", hide_index=True
+)
+st.caption(
+    "ρ cercano a 0 = no hay relación monótona; ρ cercano a ±1 = relación "
+    "monótona fuerte. El signo indica la dirección: positivo = cuando una "
+    "variable sube, la otra tiende a subir; negativo = tiende a bajar. "
+    "\"Índice de Agencia\" usa el filtro de confiabilidad propio (no el "
+    "slider de arriba); las dos filas de sentimiento sí usan el slider."
+)
 
 st.divider()
 
