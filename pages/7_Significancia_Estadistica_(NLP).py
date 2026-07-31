@@ -10,7 +10,7 @@ st.markdown(
     """
     <style>
     [data-testid="stMetricValue"] {
-        font-weight: 700;
+        font-weight: 500;
     }
     </style>
     """,
