@@ -122,7 +122,7 @@ st.divider()
 # ----------------------------
 # TABLA RESUMEN CONSOLIDADA
 # ----------------------------
-st.subheader("Resumen consolidado")
+st.subheader("Resumen consolidado · Mann-Whitney U")
 
 metricas_numericas = {
     "Sentimiento — VADER (Compound)": (sent_f, "Vader_Compound"),
@@ -171,7 +171,7 @@ st.divider()
 # ----------------------------
 # TESTS DE CHI-CUADRADO (variables categóricas)
 # ----------------------------
-st.subheader("Variables categóricas (Chi-cuadrado)")
+st.subheader("Variables categóricas · Chi-cuadrado")
 
 col1, col2, col3 = st.columns(3)
 
@@ -576,12 +576,5 @@ st.markdown(
     con el género del equipo de dirección y guion, **{n_significativos_equipo}**
     mostraron al menos un efecto estadísticamente significativo del equipo
     creativo (p < 0.05).
-
-    *(Añade aquí, a mano, la interpretación cualitativa final de tu proyecto: qué
-    patrones consistentes encontraste a través de las distintas técnicas —
-    sentimiento, agencia, emociones, tópicos y regresión —, y qué limitaciones
-    metodológicas conviene señalar en la discusión de tu artículo — en
-    particular, el tamaño de muestra de solo 56 películas para los modelos de
-    equipo creativo.)*
     """
 )
