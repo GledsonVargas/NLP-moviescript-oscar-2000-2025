@@ -43,16 +43,7 @@ COLORES_GENERO_ES = {"Masculino": "#3B6EA5", "Femenino": "#C1447E", "Desconocido
 
 # ----------------------------
 # CARGA DE DATOS
-# -----------------------------------------------------------------------------
-# Antes esta página leía df_sentiment_flat.pkl (pensado para análisis de
-# sentimiento, que aquí no se usa). Como Dataset_final.pkl ya trae
-# Script_Dict (diálogo por personaje) y Characters_Genders (género por
-# personaje), construimos la tabla de personajes directamente desde ahí.
-# Ventaja adicional: Dataset_final.pkl SÍ incluye "Anatomy of a Fall" y
-# "Talk to Her" (df_sentiment_flat.pkl las excluía por no estar
-# predominantemente en inglés), así que esta página ahora cubre las 58
-# películas completas en vez de 56.
-# -----------------------------------------------------------------------------
+# ----------------------------
 
 def normalize_name(name):
     """
@@ -105,7 +96,7 @@ df = cargar_datos()
 # -----------------------------------------------------------------------------
 # Varias secciones de esta página (Directores/guionistas, Relación de género,
 # Una mirada femenina, y el gráfico de "Personajes por categoría de Oscar")
-# necesitan columnas que solo existen en Dataset_final.pkl "en crudo"
+# necesitan columnas que solo existen en dataset_final_75 "en crudo"
 # (male_director, female_director, male_writer, female_writer, Director,
 # Writers...), no en la tabla `df` aplanada por personaje. Por eso se carga
 # aparte, con nombres distintos (df_peliculas / df_peliculas_unicas) para no
@@ -188,19 +179,43 @@ conteo_antes = df_base_award["Gender_ES"].value_counts()
 df_filtrado = df_base_award[df_base_award["Words"] >= corte]
 conteo_genero = df_filtrado["Gender_ES"].value_counts()
 
-excluidos_m = conteo_antes.get("Masculino", 0) - conteo_genero.get("Masculino", 0)
-excluidos_f = conteo_antes.get("Femenino", 0) - conteo_genero.get("Femenino", 0)
 
-total_antes_m = conteo_antes.get("Masculino", 0)
-total_antes_f = conteo_antes.get("Femenino", 0)
+def unir_con_y(partes):
+    if not partes:
+        return ""
+    if len(partes) == 1:
+        return partes[0]
+    return ", ".join(partes[:-1]) + " y " + partes[-1]
 
-pct_masc = (excluidos_m / total_antes_m * 100) if total_antes_m > 0 else 0
-pct_fem = (excluidos_f / total_antes_f * 100) if total_antes_f > 0 else 0
 
-st.caption(
-    f"Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_masc:.1f}%)** y "
-    f"**{excluidos_f:,}** personajes femeninos **({pct_fem:.1f}%)** con menos de **{corte}** palabras."
-)
+if modo_conteo == "Películas únicas":
+    st.caption(
+        "Cada personaje se cuenta una sola vez, aunque su película esté "
+        "nominada en más de una categoría de Oscar (películas únicas)."
+    )
+else:
+    st.caption(
+        "Cada nominación cuenta por separado: si una película está nominada "
+        "en 2 categorías de Oscar, sus personajes se cuentan dos veces (una "
+        "vez por categoría)."
+    )
+
+st.caption(f"Personajes incluidos con estos filtros: **{len(df_filtrado):,}**")
+
+partes_exclusion = []
+for genero, etiqueta in [
+    ("Masculino", "personajes masculinos"),
+    ("Femenino", "personajes femeninos"),
+    ("Desconocido", "personajes desconocidos"),
+]:
+    total_antes_genero = conteo_antes.get(genero, 0)
+    if total_antes_genero > 0:
+        excluidos_genero = total_antes_genero - conteo_genero.get(genero, 0)
+        pct_genero = excluidos_genero / total_antes_genero * 100
+        partes_exclusion.append(f"**{excluidos_genero:,}** {etiqueta} **({pct_genero:.1f}%)**")
+
+if partes_exclusion:
+    st.caption(f"Se excluyen {unir_con_y(partes_exclusion)} con menos de **{corte}** palabras.")
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Personajes masculinos", f"{conteo_genero.get('Masculino', 0):,}")

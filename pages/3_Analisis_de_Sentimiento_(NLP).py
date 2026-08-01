@@ -91,19 +91,59 @@ with col_a:
     generos_seleccionados = st.multiselect(
         "Género",
         options=["Masculino", "Femenino", "Desconocido"],
-        default=["Masculino", "Femenino"]
+        default=["Masculino", "Femenino", "Desconocido"]
     )
 with col_b:
     corte_palabras = st.slider("Palabras mínimas del personaje", 0, int(df["Words"].max()), 20, step=5)
 
-df_filtrado = df[
-    (df["Gender_ES"].isin(generos_seleccionados)) &
-    (df["Words"] >= corte_palabras)
-]
+# --- Base: género + award ya aplicados, SIN el corte de palabras todavía ---
+# (para poder calcular cuántos personajes se excluyen exactamente por el
+# slider, igual que en la página de Estadísticas de Género)
+df_base = df[df["Gender_ES"].isin(generos_seleccionados)]
 if award_seleccionado and award_seleccionado != "Todas":
-    df_filtrado = df_filtrado[df_filtrado["Award"] == TRADUCCION_AWARD_INV[award_seleccionado]]
+    df_base = df_base[df_base["Award"] == TRADUCCION_AWARD_INV[award_seleccionado]]
 
+# 19 de las 56 películas están nominadas en 2 categorías de Oscar, así que
+# aparecen duplicadas (una fila por categoría, por personaje) cuando
+# "Categoría de Oscar" = Todas. Nos quedamos con una sola fila por
+# Título+Personaje para contar cada personaje una única vez (películas
+# únicas), no una vez por nominación.
+df_base = df_base.drop_duplicates(subset=["Title", "Character"])
+
+conteo_antes = df_base["Gender_ES"].value_counts()
+
+df_filtrado = df_base[df_base["Words"] >= corte_palabras]
+conteo_despues = df_filtrado["Gender_ES"].value_counts()
+
+st.caption(
+    "Cada personaje se cuenta una sola vez, aunque su película esté nominada "
+    "en más de una categoría de Oscar (películas únicas)."
+)
 st.caption(f"Personajes incluidos con estos filtros: **{len(df_filtrado):,}**")
+
+
+def unir_con_y(partes):
+    if not partes:
+        return ""
+    if len(partes) == 1:
+        return partes[0]
+    return ", ".join(partes[:-1]) + " y " + partes[-1]
+
+
+partes_exclusion = []
+for genero, etiqueta in [
+    ("Masculino", "personajes masculinos"),
+    ("Femenino", "personajes femeninos"),
+    ("Desconocido", "personajes desconocidos"),
+]:
+    total_antes = conteo_antes.get(genero, 0)
+    if total_antes > 0:
+        excluidos = total_antes - conteo_despues.get(genero, 0)
+        pct = excluidos / total_antes * 100
+        partes_exclusion.append(f"**{excluidos:,}** {etiqueta} **({pct:.1f}%)**")
+
+if partes_exclusion:
+    st.caption(f"Se excluyen {unir_con_y(partes_exclusion)} con menos de **{corte_palabras}** palabras.")
 
 st.divider()
 
