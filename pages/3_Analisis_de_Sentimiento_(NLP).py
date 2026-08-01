@@ -96,6 +96,8 @@ with col_a:
 with col_b:
     corte_palabras = st.slider("Palabras mínimas del personaje", 0, int(df["Words"].max()), 20, step=5)
 
+
+
 # --- Base: género + award ya aplicados, SIN el corte de palabras todavía ---
 # (para poder calcular cuántos personajes se excluyen exactamente por el
 # slider, igual que en la página de Estadísticas de Género)
@@ -115,10 +117,10 @@ conteo_antes = df_base["Gender_ES"].value_counts()
 df_filtrado = df_base[df_base["Words"] >= corte_palabras]
 conteo_despues = df_filtrado["Gender_ES"].value_counts()
 
-st.caption(
-    "Cada personaje se cuenta una sola vez, aunque su película esté nominada "
-    "en más de una categoría de Oscar (películas únicas)."
-)
+# st.caption(
+#     "Cada personaje se cuenta una sola vez, aunque su película esté nominada "
+#     "en más de una categoría de Oscar (películas únicas)."
+# )
 st.caption(f"Personajes incluidos con estos filtros: **{len(df_filtrado):,}**")
 
 

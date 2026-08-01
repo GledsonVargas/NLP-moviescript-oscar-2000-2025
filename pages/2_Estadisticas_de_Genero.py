@@ -188,17 +188,17 @@ def unir_con_y(partes):
     return ", ".join(partes[:-1]) + " y " + partes[-1]
 
 
-if modo_conteo == "Películas únicas":
-    st.caption(
-        "Cada personaje se cuenta una sola vez, aunque su película esté "
-        "nominada en más de una categoría de Oscar (películas únicas)."
-    )
-else:
-    st.caption(
-        "Cada nominación cuenta por separado: si una película está nominada "
-        "en 2 categorías de Oscar, sus personajes se cuentan dos veces (una "
-        "vez por categoría)."
-    )
+# if modo_conteo == "Películas únicas":
+#     st.caption(
+#         "Cada personaje se cuenta una sola vez, aunque su película esté "
+#         "nominada en más de una categoría de Oscar (películas únicas)."
+#     )
+# else:
+#     st.caption(
+#         "Cada nominación cuenta por separado: si una película está nominada "
+#         "en 2 categorías de Oscar, sus personajes se cuentan dos veces (una "
+#         "vez por categoría)."
+#     )
 
 st.caption(f"Personajes incluidos con estos filtros: **{len(df_filtrado):,}**")
 

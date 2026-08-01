@@ -77,7 +77,7 @@ def cargar_datos():
 # -----------------------------------------------------------------------------
 @st.cache_data
 def cargar_datos_peliculas():
-    return pd.read_pickle("Dataset_final.pkl")
+    return pd.read_pickle("dataset_final_75.pkl")
 
 
 df = cargar_datos()
@@ -107,7 +107,7 @@ with col_a:
     generos_seleccionados = st.multiselect(
         "Género",
         options=["Masculino", "Femenino", "Desconocido"],
-        default=["Masculino", "Femenino"]
+        default=["Masculino", "Femenino", "Desconocido"]
     )
 with col_b:
     corte_palabras = st.slider("Palabras mínimas del personaje", 0, int(df["Words"].max()), 20, step=5)
