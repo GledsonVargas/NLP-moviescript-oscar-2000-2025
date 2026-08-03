@@ -118,25 +118,46 @@ df_base = df[df["Gender_ES"].isin(generos_seleccionados)]
 if award_seleccionado and award_seleccionado != "Todas":
     df_base = df_base[df_base["Award"] == TRADUCCION_AWARD_INV[award_seleccionado]]
 
+# 19 de las 56 películas están nominadas en 2 categorías de Oscar, así que
+# aparecen duplicadas (una fila por categoría, por personaje) cuando
+# "Categoría de Oscar" = Todas. Nos quedamos con una sola fila por
+# Título+Personaje para contar cada personaje una única vez (películas
+# únicas), no una vez por nominación.
+df_base = df_base.drop_duplicates(subset=["Title", "Character"])
+
 conteo_antes = df_base["Gender_ES"].value_counts()
 
 df_filtrado = df_base[df_base["Words"] >= corte_palabras]
 conteo_despues = df_filtrado["Gender_ES"].value_counts()
 
-excluidos_m = conteo_antes.get("Masculino", 0) - conteo_despues.get("Masculino", 0)
-excluidos_f = conteo_antes.get("Femenino", 0) - conteo_despues.get("Femenino", 0)
-total_antes_m = conteo_antes.get("Masculino", 0)
-total_antes_f = conteo_antes.get("Femenino", 0)
-pct_m = (excluidos_m / total_antes_m * 100) if total_antes_m > 0 else 0
-pct_f = (excluidos_f / total_antes_f * 100) if total_antes_f > 0 else 0
 
-st.caption(
-    f"Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
-    f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
-    f"**{corte_palabras}** palabras."
-)
+def unir_con_y(partes):
+    if not partes:
+        return ""
+    if len(partes) == 1:
+        return partes[0]
+    return ", ".join(partes[:-1]) + " y " + partes[-1]
+
+
+partes_exclusion = []
+for genero, etiqueta in [
+    ("Masculino", "personajes masculinos"),
+    ("Femenino", "personajes femeninos"),
+    ("Desconocido", "personajes desconocidos"),
+]:
+    total_antes_genero = conteo_antes.get(genero, 0)
+    if total_antes_genero > 0:
+        excluidos_genero = total_antes_genero - conteo_despues.get(genero, 0)
+        pct_genero = excluidos_genero / total_antes_genero * 100
+        partes_exclusion.append(f"**{excluidos_genero:,}** {etiqueta} **({pct_genero:.1f}%)**")
+
+texto_exclusion = ""
+if partes_exclusion:
+    texto_exclusion = f"Se excluyen {unir_con_y(partes_exclusion)} con menos de **{corte_palabras}** palabras."
 
 st.caption(f"Personajes incluidos con estos filtros: **{len(df_filtrado):,}**")
+if texto_exclusion:
+    st.caption(texto_exclusion)
 
 st.divider()
 
@@ -144,10 +165,7 @@ st.divider()
 # EMOCIÓN DOMINANTE POR GÉNERO
 # ----------------------------
 st.subheader("Emoción dominante por género")
-st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**"
-           f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
-           f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
-           f"**{corte_palabras}** palabras.")
+st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**. " + texto_exclusion)
 
 excluir_neutro_dominante = pill_excluir_neutro("pill_dominante")
 
@@ -190,11 +208,6 @@ st.markdown(
     o según si hay una mujer en el equipo de dirección o guion.
     """
 )
-
-# st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**"
-#     f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
-#     f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
-#     f"**{corte_palabras}** palabras.")
 
 col_radar_1, col_radar_2 = st.columns(2)
 with col_radar_1:
@@ -244,10 +257,7 @@ else:
         showlegend=True,
     )
     st.plotly_chart(fig_radar, width="stretch")
-    st.caption(f"Personajes en este recorte: **{len(df_radar):,}**"
-        f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
-        f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
-        f"**{corte_palabras}** palabras.")
+    st.caption(f"Personajes en este recorte: **{len(df_radar):,}**. " + texto_exclusion)
 
 
 st.divider()
@@ -492,10 +502,7 @@ else:
         markers=True,
     )
     st.plotly_chart(fig_evolucion, width="stretch")
-    st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**"
-           f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
-           f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
-           f"**{corte_palabras}** palabras.")
+    st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**. " + texto_exclusion)
 
 st.caption(
     "Cada punto es la media de esa emoción entre todos los personajes de ese "
@@ -528,9 +535,6 @@ fig_barras_emociones = px.bar(
 fig_barras_emociones.update_traces(texttemplate="%{text:.1%}", textposition="outside", cliponaxis=False)
 st.plotly_chart(fig_barras_emociones, width="stretch")
 
-st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**"
-           f". Se excluyen **{excluidos_m:,}** personajes masculinos **({pct_m:.1f}%)** y "
-           f"**{excluidos_f:,}** personajes femeninos **({pct_f:.1f}%)** con menos de "
-           f"**{corte_palabras}** palabras.")
+st.caption(f"Personajes en este recorte: **{len(df_filtrado):,}**. " + texto_exclusion)
 
 st.divider()

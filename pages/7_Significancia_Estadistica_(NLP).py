@@ -42,16 +42,43 @@ NOMBRES_GENERO = {"male": "Masculino", "female": "Femenino"}
 # ----------------------------
 # CARGA DE DATOS
 # ----------------------------
+
+# Columnas que DEBEN ser numéricas en cada dataframe. Se fuerzan aquí, una
+# sola vez, en vez de en cada test/modelo por separado: si el pickle/csv de
+# origen guardó alguna con dtype "object" (texto residual, None mezclado con
+# floats, etc.), esto lo corrige antes de que llegue a scipy/statsmodels,
+# que fallan de formas distintas y confusas ante columnas no numéricas
+# (TypeError en isnan, AttributeError en corrcoef, endog categórico en OLS...).
+COLUMNAS_NUMERICAS = {
+    "sentimiento": ["Words", "Vader_Compound", "Distilbert_Score"],
+    "agencia": ["Words", "Agency_Index"],
+    "emociones": [
+        "Words", "Emotion_Anger", "Emotion_Disgust", "Emotion_Fear",
+        "Emotion_Joy", "Emotion_Sadness", "Emotion_Surprise",
+    ],
+}
+
+
+def _forzar_numericas(df, columnas):
+    for col in columnas:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    return df
+
+
 @st.cache_data
 def cargar_datos():
     sentimiento = pd.read_pickle("df_sentiment_flat.pkl")
     sentimiento["Gender_ES"] = sentimiento["Gender"].map(NOMBRES_GENERO)
+    sentimiento = _forzar_numericas(sentimiento, COLUMNAS_NUMERICAS["sentimiento"])
 
     agencia = pd.read_pickle("spacy_agencia.pkl")
     agencia["Gender_ES"] = agencia["Gender"].map(NOMBRES_GENERO)
+    agencia = _forzar_numericas(agencia, COLUMNAS_NUMERICAS["agencia"])
 
     emociones = pd.read_csv("df_hartmann_emotions.csv")
     emociones["Gender_ES"] = emociones["Gender"].map(NOMBRES_GENERO)
+    emociones = _forzar_numericas(emociones, COLUMNAS_NUMERICAS["emociones"])
 
     return sentimiento, agencia, emociones
 
@@ -101,11 +128,16 @@ emo_f = df_emociones[
 ]
 
 def test_mannwhitney(df, columna, gender_col="Gender_ES"):
-    m = df[df[gender_col] == "Masculino"][columna].dropna()
-    f = df[df[gender_col] == "Femenino"][columna].dropna()
+    # Forzamos a numérico: cualquier valor no convertible (texto residual,
+    # None mezclado con floats, etc.) se convierte en NaN y se descarta con
+    # el dropna(). Esto evita el TypeError de np.isnan cuando la columna
+    # llega con dtype "object" en vez de float.
+    serie = pd.to_numeric(df[columna], errors="coerce")
+    m = serie[df[gender_col] == "Masculino"].dropna()
+    f = serie[df[gender_col] == "Femenino"].dropna()
     if len(m) < 2 or len(f) < 2:
         return None
-    stat, p = mannwhitneyu(m, f, alternative="two-sided")
+    stat, p = mannwhitneyu(m.to_numpy(dtype=float), f.to_numpy(dtype=float), alternative="two-sided")
     return {
         "Media Masculino": m.mean(), "Media Femenino": f.mean(),
         "N Masculino": len(m), "N Femenino": len(f),
@@ -235,10 +267,13 @@ st.markdown(
 
 
 def fila_spearman(nombre, df, col_x, col_y):
-    datos = df[[col_x, col_y]].dropna()
+    # Igual que en test_mannwhitney: forzamos ambas columnas a numérico para
+    # evitar que un dtype "object" residual (texto, None mezclado con
+    # floats, etc.) rompa spearmanr/np.corrcoef más abajo.
+    datos = df[[col_x, col_y]].apply(pd.to_numeric, errors="coerce").dropna()
     if len(datos) < 3:
         return None
-    rho, p = spearmanr(datos[col_x], datos[col_y])
+    rho, p = spearmanr(datos[col_x].to_numpy(dtype=float), datos[col_y].to_numpy(dtype=float))
     return {
         "Relación": nombre,
         "ρ (rho)": round(rho, 3),
@@ -249,6 +284,8 @@ def fila_spearman(nombre, df, col_x, col_y):
 
 
 sent_f_spearman = sent_f.copy()
+sent_f_spearman["Vader_Compound"] = pd.to_numeric(sent_f_spearman["Vader_Compound"], errors="coerce")
+sent_f_spearman["Distilbert_Score"] = pd.to_numeric(sent_f_spearman["Distilbert_Score"], errors="coerce")
 sent_f_spearman["|Vader_Compound|"] = sent_f_spearman["Vader_Compound"].abs()
 sent_f_spearman["|Distilbert_Score|"] = sent_f_spearman["Distilbert_Score"].abs()
 
