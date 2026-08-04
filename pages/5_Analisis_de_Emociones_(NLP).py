@@ -110,7 +110,7 @@ with col_a:
         default=["Masculino", "Femenino", "Desconocido"]
     )
 with col_b:
-    corte_palabras = st.slider("Palabras mínimas del personaje", 0, int(df["Words"].max()), 20, step=5)
+    corte_palabras = st.slider("Palabras mínimas del personaje", 0, int(df["Words"].max()), 0, step=5)
 
 # --- Base: género + award ya aplicados, SIN el corte de palabras todavía ---
 # (para poder calcular cuántos personajes se excluyen exactamente por el slider)

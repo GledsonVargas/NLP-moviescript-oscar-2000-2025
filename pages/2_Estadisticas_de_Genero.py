@@ -172,7 +172,7 @@ else:
 st.caption(f"**{n_peliculas_seleccionadas:,} películas seleccionadas**")
 
 max_palabras = int(df["Words"].max())
-corte = st.slider("Número mínimo de palabras", min_value=0, max_value=max_palabras, value=20, step=5)
+corte = st.slider("Número mínimo de palabras", min_value=0, max_value=max_palabras, value=0, step=5)
 
 conteo_antes = df_base_award["Gender_ES"].value_counts()
 
@@ -675,15 +675,15 @@ st.markdown(
 )
 
 CONDICIONES_MIRADA_FEMENINA = {
-    "Películas con mujer en la dirección": lambda d: (d["female_director"] > 0),
-    "Películas con mujer guionista": lambda d: (d["female_writer"] > 0),
-    "Solamente mujer directora": lambda d: (
+    "Películas con dirección mixta": lambda d: (d["female_director"] > 0),
+    "Películas con guion mixto": lambda d: (d["female_writer"] > 0),
+    "Películas con dirección femenina": lambda d: (
         (d["female_director"] > 0) & (d["male_director"] == 0)
     ),
-    "Solamente mujer guionista": lambda d: (
+    "Películas con guion femenino": lambda d: (
         (d["female_writer"] > 0) & (d["male_writer"] == 0)
     ),
-    "Mujer directora y guionista": lambda d: (
+    "Películas con guion y dirección femenina": lambda d: (
         (d["female_director"] > 0) & (d["male_director"] == 0)
         & (d["female_writer"] > 0) & (d["male_writer"] == 0)
     ),

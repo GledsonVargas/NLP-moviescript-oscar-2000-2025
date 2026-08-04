@@ -113,19 +113,25 @@ st.caption(
 
 # ----------------------------
 # PREPARAR SUBCONJUNTOS MASCULINO/FEMENINO PARA CADA MÉTRICA
-# ----------------------------
+# -----------------------------------------------------------------------------
+# 19 de las 56 películas están nominadas en 2 categorías de Oscar, así que sus
+# personajes aparecen duplicados (una fila por categoría) en los 3 datasets de
+# origen. Deduplicamos por Título+Personaje en los tres para contar cada
+# personaje una única vez (película única) — mismo criterio que ya aplican
+# las páginas de Sentimiento, Agencia y Emociones por separado.
+# -----------------------------------------------------------------------------
 sent_f = df_sentimiento[
     (df_sentimiento["Gender_ES"].isin(["Masculino", "Femenino"])) &
     (df_sentimiento["Words"] >= corte_palabras)
-]
+].drop_duplicates(subset=["Title", "Character"])
 agencia_f = df_agencia[
     (df_agencia["Gender_ES"].isin(["Masculino", "Femenino"])) &
     (df_agencia["Reliable"])
-].dropna(subset=["Agency_Index"])
+].dropna(subset=["Agency_Index"]).drop_duplicates(subset=["Title", "Character"])
 emo_f = df_emociones[
     (df_emociones["Gender_ES"].isin(["Masculino", "Femenino"])) &
     (df_emociones["Words"] >= corte_palabras)
-]
+].drop_duplicates(subset=["Title", "Character"])
 
 def test_mannwhitney(df, columna, gender_col="Gender_ES"):
     # Forzamos a numérico: cualquier valor no convertible (texto residual,
