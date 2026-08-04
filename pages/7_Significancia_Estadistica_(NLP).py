@@ -621,3 +621,78 @@ st.markdown(
     creativo (p < 0.05).
     """
 )
+
+st.divider()
+
+# -----------------------------------------------------------------------------
+# MODELO ADICIONAL: ¿el efecto combinado de "mujer en dirección Y en guion a la
+# vez" es distinto de la simple suma de sus efectos individuales?
+#
+# El gráfico descriptivo "¿Cambia el peso narrativo según quién dirige o
+# escribe?" muestra que el grupo "guion y dirección femenina" tiene la media
+# de palabras más alta de todos los grupos (347 en personajes femeninos). El
+# Modelo 2 de arriba (brecha de palabras) no puede confirmar si ESE salto
+# concreto es significativo, porque trata directoras_mujeres y
+# guionistas_mujeres como efectos aditivos e independientes — no como una
+# combinación con su propio coeficiente. Aquí añadimos el término de
+# interacción directoras_mujeres:guionistas_mujeres para responder esa
+# pregunta directamente.
+# -----------------------------------------------------------------------------
+st.subheader("¿El efecto de dirección y guion femeninos a la vez es mayor que la suma de sus partes?")
+st.caption(
+    "Mismo nivel y variable dependiente que el modelo anterior (brecha de "
+    "palabras Femenino − Masculino, a nivel película), pero añadiendo la "
+    "interacción entre Directoras (mujeres) y Guionistas (mujeres). El "
+    "coeficiente de esa interacción indica si el efecto de tener ambos roles "
+    "ocupados por mujeres a la vez es distinto de sumar sus dos efectos por "
+    "separado — la pregunta que el modelo anterior no podía responder."
+)
+
+modelo_interaccion_mujeres = smf.ols(
+    "gap_palabras_F_menos_M ~ directoras_mujeres * guionistas_mujeres "
+    "+ directores_hombres + guionistas_hombres",
+    data=df_peliculas_modelo
+).fit()
+st.dataframe(tabla_coeficientes(modelo_interaccion_mujeres), width="stretch", hide_index=True)
+st.caption(
+    f"N = {int(modelo_interaccion_mujeres.nobs)} películas · "
+    f"R² = {modelo_interaccion_mujeres.rsquared:.3f}"
+)
+st.markdown(
+    """
+    Con solo 56 películas, el grupo "dirección y guion femeninos a la vez"
+    probablemente tiene muy pocos casos, así que este término de interacción
+    tiene poca potencia estadística — un p-valor alto aquí no descarta el
+    efecto, solo indica que esta muestra no basta para confirmarlo con
+    certeza (ver nota sobre potencia estadística más arriba).
+    """
+)
+
+st.divider()
+
+# -----------------------------------------------------------------------------
+# MODELO ADICIONAL: mismo razonamiento que el de brecha de palabras, aplicado
+# ahora a la PROPORCIÓN de personajes femeninos. ¿El efecto de tener mujeres
+# en dirección Y en guion a la vez es distinto de la suma de sus efectos
+# individuales sobre pct_personajes_femeninos?
+# -----------------------------------------------------------------------------
+st.subheader("Proporción de personajes femeninos: ¿dirección y guion femeninos a la vez suman más?")
+st.caption(
+    "Mismo nivel y variable dependiente que el primer modelo de este bloque "
+    "(% de personajes femeninos, a nivel película), pero añadiendo la "
+    "interacción entre Directoras (mujeres) y Guionistas (mujeres), igual "
+    "que se hizo para la brecha de palabras."
+)
+
+modelo_interaccion_representacion = smf.ols(
+    "pct_personajes_femeninos ~ directoras_mujeres * guionistas_mujeres "
+    "+ directores_hombres + guionistas_hombres",
+    data=df_peliculas_modelo
+).fit()
+st.dataframe(tabla_coeficientes(modelo_interaccion_representacion), width="stretch", hide_index=True)
+st.caption(
+    f"N = {int(modelo_interaccion_representacion.nobs)} películas · "
+    f"R² = {modelo_interaccion_representacion.rsquared:.3f}"
+)
+
+st.divider()
